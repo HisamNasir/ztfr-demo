@@ -95,7 +95,7 @@ const RightSideCard = () => {
 
       {showSidebar && (
         <motion.div
-          className="fixed z-20 gap-6 top-0 right-0 bg-black h-screen  text-white max-md:w-screen lg:w-[100vh] px-4 max-w-[960px]"
+          className="fixed z-20 gap-6 top-0 right-0 bg-black h-screen  text-white max-md:w-screen lg:w-[960px] px-4 "
           initial={{ x: '100%' }}
           animate={sidebarAnimation}
           exit={{ x: '100%' }}
@@ -116,7 +116,7 @@ const RightSideCard = () => {
             <div className='  h-[88vh] '>
 
               <div className=' grid grid-cols-3  md:grid-cols-4 h-full grid-rows-4 gap-6 '>
-                <div ref={containerRef} className=' hidden row-span-3 w-full md:flex flex-col  h-full py-6 gap-6 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
+                <div ref={containerRef} className=' hidden row-span-3 md:flex flex-col  h-full w-full max-w-[200px] py-6 gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
 
                   <AnimatePresence>
                     {images.map((imageName, index) => (
@@ -126,7 +126,7 @@ const RightSideCard = () => {
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: '-100%', opacity: 0 }}
                         transition={{ duration: 1, delay: index * 0.5 }}
-                        className=' w-full h-full sm:w-[120px] sm:h-[120px] 2xl:w-[200px] 2xl:h-[200px]'
+                        className=' w-full h-full sm:w-[120px] sm:h-[120px] lg:w-[200px] lg:h-[200px]'
                       >
                         <Image className='w-full h-full' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
                       </motion.div>
@@ -154,10 +154,10 @@ const RightSideCard = () => {
                   <div className=' relative h-[90%] content-between  -translate-y-4  w-full gap-6 grid grid-cols-3 grid-rows-3'>
                     <div className=' hidden hover:scale-95 transition-transform duration-300  col-span-2 row-span-2 sm:flex items-center justify-center '>
                       <div className='w-full h-full  flex items-center justify-center'>
-                        <Image className='h-full w-auto max-h-[400px] max-w-[400px] p-2' src={MainImg} alt='' width={400} height={400} />
+                        <Image className='h-full w-auto max-h-[400px] max-w-[400px]' src={MainImg} alt='' width={400} height={400} />
                       </div>
                     </div>
-                    <div className=' row-span-2 w-full h-full max-sm:col-span-3 '>
+                    <div className=' row-span-2 w-full h-full max-sm:row-span-2 max-sm:col-span-3 '>
                       <div className='sm:pl-1  flex flex-col h-full row-span-3 sm:row-span-2 max-h-[420px] justify-between  sm:text-end items-start sm:items-end '>
                         <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">features</button>
                         <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">products</button>
@@ -209,8 +209,8 @@ const RightSideCard = () => {
                 </div>
 
 
-                <div className=' relative col-span-4 w-full h-full flex items-center'>
-                  <div ref={containerRef2} className=" relative grid grid-flow-col gap-6 scrollbar-hide items-center snap-x overflow-hidden h-full overflow-x-scroll ">
+                <div className=' relative col-span-4 max-sm:row-span-2 w-full h-full flex items-center'>
+                  <div ref={containerRef2} className=" relative grid grid-flow-col max-h-[200px]  gap-8 scrollbar-hide items-center snap-x overflow-hidden h-full overflow-x-scroll  w-full">
 
                     <AnimatePresence>
                       {images.map((imageName, index) => (
@@ -220,9 +220,9 @@ const RightSideCard = () => {
                           animate={{ y: 0, opacity: 1 }}
                           exit={{ y: '-100%', opacity: 0 }}
                           transition={{ duration: 1, delay: index * 0.5 }}
-                          className='w-full h-full max-w-[200px] max-h-[200px]'
+                          className=' relative w-auto h-full '
                         >
-                          <Image className=' w-auto h-[90%] max-w-[200px] max-h-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
+                          <Image className='relative w-auto h-full  max-w-[200px] max-h-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
                         </motion.div>
                       ))}
                     </AnimatePresence>

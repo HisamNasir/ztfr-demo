@@ -17,8 +17,8 @@ const Signup = () => {
     router.back();
   };
   return (
-    <div className='h-screen relative flex flex-col gap-9 items-center transition-all duration-500'>
-      <div className=' absolute top-0 p-4 lg:p-6'>
+    <div className='h-screen relative flex items-center transition-all duration-500'>
+      <div className='absolute top-0 p-4 lg:p-6'>
         <GroupText/>
         
       </div>

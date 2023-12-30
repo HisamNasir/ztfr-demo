@@ -3,7 +3,7 @@ import React from 'react';
 import imageSrc from '@/public/assets/ztfrGold.png'
 const GroupText = () => {
     return (
-        <div className="hidden sm:flex flex-wrap w-full lg:w-[940px]  ">
+        <div className="hidden lg:flex flex-wrap w-full lg:w-[940px] ">
                 <div className="flex ">
                 <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">SEND FILES</button>
                 <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">SEND FOLDERS</button>
