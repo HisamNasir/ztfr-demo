@@ -115,7 +115,7 @@ const RightSideCard = () => {
             {/* mid section  */}
             <div className='  h-[86vh] '>
 
-              <div className=' relative grid grid-cols-3  md:grid-cols-4 h-full grid-rows-4 gap-6 '>
+              <div className=' relative grid grid-cols-3  md:grid-cols-4 h-full grid-rows-4 gap-4 '>
                 <div ref={containerRef} className=' relative hidden row-span-3 md:flex flex-col  h-full w-full max-w-[200px] py-6 gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
 
                   <AnimatePresence>
@@ -171,13 +171,13 @@ const RightSideCard = () => {
                       </div>
                     </div>
                     <div className=' col-span-2 w-full h-full hidden md:flex items-center  '>
-                      <div className='col-span-3 flex h-full w-full items-end justify-center'>
+                      <div className='col-span-3 gap-2 flex h-full w-full items-end justify-center'>
                         <div className=' flex-col hidden sm:flex gap-4'>
                           <button onClick={handleScrollUp} className="  bg-transparent text-gray-400 text-lg"><FaAngleUp /></button>
                           <button onClick={handleScrollDown} className=" bg-transparent text-gray-400 text-lg"><FaAngleDown /></button>
                         </div>
 
-                        <div className=' hidden sm:flex col-span-2 gap-3 w-full h-full'>
+                        <div className=' hidden sm:flex col-span-2 w-full h-full'>
                           <button className=' w-full h-full'>
                             <Image className=' w-full h-auto max-h-[200px] max-w-[334px] max-2xl:pr-[60px] ' src={Phone} alt='' width={334} height={200} />
                           </button>
@@ -187,7 +187,7 @@ const RightSideCard = () => {
                     </div>
                     <div className=' w-full h-full flex items-center' style={{ width: 'calc(100% + 60px)' }}>
                       <div className=' relative w-full  hidden md:flex items-end -translate-x-[60px]' >
-                        <div className=' relative flex flex-col  items-end '>
+                        <div className=' relative flex flex-col gap-2  items-end '>
                           <div className='w-full h-full relative flex gap-4'>
                             <button>
                               <Image className='w-full h-full max-h-[150px] max-w-[118px]' src={Group1} width={118} height={150} alt='' />
