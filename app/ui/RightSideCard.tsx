@@ -95,7 +95,7 @@ const RightSideCard = () => {
 
       {showSidebar && (
         <motion.div
-          className="fixed z-20 gap-6 top-0 right-0 bg-black h-screen  text-white w-screen lg:w-[100vh] px-4 max-w-[960px]"
+          className="fixed z-20 gap-6 top-0 right-0 bg-black h-screen  text-white max-md:w-screen lg:w-[100vh] px-4 max-w-[960px]"
           initial={{ x: '100%' }}
           animate={sidebarAnimation}
           exit={{ x: '100%' }}
@@ -152,7 +152,7 @@ const RightSideCard = () => {
                     </div>
                   </div>
                   <div className=' relative h-[90%] content-between  -translate-y-4  w-full gap-6 grid grid-cols-3 grid-rows-3'>
-                    <div className=' hidden hover:scale-95 transition-transform duration-300  col-span-2 row-span-2 md:flex items-center justify-center '>
+                    <div className=' hidden hover:scale-95 transition-transform duration-300  col-span-2 row-span-2 sm:flex items-center justify-center '>
                       <div className='w-full h-full  flex items-center justify-center'>
                         <Image className='h-full w-auto max-h-[400px] max-w-[400px] p-2' src={MainImg} alt='' width={400} height={400} />
                       </div>
@@ -186,7 +186,7 @@ const RightSideCard = () => {
                       </div>
                     </div>
                     <div className=' w-full h-full flex items-center' style={{ width: 'calc(100% + 60px)' }}>
-                      <div className=' relative w-full h-full hidden md:flex items-end -translate-x-[60px]' >
+                      <div className=' relative w-full  hidden md:flex items-end -translate-x-[60px]' >
                         <div className=' relative flex flex-col  items-end '>
                           <div className='w-full h-full relative flex gap-4'>
                             <button>
@@ -209,8 +209,8 @@ const RightSideCard = () => {
                 </div>
 
 
-                <div className=' col-span-4 w-full h-full flex items-center'>
-                  <div ref={containerRef2} className="grid grid-flow-col gap-6 scrollbar-hide  snap-x overflow-hidden h-full overflow-x-scroll ">
+                <div className=' relative col-span-4 w-full h-full flex items-center'>
+                  <div ref={containerRef2} className=" relative grid grid-flow-col gap-6 scrollbar-hide items-center snap-x overflow-hidden h-full overflow-x-scroll ">
 
                     <AnimatePresence>
                       {images.map((imageName, index) => (
@@ -220,9 +220,9 @@ const RightSideCard = () => {
                           animate={{ y: 0, opacity: 1 }}
                           exit={{ y: '-100%', opacity: 0 }}
                           transition={{ duration: 1, delay: index * 0.5 }}
-                          className=' w-[100px] h-[100px]  xl:w-[120px] xl:h-[120px] 2xl:w-[200px] 2xl:h-[200px]'
+                          className='w-full h-full max-w-[200px] max-h-[200px]'
                         >
-                          <Image className='h-full w-full' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
+                          <Image className=' w-auto h-[90%] max-w-[200px] max-h-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
                         </motion.div>
                       ))}
                     </AnimatePresence>
