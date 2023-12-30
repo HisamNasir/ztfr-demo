@@ -5,30 +5,30 @@ const GroupText = () => {
     return (
         <div className="hidden sm:flex flex-wrap w-full lg:w-[940px]  ">
                 <div className="flex ">
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">SEND FILES</button>
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">SEND FOLDERS</button>
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">SHARE IDEAS</button>
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">SHARE TRANSFERS IN MULTIPLE FORMATS</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">SEND FILES</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">SEND FOLDERS</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">SHARE IDEAS</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">SHARE TRANSFERS IN MULTIPLE FORMATS</button>
                 </div>
                 <div className="flex gap-2">
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">UNLIMITED STORAGE</button>
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">SEND UNLIMITED ON TRANSFERS</button>
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">RECEIVE UNLIMITED ON TRANSFERS</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">UNLIMITED STORAGE</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">SEND UNLIMITED ON TRANSFERS</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">RECEIVE UNLIMITED ON TRANSFERS</button>
                 </div >
                 <div className="flex gap-2">
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">STORAGE FOR UP TO 2 YEARS</button>
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">PORTAL</button>
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">CUSTOM EXPIRATION DATES</button>
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">ASSIGN PIN PROTECTED</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">STORAGE FOR UP TO 2 YEARS</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">PORTAL</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">CUSTOM EXPIRATION DATES</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">ASSIGN PIN PROTECTED</button>
                 </div>
                 <div className="flex ">
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">PUBLIC SHARING</button>
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">DYNAMIC LINKS</button>
-                <Image width={147} height={50} src={imageSrc} alt="Image" className="w-[127px] h-[30px] sm:w-[137px] sm:h-[40px] md:w-[147px] md:h-[50px]" />
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">PASSWORD PROTECTED</button>
-                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">TRACK DOWNLOADS</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">PUBLIC SHARING</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">DYNAMIC LINKS</button>
+                <Image width={147} height={50} src={imageSrc} alt="Image" className="w-[127px] h-[30px] lg:w-[137px] lg:h-[40px] xl:w-[147px] xl:h-[50px]" />
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">PASSWORD PROTECTED</button>
+                <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">TRACK DOWNLOADS</button>
             </div>
-            <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-">ADVANCED AES 254-BIT ENCRYPTION</button>
+            <button className="text-[10px] xl:text-[14px] py-1 tracking-widest text-xs xl:text-sm ">ADVANCED AES 254-BIT ENCRYPTION</button>
         </div>
     );
 };

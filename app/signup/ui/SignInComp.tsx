@@ -34,7 +34,7 @@ const SignIn = () => {
       <Input
         label="Email"
         variant="bordered"
-        size="md"
+        size="sm"
         fullWidth
         type='email'
         className=' sm:max-w-[450px]  bg-white'
