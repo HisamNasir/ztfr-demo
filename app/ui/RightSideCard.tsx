@@ -95,7 +95,7 @@ const RightSideCard = () => {
 
       {showSidebar && (
         <motion.div
-          className="fixed z-20 gap-6 top-0 right-0 bg-black h-screen  text-white max-md:w-screen lg:w-[960px] px-4 "
+          className="fixed z-20 gap-6 top-0 right-0 bg-black h-screen  text-white max-md:w-screen md:w-[700px] 2xl:w-[960px] px-4 "
           initial={{ x: '100%' }}
           animate={sidebarAnimation}
           exit={{ x: '100%' }}
@@ -113,10 +113,10 @@ const RightSideCard = () => {
 
             </nav>
             {/* mid section  */}
-            <div className='  h-[88vh] '>
+            <div className='  h-[86vh] '>
 
-              <div className=' grid grid-cols-3  md:grid-cols-4 h-full grid-rows-4 gap-6 '>
-                <div ref={containerRef} className=' hidden row-span-3 md:flex flex-col  h-full w-full max-w-[200px] py-6 gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
+              <div className=' relative grid grid-cols-3  md:grid-cols-4 h-full grid-rows-4 gap-6 '>
+                <div ref={containerRef} className=' relative hidden row-span-3 md:flex flex-col  h-full w-full max-w-[200px] py-6 gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
 
                   <AnimatePresence>
                     {images.map((imageName, index) => (
@@ -126,9 +126,9 @@ const RightSideCard = () => {
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: '-100%', opacity: 0 }}
                         transition={{ duration: 1, delay: index * 0.5 }}
-                        className=' w-full h-full sm:w-[120px] sm:h-[120px] lg:w-[200px] lg:h-[200px]'
+                        className=' relative w-auto h-full '
                       >
-                        <Image className='w-full h-full' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
+                        <Image className='relative h-auto w-full  max-w-[200px] max-h-[200px]'width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
                       </motion.div>
                     ))}
                   </AnimatePresence>
