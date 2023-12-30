@@ -170,47 +170,46 @@ const RightSideCard = () => {
                         <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">newsroom/press</button>
                       </div>
                     </div>
-                    <div className=' col-span-2 w-full h-full hidden md:flex items-center  '>
+                    <div className=' col-span-2  hidden md:flex items-center  '>
                       <div className='col-span-3 gap-2 flex h-full w-full items-end justify-center'>
                         <div className=' flex-col hidden sm:flex gap-4'>
                           <button onClick={handleScrollUp} className="  bg-transparent text-gray-400 text-lg"><FaAngleUp /></button>
                           <button onClick={handleScrollDown} className=" bg-transparent text-gray-400 text-lg"><FaAngleDown /></button>
                         </div>
 
-                        <div className=' hidden sm:flex col-span-2 w-full h-full'>
-                          <button className=' w-full h-full'>
-                            <Image className=' w-full h-auto max-h-[200px] max-w-[334px] max-2xl:pr-[60px] ' src={Phone} alt='' width={334} height={200} />
-                          </button>
+                        <button className=' relative hidden sm:flex col-span-2 w-full h-full'>
+                          
+                            <Image className=' w-auto h-auto max-h-[200px] max-w-[334px] ' src={Phone} alt='' width={334} height={200} />
+                          
 
-                        </div>
+                        </button>
                       </div>
                     </div>
-                    <div className=' w-full h-full flex items-center' style={{ width: 'calc(100% + 60px)' }}>
-                      <div className=' relative w-full  hidden md:flex items-end -translate-x-[60px]' >
-                        <div className=' relative flex flex-col gap-2  items-end '>
-                          <div className='w-full h-full relative flex gap-4'>
+                    <div className=' hidden md:flex items-center' style={{ width: 'calc(100% + 60px)' }}>
+                     
+                        <div className=' relative flex flex-col gap-2 items-center '>
+                          <div className=' w-auto h-full -translate-x-[60px] flex gap-4'>
                             <button>
-                              <Image className='w-full h-full max-h-[150px] max-w-[118px]' src={Group1} width={118} height={150} alt='' />
+                              <Image className='w-full h-auto max-h-[150px] max-w-[118px]' src={Group1} width={118} height={150} alt='' />
                             </button>
                             <button>
-                              <Image className='w-full h-full  max-h-[150px] max-w-[118px]' src={Group2} width={118} height={150} alt='' />
+                              <Image className='w-full h-auto  max-h-[150px] max-w-[118px]' src={Group2} width={118} height={150} alt='' />
                             </button>
 
                           </div>
-                          <div className=' flex justify-center gap-4'>
-                            <button onClick={handleScrollleft} className=" w-full bg-transparent -rotate-90 text-gray-400  text-lg"><FaAngleUp /></button>
-                            <button onClick={handleScrollright} className="w-full bg-transparent -rotate-90 text-gray-400  text-lg"><FaAngleDown /></button>
+                          <div className=' absolute -bottom-8 right-[60px] flex justify-center gap-4'>
+                            <button onClick={handleScrollleft} className=" bg-transparent -rotate-90 text-gray-400  text-lg"><FaAngleUp /></button>
+                            <button onClick={handleScrollright} className=" bg-transparent -rotate-90 text-gray-400  text-lg"><FaAngleDown /></button>
                           </div>
                         </div>
-                      </div>
                     </div>
                   </div>
 
                 </div>
 
 
-                <div className=' relative col-span-4 max-sm:row-span-2 w-full h-full flex items-center'>
-                  <div ref={containerRef2} className=" relative grid grid-flow-col max-h-[200px]  gap-8 scrollbar-hide items-center snap-x overflow-hidden h-full overflow-x-scroll  w-full">
+                <div className=' col-span-4 max-sm:row-span-2 w-full h-full flex items-center'>
+                  <div ref={containerRef2} className="  grid grid-flow-col aspect-w-1 aspect-h-1  gap-8 scrollbar-hide items-center snap-x overflow-hidden h-full overflow-x-scroll  w-full">
 
                     <AnimatePresence>
                       {images.map((imageName, index) => (
@@ -220,9 +219,9 @@ const RightSideCard = () => {
                           animate={{ y: 0, opacity: 1 }}
                           exit={{ y: '-100%', opacity: 0 }}
                           transition={{ duration: 1, delay: index * 0.5 }}
-                          className=' relative w-auto h-full '
+                          className=' relative h-full w-auto  aspect-w-1 aspect-h-1'
                         >
-                          <Image className='relative w-auto h-full  max-w-[200px] max-h-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
+                          <Image className='relative h-auto w-auto aspect-w-1 aspect-h-1  max-w-[200px] max-h-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
                         </motion.div>
                       ))}
                     </AnimatePresence>
