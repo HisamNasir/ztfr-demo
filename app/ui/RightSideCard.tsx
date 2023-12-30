@@ -103,7 +103,7 @@ const RightSideCard = () => {
         >
           <div className=' h-full relative '>
             {/* top section */}
-            <nav className='h-[53px] px-6 flex  left-5 top-5 justify-between items-center gap-4 '>
+            <nav className='h-[53px] pt-4 p-2 flex justify-between items-center gap-4 '>
               <div className='flex items-center gap-4 md:gap-8'>
                 <button className="cursor-pointer w-5 h-5" onClick={closeSidebar}>
                   <Image className=' w-5 h-5' src={X} width={20} height={20} alt='Close Sidebar' />
@@ -158,7 +158,7 @@ const RightSideCard = () => {
                       </div>
                     </div>
                     <div className=' row-span-2 w-full h-full max-sm:row-span-2 max-sm:col-span-3 '>
-                      <div className='sm:pl-1  flex flex-col h-full row-span-3 sm:row-span-2 max-h-[420px] justify-between  sm:text-end items-start sm:items-end '>
+                      <div className='px-1 pt-4  flex flex-col h-full row-span-3 sm:row-span-2 max-h-[420px] justify-between  sm:text-end items-start sm:items-end '>
                         <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">features</button>
                         <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">products</button>
                         <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase"><Image className='h-[11px]' src={Ztr} alt='' width={122} height={11} /></button>
