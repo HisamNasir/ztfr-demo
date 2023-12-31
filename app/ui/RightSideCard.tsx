@@ -160,7 +160,7 @@ const RightSideCard = () => {
                         <button onClick={handleScrollright} className="w-full bg-transparent -rotate-90 text-gray-400 text-xl"><FaAngleDown /></button>
                   </div>
                     <div className=' grid grid-cols-3 grid-rows-3 gap-2 w-full p-6 h-full'>
-                      <div className='hidden sm:flex col-span-2 row-span-2 w-full h-full items-center'>
+                      <div className='hidden sm:flex col-span-2 row-span-2 w-full h-full justify-center items-center'>
                       <Image className=' h-full w-auto max-w-[400px] max-h-[400px]' src={MainImg} alt=' ' width={400} height={400} />
 
                       </div>
