@@ -176,11 +176,10 @@ const RightSideCard = () => {
                       <button className="text-whitetext-[8px] text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">newsroom/press</button>
                       </div>
                       <div className=' relative hidden sm:block col-span-3 w-full h-full'>
-                        <div className='flex relative h-full w-full '>
-                        <button className='h-full w-auto '>
+                        <div className='flex relative h-full w-auto '>
                           <Image className=' h-full w-auto  max-h-[200px] max-w-[334px] ' src={Phone} alt='' width={334} height={200} />
-                        </button>
-                        <div className='flex gap-4 h-full w-full items-center justify-end'>
+
+                        <div className='flex relative gap-4 h-full w-full items-center justify-end'>
                                 <Image className='h-full w-auto max-h-[150px] max-w-[118px]' src={Group1} width={118} height={150} alt='' />
                                 <Image className='h-full w-auto max-h-[150px] max-w-[118px]'  src={Group2} width={118} height={150} alt='' />
                             </div>
