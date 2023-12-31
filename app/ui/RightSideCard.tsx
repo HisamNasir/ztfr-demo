@@ -165,15 +165,15 @@ const RightSideCard = () => {
 
                       </div>
                       <div className='flex flex-col justify-between items-end py-4 col-span-3 row-span-3 sm:row-span-2 sm:col-span-1 w-full h-full'>
-                      <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">features</button>
-                      <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">products</button>
-                      <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase"><Image className='h-[11px]' src={Ztr} alt='' width={122} height={11} /></button>
-                      <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">pricing</button>
-                      <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">advertising</button>
-                      <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">company</button>
-                      <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">careers</button>
-                      <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">my account</button>
-                      <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">newsroom/press</button>
+                      <button className="text-whitetext-[8px] text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">features</button>
+                      <button className="text-whitetext-[8px] text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">products</button>
+                      <button className="text-whitetext-[8px] text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase"><Image className='h-[11px]' src={Ztr} alt='' width={122} height={11} /></button>
+                      <button className="text-whitetext-[8px] text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">pricing</button>
+                      <button className="text-whitetext-[8px] text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">advertising</button>
+                      <button className="text-whitetext-[8px] text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">company</button>
+                      <button className="text-whitetext-[8px] text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">careers</button>
+                      <button className="text-whitetext-[8px] text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">my account</button>
+                      <button className="text-whitetext-[8px] text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">newsroom/press</button>
                       </div>
                       <div className=' relative hidden sm:block col-span-3 w-full h-full'>
                         <div className='flex relative h-full w-full '>
