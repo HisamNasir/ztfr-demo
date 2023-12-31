@@ -175,7 +175,7 @@ const RightSideCard = () => {
                       <div className=' col-span-3 gap-2 hidden md:flex justify-between items-center'>
                         <Image className=' w-auto h-full max-h-[200px] max-w-[334px] ' src={Phone} alt='' width={334} height={200} />
                         <div className='  w-auto h-full flex flex-col gap-2 items-end justify-end '>
-                        <div className=' relative w-auto h-full flex justify-end gap-4'>
+                        <div className=' relative w-auto h-full flex justify-end gap-4 py-3'>
                           <button >
                             <Image className='h-full w-auto max-h-[150px] max-w-[118px]' src={Group1} width={118} height={150} alt='' />
                           </button>
@@ -183,7 +183,7 @@ const RightSideCard = () => {
                             <Image className='h-full w-auto  max-h-[150px] max-w-[118px]' src={Group2} width={118} height={150} alt='' />
                           </button>
                         </div>
-                        <div className=' absolute -bottom-4 flex items-center justify-end gap-4'>
+                        <div className=' absolute -bottom-3 flex items-center justify-end gap-4'>
                           <button onClick={handleScrollleft} className=" bg-transparent -rotate-90 text-gray-400  text-lg"><FaAngleUp /></button>
                           <button onClick={handleScrollright} className=" bg-transparent -rotate-90 text-gray-400  text-lg"><FaAngleDown /></button>
                         </div>
