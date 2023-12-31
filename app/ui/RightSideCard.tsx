@@ -114,8 +114,8 @@ const RightSideCard = () => {
             {/* mid section  */}
             <div className='h-[calc(100%-106px)] '>
               <div className=' grid grid-cols-4 h-full max-w-full max-h-full grid-rows-4 gap-2 px-4'>
-                <div className=' hidden md:block row-span-3 w-full h-full'>
-                <div ref={containerRef} className=' relative hidden row-span-3 md:flex flex-col  h-full w-full max-w-[200px] py-6 gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
+                <div className=' hidden sm:block row-span-3 w-full h-full'>
+                <div ref={containerRef} className=' relative hidden row-span-3 sm:flex flex-col  h-full w-full max-w-[200px] py-6 gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
 
 <AnimatePresence>
   {images.map((imageName, index) => (
@@ -133,10 +133,10 @@ const RightSideCard = () => {
 </AnimatePresence>
 </div>
                 </div>
-                <div className=' relative row-span-3 pt-8 col-span-4 md:col-span-3 h-full'>
+                <div className=' relative row-span-3 pt-8 col-span-4 sm:col-span-3 h-full'>
                 <div className=' absolute top-0 flex justify-end items-center w-full pb-2 px-4 '> 
               <div className='hidden sm:flex items-start w-full'>
-                <Image className=' px-2 mx-auto w-auto md:w-[180px] lg:w-[220px] xl:w-[250px]' src={Ztransfer} alt='Z Transfer' width={253} height={35} />
+                <Image className=' px-2 mx-auto h-auto w-full sm:w-[220px] xl:w-[250px]' src={Ztransfer} alt='Z Transfer' width={253} height={35} />
               </div>
                 <div className="items-center  grid grid-cols-2">
                   <div  className=' h-auto w-4 md:w-4 lg:w-5 ' >
@@ -189,7 +189,7 @@ const RightSideCard = () => {
                     </div>
                 </div>
                 <div className=' col-span-4 w-full h-full'>
-                <div ref={containerRef2} className="flex gap-8 relative scrollbar-hide h-full   snap-x overflow-hidden overflow-x-scroll ">
+                <div ref={containerRef2} className="flex gap-8 relative scrollbar-hide h-full snap-x overflow-hidden overflow-x-scroll ">
                 
                 <AnimatePresence>
                   {images.map((imageName, index) => (
@@ -199,9 +199,9 @@ const RightSideCard = () => {
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: '-100%', opacity: 0 }}
                       transition={{ duration: 1, delay: index * 0.5 }}
-                      className='  snap-start flex h-full w-auto  max-h-[200px] max-w-[200px]'
+                      className='snap-start h-full w-full '
                     >
-                      <Image className='flex h-full w-auto max-h-[200px] max-w-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
+                      <Image className='h-full w-auto max-h-[200px] max-w-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
                     </motion.div>
                   ))}
                 </AnimatePresence>
