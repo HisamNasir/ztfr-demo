@@ -95,7 +95,7 @@ const RightSideCard = () => {
 
       {showSidebar && (
         <motion.div
-          className="fixed z-20 gap-6 top-0 right-0 bg-black h-screen  text-white max-md:w-screen md:w-[700px] 2xl:w-[960px] px-4 "
+          className="fixed z-20 gap-6 top-0 right-0 bg-black h-screen  text-white w-screen  lg:w-1/2 max-w-[960px] px-4 "
           initial={{ x: '100%' }}
           animate={sidebarAnimation}
           exit={{ x: '100%' }}
@@ -103,21 +103,18 @@ const RightSideCard = () => {
         >
           <div className=' h-full relative '>
             {/* top section */}
-            <nav className='h-[53px] pt-4 p-2 flex justify-between items-center gap-4 '>
+            <nav className='h-[53px] py-6 px-2 flex justify-between items-center gap-4 '>
               <div className='flex items-center gap-4 md:gap-8'>
                 <button className="cursor-pointer w-5 h-5" onClick={closeSidebar}>
                   <Image className=' w-5 h-5' src={X} width={20} height={20} alt='Close Sidebar' />
                 </button>
                 <p className=' text-xs md:text-sm'>Menu</p>
               </div>
-
             </nav>
             {/* mid section  */}
             <div className='  h-[86vh] '>
-
-              <div className=' relative grid grid-cols-3  md:grid-cols-4 h-full grid-rows-4 gap-4 '>
-                <div ref={containerRef} className=' relative hidden row-span-3 md:flex flex-col  h-full w-full max-w-[200px] py-6 gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
-
+              <div className='grid grid-cols-3  md:grid-cols-4 h-full w-full grid-rows-4 gap-4 '>
+                <div ref={containerRef} className=' hidden row-span-3 md:flex flex-col max-w-[200px] py-4 gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
                   <AnimatePresence>
                     {images.map((imageName, index) => (
                       <motion.div
@@ -126,9 +123,9 @@ const RightSideCard = () => {
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: '-100%', opacity: 0 }}
                         transition={{ duration: 1, delay: index * 0.5 }}
-                        className=' relative w-auto h-full '
+                        className=' relative w-full h-full '
                       >
-                        <Image className='relative h-auto w-full  max-w-[200px] max-h-[200px]'width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
+                        <Image className='relative h-full w-full aspect-square  max-w-[200px] max-h-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
                       </motion.div>
                     ))}
                   </AnimatePresence>
@@ -136,7 +133,7 @@ const RightSideCard = () => {
                 <div className=' relative h-full w-full row-span-3 col-span-3'>
                   <div className=' w-full right-2 top-2 flex justify-end -translate-y-4 items-center pb-2 px-4 '>
                     <div className='hidden sm:flex items-start w-full '>
-                      <Image className=' px-2 mx-auto w-auto md:w-[180px] lg:w-[220px] xl:w-[250px]' src={Ztransfer} alt='Z Transfer' width={253} height={35} />
+                      <Image className='mx-auto w-auto md:w-[180px] lg:w-[220px] xl:w-[250px]' src={Ztransfer} alt='Z Transfer' width={253} height={35} />
                     </div>
                     <div className="items-center  grid grid-cols-2">
                       <div className=' h-auto w-4 md:w-4 lg:w-5 ' >
@@ -151,66 +148,53 @@ const RightSideCard = () => {
                       />
                     </div>
                   </div>
-                  <div className=' relative h-[90%] content-between  -translate-y-4  w-full gap-6 grid grid-cols-3 grid-rows-3'>
-                    <div className=' hidden hover:scale-95 transition-transform duration-300  col-span-2 row-span-2 sm:flex items-center justify-center '>
-                      <div className='w-full h-full  flex items-center justify-center'>
-                        <Image className='h-full w-auto max-h-[400px] max-w-[400px]' src={MainImg} alt='' width={400} height={400} />
-                      </div>
+                  <div className=' relative h-[90%] content-between w-full'>
+                    <div className=' absolute bottom-2 left-0 flex-col hidden sm:flex gap-4'>
+                      <button onClick={handleScrollUp} className="  bg-transparent text-gray-400 text-lg"><FaAngleUp /></button>
+                      <button onClick={handleScrollDown} className=" bg-transparent text-gray-400 text-lg"><FaAngleDown /></button>
                     </div>
-                    <div className=' row-span-2 w-full h-full max-sm:row-span-2 max-sm:col-span-3 '>
-                      <div className='px-1 pt-4  flex flex-col h-full row-span-3 sm:row-span-2 max-h-[420px] justify-between  sm:text-end items-start sm:items-end '>
-                        <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">features</button>
-                        <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">products</button>
-                        <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase"><Image className='h-[11px]' src={Ztr} alt='' width={122} height={11} /></button>
-                        <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">pricing</button>
-                        <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">advertising</button>
-                        <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">company</button>
-                        <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">careers</button>
-                        <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">my account</button>
-                        <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">newsroom/press</button>
+                    <div className='px-8 h-full content-between w-full gap-6 grid grid-cols-3 grid-rows-3'>
+                      <div className=' hidden hover:scale-95 transition-transform duration-300  col-span-2 row-span-2 sm:flex items-center justify-center '>
+                        <div className='w-full h-full  flex items-center '>
+                          <Image className='w-auto h-full max-h-[400px] max-w-[400px]' src={MainImg} alt='' width={400} height={400} />
+                        </div>
                       </div>
-                    </div>
-                    <div className=' col-span-2  hidden md:flex items-center  '>
-                      <div className='col-span-3 gap-2 flex h-full w-full items-end justify-center'>
-                        <div className=' flex-col hidden sm:flex gap-4'>
-                          <button onClick={handleScrollUp} className="  bg-transparent text-gray-400 text-lg"><FaAngleUp /></button>
-                          <button onClick={handleScrollDown} className=" bg-transparent text-gray-400 text-lg"><FaAngleDown /></button>
+                      <div className=' row-span-2 w-full h-full flex items-center justify-end max-sm:row-span-2 max-sm:col-span-3 '>
+                        <div className=' py-2   flex flex-col h-full row-span-3 sm:row-span-2 max-h-[420px] justify-between  sm:text-end items-end '>
+                          <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">features</button>
+                          <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">products</button>
+                          <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase"><Image className='h-[11px]' src={Ztr} alt='' width={122} height={11} /></button>
+                          <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">pricing</button>
+                          <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">advertising</button>
+                          <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">company</button>
+                          <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">careers</button>
+                          <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">my account</button>
+                          <button className="text-whitetext-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">newsroom/press</button>
+                        </div>
+                      </div>
+                      <div className=' col-span-3 gap-2 hidden md:flex justify-between items-center'>
+                        <Image className=' w-auto h-full max-h-[200px] max-w-[334px] ' src={Phone} alt='' width={334} height={200} />
+                        <div className='  w-auto h-full flex flex-col gap-2 items-end justify-end '>
+                        <div className=' relative w-auto h-full flex justify-end gap-4'>
+                          <button >
+                            <Image className='h-full w-auto max-h-[150px] max-w-[118px]' src={Group1} width={118} height={150} alt='' />
+                          </button>
+                          <button>
+                            <Image className='h-full w-auto  max-h-[150px] max-w-[118px]' src={Group2} width={118} height={150} alt='' />
+                          </button>
+                        </div>
+                        <div className=' absolute -bottom-4 flex items-center justify-end gap-4'>
+                          <button onClick={handleScrollleft} className=" bg-transparent -rotate-90 text-gray-400  text-lg"><FaAngleUp /></button>
+                          <button onClick={handleScrollright} className=" bg-transparent -rotate-90 text-gray-400  text-lg"><FaAngleDown /></button>
                         </div>
 
-                        <button className=' relative hidden sm:flex col-span-2 w-full h-full'>
-                          
-                            <Image className=' w-auto h-auto max-h-[200px] max-w-[334px] ' src={Phone} alt='' width={334} height={200} />
-                          
-
-                        </button>
-                      </div>
-                    </div>
-                    <div className=' hidden md:flex items-center' style={{ width: 'calc(100% + 60px)' }}>
-                     
-                        <div className=' relative flex flex-col gap-2 items-center '>
-                          <div className=' w-auto h-full -translate-x-[60px] flex gap-4'>
-                            <button>
-                              <Image className='w-full h-auto max-h-[150px] max-w-[118px]' src={Group1} width={118} height={150} alt='' />
-                            </button>
-                            <button>
-                              <Image className='w-full h-auto  max-h-[150px] max-w-[118px]' src={Group2} width={118} height={150} alt='' />
-                            </button>
-
-                          </div>
-                          <div className=' absolute -bottom-8 right-[60px] flex justify-center gap-4'>
-                            <button onClick={handleScrollleft} className=" bg-transparent -rotate-90 text-gray-400  text-lg"><FaAngleUp /></button>
-                            <button onClick={handleScrollright} className=" bg-transparent -rotate-90 text-gray-400  text-lg"><FaAngleDown /></button>
-                          </div>
                         </div>
+                      </div>
                     </div>
                   </div>
-
                 </div>
-
-
-                <div className=' col-span-4 max-sm:row-span-2 w-full h-full flex items-center'>
-                  <div ref={containerRef2} className="  grid grid-flow-col aspect-w-1 aspect-h-1  gap-8 scrollbar-hide items-center snap-x overflow-hidden h-full overflow-x-scroll  w-full">
-
+                <div className=' col-span-4 max-sm:row-span-2 w-full h-full max-h-[200px] flex'>
+                  <div ref={containerRef2} className=" grid grid-flow-col gap-8 scrollbar-hide items-center snap-x overflow-hidden h-auto w-full overflow-x-scroll">
                     <AnimatePresence>
                       {images.map((imageName, index) => (
                         <motion.div
@@ -219,21 +203,16 @@ const RightSideCard = () => {
                           animate={{ y: 0, opacity: 1 }}
                           exit={{ y: '-100%', opacity: 0 }}
                           transition={{ duration: 1, delay: index * 0.5 }}
-                          className=' relative h-full w-auto  aspect-w-1 aspect-h-1'
-                        >
-                          <Image className='relative h-auto w-auto aspect-w-1 aspect-h-1  max-w-[200px] max-h-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
+                          className=' relative h-full w-full'>
+                          <Image className='relative h-full w-auto aspect-w-1 aspect-h-1  max-w-[200px] max-h-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
                         </motion.div>
                       ))}
                     </AnimatePresence>
                   </div>
                 </div>
-
-
               </div>
-
             </div>
             {/* bot section  */}
-
             <footer className='h-[53px] absolute bottom-0 px-6 row-span-1 w-full flex items-center '>
               <div className=' flex  w-full items-center '>
                 <div className='flex items-center'>
