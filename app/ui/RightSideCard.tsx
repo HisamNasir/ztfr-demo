@@ -15,14 +15,12 @@ import btn4 from "@/public/assets/sidebar/buttons/btn (4).svg";
 import btn5 from "@/public/assets/sidebar/buttons/btn (5).svg";
 import btn6 from "@/public/assets/sidebar/buttons/btn (6).svg";
 import btn7 from "@/public/assets/sidebar/buttons/btn (7).svg";
-import FootImg4 from "@/public/assets/sidebar/foot.png";
 import MainImg from "@/public/assets/sidebar/main.png";
 import Phone from "@/public/assets/sidebar/iphone.png";
 import Ztr from "@/public/assets/sidebar/ztr.png";
 import Group1 from "@/public/assets/sidebar/Group 1.png";
 import Group2 from "@/public/assets/sidebar/Group 2.png";
 import ProfileBtn from './ProfileBtn';
-import { button } from '@nextui-org/react';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 
 const images = ["/assets/sidebar/1.png", "/assets/sidebar/2.png", "/assets/sidebar/3.png", "/assets/sidebar/4.png", "/assets/sidebar/5.png", "/assets/sidebar/6.png", "/assets/sidebar/7.png"];
@@ -115,47 +113,47 @@ const RightSideCard = () => {
             <div className='h-[calc(100%-106px)] '>
               <div className=' grid grid-cols-4 max-w-full max-h-full grid-rows-4 gap-2 px-4'>
                 <div className=' hidden sm:block row-span-3 w-full h-full'>
-                <div ref={containerRef} className=' relative hidden row-span-3 sm:flex flex-col  h-full w-full max-w-[200px] py-6 gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
+                  <div ref={containerRef} className=' relative hidden row-span-3 sm:flex flex-col  h-full w-full max-w-[200px] py-6 gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
 
-  {images.map((imageName, index) => (
+                    {images.map((imageName, index) => (
 
-      // eslint-disable-next-line react/jsx-key
-      <Image className='relative h-auto w-full  max-w-[200px] max-h-[200px]'width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
-  ))}
-</div>
+                      // eslint-disable-next-line react/jsx-key
+                      <Image className='relative h-auto w-full  max-w-[200px] max-h-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
+                    ))}
+                  </div>
                 </div>
                 <div className=' relative row-span-3 pt-8 col-span-4 sm:col-span-3 h-full'>
-                <div className=' absolute top-0 flex justify-end items-center w-full pb-2 px-4 '> 
-              <div className='hidden sm:flex items-start w-full'>
-                <Image className=' px-2 mx-auto h-auto w-full sm:w-[220px] xl:w-[250px]' src={Ztransfer} alt='Z Transfer' width={253} height={35} />
-              </div>
-                <div className="items-center  grid grid-cols-2">
-                  <div  className=' h-auto w-4 md:w-4 lg:w-5 ' >
-                    <ProfileBtn />
+                  <div className=' absolute top-0 flex justify-end items-center w-full pb-2 px-4 '>
+                    <div className='hidden sm:flex items-start w-full'>
+                      <Image className=' px-2 mx-auto h-auto w-full sm:w-[220px] xl:w-[250px]' src={Ztransfer} alt='Z Transfer' width={253} height={35} />
+                    </div>
+                    <div className="items-center  grid grid-cols-2">
+                      <div className=' h-auto w-4 md:w-4 lg:w-5 ' >
+                        <ProfileBtn />
+                      </div>
+                      <Image
+                        alt="UK Flag"
+                        width={100}
+                        height={100}
+                        className=" w-6 md:w-9 lg:w-8 lg:h-8 xl:w-[50px] xl:h-[40px]"
+                        src={UK}
+                      />
+                    </div>
                   </div>
-                  <Image
-                    alt="UK Flag"
-                    width={100}
-                    height={100}
-                    className=" w-6 md:w-9 lg:w-8 lg:h-8 xl:w-[50px] xl:h-[40px]"
-                    src={UK}
-                  />
-                </div>
-              </div>
                   <div className=' hidden md:flex absolute z-10 bottom-4  flex-col gap-2'>
-                        <button onClick={handleScrollUp} className=" w-full bg-transparent text-gray-400  text-xl"><FaAngleUp /></button>
-                        <button onClick={handleScrollDown} className="w-full bg-transparent text-gray-400 text-xl"><FaAngleDown /></button>
+                    <button onClick={handleScrollUp} className=" w-full bg-transparent text-gray-400  text-xl"><FaAngleUp /></button>
+                    <button onClick={handleScrollDown} className="w-full bg-transparent text-gray-400 text-xl"><FaAngleDown /></button>
                   </div>
                   <div className=' absolute z-10 bottom-0 right-4 gap-2 flex'>
-                        <button onClick={handleScrollleft} className=" w-full bg-transparent -rotate-90 text-gray-400 text-xl"><FaAngleUp /></button>
-                        <button onClick={handleScrollright} className="w-full bg-transparent -rotate-90 text-gray-400 text-xl"><FaAngleDown /></button>
+                    <button onClick={handleScrollleft} className=" w-full bg-transparent -rotate-90 text-gray-400 text-xl"><FaAngleUp /></button>
+                    <button onClick={handleScrollright} className="w-full bg-transparent -rotate-90 text-gray-400 text-xl"><FaAngleDown /></button>
                   </div>
-                    <div className=' grid grid-cols-3 grid-rows-3 gap-2 w-full p-6 h-full'>
-                      <div className='hidden sm:flex col-span-2 row-span-2 w-full h-full '>
+                  <div className=' grid grid-cols-3 grid-rows-3 gap-2 w-full p-6 h-full'>
+                    <div className='hidden sm:flex col-span-2 row-span-2 w-full h-full '>
                       <Image className=' h-full w-auto max-w-[400px] max-h-[400px]' src={MainImg} alt=' ' width={400} height={400} />
 
-                      </div>
-                      <div className='flex flex-col justify-between items-end py-4 col-span-3 row-span-3 sm:row-span-2 sm:col-span-1 w-full h-full'>
+                    </div>
+                    <div className='flex flex-col justify-between items-end py-4 col-span-3 row-span-3 sm:row-span-2 sm:col-span-1 w-full h-full'>
                       <button className="text-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">features</button>
                       <button className="text-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">products</button>
                       <button className=""><Image className='maxh-[11px]' src={Ztr} alt='' width={122} height={11} /></button>
@@ -165,28 +163,28 @@ const RightSideCard = () => {
                       <button className="text-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">careers</button>
                       <button className="text-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">my account</button>
                       <button className="text-[8px] md:text-[10px] lg:text-xs  xl:text-[16px] tracking-widest pb-1 md:pb-1 uppercase">newsroom/press</button>
-                      </div>
-                      <div className=' relative hidden sm:block col-span-3 w-full h-full'>
-                        <div className='flex relative h-full w-auto '>
-                          <Image className=' h-full w-auto  max-h-[200px] max-w-[334px] ' src={Phone} alt='' width={334} height={200} />
+                    </div>
+                    <div className=' relative hidden sm:block col-span-3 w-full h-full'>
+                      <div className='flex relative h-full w-auto '>
+                        <Image className=' h-full w-auto  max-h-[200px] max-w-[334px] ' src={Phone} alt='' width={334} height={200} />
 
                         <div className='flex  gap-4 h-full w-full items-center justify-end ml-4'>
-                                <Image className='h-full w-full  max-h-[150px] max-w-[118px]' src={Group1} width={118} height={150} alt='' />
-                                <Image className='h-full w-full  max-h-[150px] max-w-[118px]'  src={Group2} width={118} height={150} alt='' />
-                            </div>
+                          <Image className='h-full w-full  max-h-[150px] max-w-[118px]' src={Group1} width={118} height={150} alt='' />
+                          <Image className='h-full w-full  max-h-[150px] max-w-[118px]' src={Group2} width={118} height={150} alt='' />
                         </div>
-
                       </div>
+
                     </div>
+                  </div>
                 </div>
                 <div className=' col-span-4 w-full h-full'>
-                <div ref={containerRef2} className="flex gap-8 relative scrollbar-hide h-full snap-x overflow-hidden overflow-x-scroll ">
-                
-                  {images.map((imageName, index) => (
-    
+                  <div ref={containerRef2} className="flex gap-8 relative scrollbar-hide h-full snap-x overflow-hidden overflow-x-scroll ">
+
+                    {images.map((imageName, index) => (
+
                       <Image key={1} className='h-full w-auto max-h-[200px] max-w-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
-                  ))}
-              </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
