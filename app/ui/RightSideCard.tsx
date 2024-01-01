@@ -117,20 +117,11 @@ const RightSideCard = () => {
                 <div className=' hidden sm:block row-span-3 w-full h-full'>
                 <div ref={containerRef} className=' relative hidden row-span-3 sm:flex flex-col  h-full w-full max-w-[200px] py-6 gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
 
-<AnimatePresence>
   {images.map((imageName, index) => (
-    <motion.div
-      key={index}
-      initial={{ x: '100%', opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      exit={{ x: '-100%', opacity: 0 }}
-      transition={{ duration: 1, delay: index * 0.5 }}
-      className=' relative w-auto h-full '
-    >
+
+      // eslint-disable-next-line react/jsx-key
       <Image className='relative h-auto w-full  max-w-[200px] max-h-[200px]'width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
-    </motion.div>
   ))}
-</AnimatePresence>
 </div>
                 </div>
                 <div className=' relative row-span-3 pt-8 col-span-4 sm:col-span-3 h-full'>
