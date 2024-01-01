@@ -168,9 +168,9 @@ const RightSideCard = () => {
                       <div className='flex relative h-full w-auto '>
                         <Image className=' h-full w-auto  max-h-[200px] max-w-[334px] ' src={Phone} alt='' width={334} height={200} />
 
-                        <div className='flex  gap-4 h-full w-full items-center justify-end ml-4'>
-                          <Image className='h-full w-full  max-h-[150px] max-w-[118px]' src={Group1} width={118} height={150} alt='' />
-                          <Image className='h-full w-full  max-h-[150px] max-w-[118px]' src={Group2} width={118} height={150} alt='' />
+                        <div className='flex  gap-4 h-full w-auto items-center justify-center ml-4'>
+                          <Image className='h-full w-auto  max-h-[150px] max-w-[118px]' src={Group1} width={118} height={150} alt='' />
+                          <Image className='h-full w-auto  max-h-[150px] max-w-[118px]' src={Group2} width={118} height={150} alt='' />
                         </div>
                       </div>
 
