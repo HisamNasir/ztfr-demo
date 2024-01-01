@@ -118,7 +118,7 @@ const RightSideCard = () => {
                     {images.map((imageName, index) => (
 
                       // eslint-disable-next-line react/jsx-key
-                      <Image className='relative h-auto w-full  max-w-[200px] max-h-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
+                      <Image key={index} className='relative h-auto w-full  max-w-[200px] max-h-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
                     ))}
                   </div>
                 </div>
@@ -182,7 +182,8 @@ const RightSideCard = () => {
 
                     {images.map((imageName, index) => (
 
-                      <Image key={1} className='h-full w-auto max-h-[200px] max-w-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
+                      // eslint-disable-next-line react/jsx-key
+                      <Image key={index} className='h-full w-auto max-h-[200px] max-w-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
                     ))}
                   </div>
                 </div>
