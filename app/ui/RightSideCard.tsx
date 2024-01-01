@@ -95,7 +95,7 @@ const RightSideCard = () => {
 
       {showSidebar && (
         <motion.div
-          className="fixed z-20 gap-6 top-0 right-0 bg-black h-screen  text-white w-full md:w-full  md:max-w-[960px]"
+          className="fixed z-20 gap-6 top-0 right-0 bg-black h-screen  text-white aspect-square max-w-full  md:max-w-[960px]"
           initial={{ x: '100%' }}
           animate={sidebarAnimation}
           exit={{ x: '100%' }}
@@ -179,9 +179,9 @@ const RightSideCard = () => {
                         <div className='flex relative h-full w-auto '>
                           <Image className=' h-full w-auto  max-h-[200px] max-w-[334px] ' src={Phone} alt='' width={334} height={200} />
 
-                        <div className='flex relative gap-4 h-full w-full items-center justify-end ml-4'>
-                                <Image className='h-full w-auto  max-h-[150px] max-w-[118px]' src={Group1} width={118} height={150} alt='' />
-                                <Image className='h-full w-auto  max-h-[150px] max-w-[118px]'  src={Group2} width={118} height={150} alt='' />
+                        <div className='flex  gap-4 h-full w-full items-center justify-end ml-4'>
+                                <Image className='h-full w-full  max-h-[150px] max-w-[118px]' src={Group1} width={118} height={150} alt='' />
+                                <Image className='h-full w-full  max-h-[150px] max-w-[118px]'  src={Group2} width={118} height={150} alt='' />
                             </div>
                         </div>
 
@@ -191,20 +191,10 @@ const RightSideCard = () => {
                 <div className=' col-span-4 w-full h-full'>
                 <div ref={containerRef2} className="flex gap-8 relative scrollbar-hide h-full snap-x overflow-hidden overflow-x-scroll ">
                 
-                <AnimatePresence>
                   {images.map((imageName, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ y: '100%', opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      exit={{ y: '-100%', opacity: 0 }}
-                      transition={{ duration: 1, delay: index * 0.5 }}
-                      className='snap-start h-full w-full '
-                    >
-                      <Image className='h-full w-auto max-h-[200px] max-w-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
-                    </motion.div>
+    
+                      <Image key={1} className='h-full w-auto max-h-[200px] max-w-[200px]' width={200} height={200} src={imageName} alt={`Image ${index + 1}`} />
                   ))}
-                </AnimatePresence>
               </div>
                 </div>
               </div>
