@@ -33,31 +33,31 @@ const SignUpComp = () => {
 <div className='sm:max-w-[450px] space-y-4 '>
 
       <input
-        className='flex items-center outline outline-gray-300 outline-2 rounded-xl w-full max-w-[450px] p-2  tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
+        className='flex items-center outline outline-gray-300 outline-2  rounded-lg w-full max-w-[450px] p-2  tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
         placeholder="EMAIL"
         type='email'
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
-        className='flex items-center outline outline-gray-300 outline-2 rounded-xl w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
+        className='flex items-center outline outline-gray-300 outline-2  rounded-lg w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
         type="text"
         placeholder="First NAME"
       />
       <input
-        className='flex items-center outline outline-gray-300 outline-2 rounded-xl w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
+        className='flex items-center outline outline-gray-300 outline-2  rounded-lg w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
         type="text"
         placeholder="LAST NAME"
       />
       <input
-        className='flex items-center outline outline-gray-300 outline-2 rounded-xl w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
+        className='flex items-center outline outline-gray-300 outline-2  rounded-lg w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
         type="text"
         placeholder="ORGANISATION (OPTIONAL)"
       />
       <input
-        className='flex items-center outline outline-gray-300 outline-2 rounded-xl w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
+        className='flex items-center outline outline-gray-300 outline-2  rounded-lg w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
         type="password"
-        placeholder="Password"
+        placeholder="PASSWORD"
         onChange={(e) => setPassword(e.target.value)}
       />
       {error && (
@@ -65,7 +65,7 @@ const SignUpComp = () => {
           {error}
         </div>
       )}
-      <div className=' text-[8px] md:text-[10px] pt-2 leading-5 text-left max-w-[450px]'>By creating an USER ID, you agree to our <br />
+      <div className=' text-[6px] lg:text-[8px] xl:text-[10px]  text-left max-w-[450px]'>By creating an USER ID, you agree to our <br />
         Terms of Service and Privacy & Cookie Statement.</div>
 </div>
 
