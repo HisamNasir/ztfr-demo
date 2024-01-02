@@ -5,7 +5,7 @@ import { TextField, CircularProgress } from "@mui/material";
 import Image from 'next/image';
 import Tick from '@/public/assets/SignBtn.png';
 import { useRouter } from 'next/navigation';
-import { Input } from '@nextui-org/react';
+import { input } from '@nextui-org/react';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -31,20 +31,14 @@ const SignIn = () => {
 
   return (
     <form className='space-y-4 mt-2 w-full'>
-      <Input
-        label="Email"
-        variant="bordered"
-        size="md"
-        fullWidth
+      <input
+        placeholder="EMAIL"
         type='email'
         className=' sm:max-w-[450px]  bg-white'
         onChange={(e) => setEmail(e.target.value)}
       />
-      <Input
-        label="Password"
-        variant="bordered"
-        size="md"
-        fullWidth
+      <input
+        placeholder="Password"
         type='password'
         className=' sm:max-w-[450px] bg-white'
         onChange={(e) => setPassword(e.target.value)}
