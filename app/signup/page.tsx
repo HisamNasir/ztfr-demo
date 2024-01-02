@@ -34,7 +34,7 @@ const Signup = () => {
 
           </div>
 
-        <div className='flex w-full lg:w-[553px] '>
+        <div className='flex w-full justify-center lg:w-[553px] h-[470px]  xl:h-[470px]  '>
           <SignupForm />
         </div>
 

@@ -30,17 +30,17 @@ const SignIn = () => {
   };
 
   return (
-    <form className='space-y-4 w-full'>
+    <form className='space-y-4 w-full max-h-[458px]'>
       <input
         placeholder="EMAIL"
         type='email'
-        className='flex items-center outline outline-gray-300 outline-2  rounded-lg w-full p-2 max-w-[450px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
+        className='flex items-center xl:h-[63px] outline outline-gray-300 outline-2  rounded-lg w-full p-2 max-w-[450px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         placeholder="PASSWORD"
         type='password'
-        className='flex items-center outline outline-gray-300 outline-2  rounded-lg w-full p-2 max-w-[450px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
+        className='flex items-center xl:h-[63px] outline outline-gray-300 outline-2  rounded-lg w-full p-2 max-w-[450px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
         onChange={(e) => setPassword(e.target.value)}
       />
       <div className=' max-w-[450px]'>
