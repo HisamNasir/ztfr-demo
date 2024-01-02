@@ -103,10 +103,10 @@ const RightSideCard = () => {
         >
           <div className=' h-full relative '>
             {/* top section */}
-            <nav className='px-6 pb-4 pt-4 flex  left-5 top-5 justify-between items-center gap-4 '>
+            <nav className='px-6 pt-4 flex  left-5 top-5 justify-between items-center gap-4 '>
               <div className='flex items-center gap-4 md:gap-8'>
-                <div className="cursor-pointer w-5 h-5" onClick={closeSidebar}>
-                  <Image className=' w-5 h-5' src={X} width={20} height={20} alt='Close Sidebar' />
+                <div className="cursor-pointer" onClick={closeSidebar}>
+                  <Image className='w-3 md:w-4 xl:w-5 h-auto' src={X} width={20} height={20} alt='Close Sidebar' />
                 </div>
                 <p className=' text-xs md:text-sm'>Menu</p>
               </div>
@@ -118,7 +118,7 @@ const RightSideCard = () => {
                   <div className=' hidden w-full sm:block'>
                   </div>
                   <div className='hidden sm:flex items-center justify-center w-full'>
-                    <Image className=' px-2 mx-auto h-auto w-full sm:w-[220px] max-w-[250px]' src={Ztransfer} alt='Z Transfer' width={253} height={35} />
+                    <Image className=' px-2 mx-auto h-auto w-[200px] md:w-[210px] xl:w-[250px]' src={Ztransfer} alt='Z Transfer' width={253} height={35} />
                   </div>
                   <div className="items-center w-full flex justify-end gap-4">
                     <div className=' h-full w-auto py-2 ' >
@@ -175,7 +175,7 @@ const RightSideCard = () => {
                         <Image className=' h-full w-full  max-h-[200px] max-w-[334px] object-cover rounded-xl' src={Phone} alt='' width={334} height={200} />
                       </div>
 
-                      <div className='flex items-center justify-end h-[75%] w-full gap-2'>
+                      <div className='flex items-center justify-end h-full py-4 w-full gap-2'>
                         <Image className='h-full w-full max-w-[118px] max-h-[150px] object-cover rounded-xl' src={Group1} width={118} height={150} alt='' />
                         <Image className='h-full w-full max-w-[118px] max-h-[150px] object-cover rounded-xl' src={Group2} width={118} height={150} alt='' />
                       </div>
@@ -198,9 +198,9 @@ const RightSideCard = () => {
             {/* bot section  */}
 
             <footer className='h-[13px] absolute px-10 bottom-5  row-span-1 w-full flex items-center '>
-              <div className=' grid grid-cols-3 gap-2  w-full max-h-[18px]'>
+              <div className=' grid grid-cols-3 gap-10  w-full max-h-[18px]'>
                 <div className='flex items-center w-full'>
-                  <Image className=' max-w-[191px] w-full h-auto px-1' src={FootImg1} width={191} height={18} alt='' />
+                  <Image className='  max-w-[191px] w-full h-auto px-1' src={FootImg1} width={191} height={18} alt='' />
                 </div>
                 <div className=' flex justify-center items-center w-full'>
                   <Image className=' max-w-[191px] w-full h-auto px-1' src={FootImg2} width={191} height={11} alt='' />
