@@ -149,7 +149,7 @@ const RightSideCard = () => {
                       <button onClick={handleScrollDown} className="w-full h-auto"><Image alt='' className=' h-auto w-full rotate-90 max-h-[11px]' src={Right} width={5} height={11} /></button>
                     </div>
                   </div>
-                  <div className=' absolute hidden sm:flex justify-end  w-full h-[11px] z-10 bottom-3 right-0 '>
+                  <div className=' absolute hidden sm:flex justify-end  w-full h-[11px] z-10 bottom-5 right-0 '>
                     <div className='flex justify-between items-center max-h-[11px] w-[41px] mx-8'>
                       <button onClick={handleScrollleft} className="  w-auto h-full"><Image alt='' className=' w-auto h-full max-h-[11px] ' src={Left} width={5} height={11} /></button>
                       <button onClick={handleScrollright} className=" w-auto h-full"><Image alt='' className=' w-auto h-full max-h-[11px] ' src={Right} width={5} height={11} /></button>
