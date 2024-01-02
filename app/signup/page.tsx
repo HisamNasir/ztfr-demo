@@ -18,7 +18,7 @@ const Signup = () => {
   };
   return (
     <div className='relative h-screen flex items-center transition-all duration-500'>
-      <div className='absolute top-0 p-4 lg:p-6'>
+      <div className='absolute top-0 -z-10 p-4 lg:p-6'>
         <GroupText/>
         
       </div>
@@ -35,7 +35,7 @@ const Signup = () => {
           </div>
 
         <div className='flex w-full lg:w-[553px] '>
-          {/* <SignupForm /> */}
+          <SignupForm />
         </div>
 
       </div>

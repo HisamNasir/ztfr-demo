@@ -4,7 +4,7 @@ import { TextField, CircularProgress } from "@mui/material";
 import { auth } from '@/app/lib/firebase'
 import Image from 'next/image';
 import Tick from '@/public/assets/SignBtn.png'
-import { Input } from '@nextui-org/react';
+import { input } from '@nextui-org/react';
 
 
 const SignUpComp = () => {
@@ -28,42 +28,36 @@ const SignUpComp = () => {
     }
   };
   return (
-    <form className=' space-y-4 mt-2 w-full '>
+    <form className=' space-y-4 w-full '>
 
-<div className='sm:max-w-[450px]  space-y-4 '>
+<div className='sm:max-w-[450px] space-y-4 '>
 
-      <Input
-        label="Email"
-        variant="bordered"
-        size="md"
-        fullWidth
+      <input
+        className='flex items-center outline outline-gray-300 outline-2 rounded-xl w-full h-[34pc] md:h-[40px] max-w-[450px] 2xl:h-[56px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
+        placeholder="EMAIL"
         type='email'
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <Input size='md'
-        className='rounded-xl bg-white'
-        variant='bordered' fullWidth
+      <input
+        className='flex items-center outline outline-gray-300 outline-2 rounded-xl w-full h-[34pc] md:h-[40px] max-w-[450px] 2xl:h-[56px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
         type="text"
-        label="First NAME"
+        placeholder="First NAME"
       />
-      <Input size='md'
-        className=' bg-white'
-        variant='bordered' fullWidth
+      <input
+        className='flex items-center outline outline-gray-300 outline-2 rounded-xl w-full h-[34pc] md:h-[40px] max-w-[450px] 2xl:h-[56px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
         type="text"
-        label="LAST NAME"
+        placeholder="LAST NAME"
       />
-      <Input size='md'
-        className='rounded-xl bg-white'
-        variant='bordered' fullWidth
+      <input
+        className='flex items-center outline outline-gray-300 outline-2 rounded-xl w-full h-[34pc] md:h-[40px] max-w-[450px] 2xl:h-[56px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
         type="text"
-        label="ORGANISATION (OPTIONAL)"
+        placeholder="ORGANISATION (OPTIONAL)"
       />
-      <Input size='md'
-        className='rounded-xl bg-white'
-        variant='bordered' fullWidth
+      <input
+        className='flex items-center outline outline-gray-300 outline-2 rounded-xl w-full h-[34pc] md:h-[40px] max-w-[450px] 2xl:h-[56px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
         type="password"
-        label="Password"
+        placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
       />
       {error && (
