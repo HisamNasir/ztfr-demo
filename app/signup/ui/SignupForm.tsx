@@ -42,7 +42,7 @@ const SignupForm = () => {
         </button>
       </div>
       <div className='sm:max-w-[450px]'>
-      <button className='flex items-center outline outline-gray-300 outline-2 rounded-xl w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
+      <button className='flex items-center outline outline-gray-300 outline-2  rounded-lg w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
       onClick={handleGoogleSignIn}><Image className=' w-4 md:w-[20px] lg:w-[25px] 2xl:w-[37px] h-auto' height={30} width={30} alt='' src={GoogleLogo}/> <span className=' text-xs 2xl:text-sm'>CONTINUE WITH GOOGLE</span></button>
       </div>
     <div className='flex justify-center my-1 xl:my-2 text-2xl 2xl:text-3xl sm:max-w-[450px] text-[#BE9F56]'>or</div>
