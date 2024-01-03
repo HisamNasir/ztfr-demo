@@ -68,7 +68,7 @@ const LeftSideCard = () => {
         LOGO
       </button>
     )}
-    <div className="flex transition-colors duration-500 relative h-[309px] lg:h-[409px] 2xl:h-[489px] w-[210px] md:w-[260px] 2xl:w-[310px] rounded-2xl  bg-black text-white">
+    <div className="flex transition-colors duration-500 relative h-[309px]  2xl:h-[489px] w-[210px] md:w-[260px] 2xl:w-[310px] rounded-2xl  bg-black text-white">
       <div id="first-card">
         <div className="absolute right-4 top-4 text-xs 2xl:text-sm">
           <FaLock />

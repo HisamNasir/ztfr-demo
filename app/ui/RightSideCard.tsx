@@ -81,13 +81,13 @@ const RightSideCard = () => {
     <div className="relative ">
       <button onClick={openSidebar}>
         <div className="" >
-          <div id="card" className="uppercase bg-black transition-colors duration-500s absolute right-0 items-center rounded-t-xl top-1/2 text-white h-8 w-36 md:h-10 md:w-41 lg:h-12 lg:w-52 translate-x-[56px] md:translate-x-[52px] lg:translate-x-[80px] flex justify-center -rotate-90">
+          <div id="card" className="uppercase bg-black transition-colors duration-500s absolute right-0 items-center rounded-t-xl top-1/2 text-white h-8 w-36 xl:h-10 xl:w-41 2xl:h-12 2xl:w-52 translate-x-[56px] xl:translate-x-[52px] 2xl:translate-x-[80px] flex justify-center -rotate-90">
             {showSvg ? (
               <div className="relative rotate-90">
-                <Image className='w-[10px] md:w-[15px] lg:w-[20px]' src={AVAV} alt='' width={90} height={22} />
+                <Image className='w-[10px] xl:w-[15px] 2xl:w-[20px]' src={AVAV} alt='' width={90} height={22} />
               </div>
             ) : (
-              <p className="text-sm md:text-lg lg:text-2xl font-light">menu</p>
+              <p className="text-sm xl:text-lg 2xl:text-2xl font-light">menu</p>
             )}
           </div>
         </div>
@@ -133,7 +133,7 @@ const RightSideCard = () => {
                     />
                   </div>
                 </div>
-                <div className=' hidden sm:block row-span-3 w-full h-full max-w-[200px]'>
+                <div className=' hidden sm:block row-span-3 h-full  w-[90px] xl:w-[100px] 2xl:w-[200px]'>
                   <div ref={containerRef} className=' relative hidden row-span-3 sm:flex flex-col  h-full w-full max-w-[200px] py-6 gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
 
                     {images.map((imageName, index) => (
@@ -183,7 +183,7 @@ const RightSideCard = () => {
                     </div>
                   </div>
                 </div>
-                <div className=' col-span-4 w-full h-full  max-h-[200px]'>
+                <div className=' col-span-4 w-full h-[90px] xl:h-[100px] 2xl:h-[200px]'>
                   <div ref={containerRef2} className="flex gap-8 relative scrollbar-hide h-full snap-x overflow-hidden overflow-x-scroll ">
 
                     {images.map((imageName, index) => (
@@ -200,10 +200,10 @@ const RightSideCard = () => {
             <footer className='h-[13px] absolute px-10 bottom-5  row-span-1 w-full flex items-center '>
               <div className=' grid grid-cols-3 gap-10  w-full max-h-[18px]'>
                 <div className='flex items-center w-full'>
-                  <Image className='  max-w-[191px] w-full h-auto px-1' src={FootImg1} width={191} height={18} alt='' />
+                  <Image className=' max-md:w-[120px] xl:w-[160px]  2xl:w-[191px] w-full h-auto px-1' src={FootImg1} width={191} height={18} alt='' />
                 </div>
                 <div className=' flex justify-center items-center w-full'>
-                  <Image className=' max-w-[191px] w-full h-auto px-1' src={FootImg2} width={191} height={11} alt='' />
+                  <Image className='max-md:w-[120px] xl:w-[160px]  2xl:w-[191px] w-full h-auto px-1' src={FootImg2} width={191} height={11} alt='' />
                 </div>
                 <div className='flex gap-2 justify-end items-center px-1'>
                   <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square w-full   max-w-[18px]' src={btn} width={25} height={25} alt='' />
