@@ -34,13 +34,13 @@ const SignIn = () => {
       <input
         placeholder="EMAIL"
         type='email'
-        className='flex items-center lg:h-[50px] 2xl:h-[63px] outline outline-gray-300 outline-2  rounded-lg w-full p-3 max-w-[450px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
+        className='flex items-center lg:h-[50px] 2xl:h-[63px] outline outline-gray-300 outline-2  rounded-lg w-full p-3 max-w-[450px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm 2xl:text-lg' 
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         placeholder="PASSWORD"
         type='password'
-        className='flex items-center lg:h-[50px] 2xl:h-[63px] outline outline-gray-300 outline-2  rounded-lg w-full p-3 max-w-[450px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
+        className='flex items-center lg:h-[50px] 2xl:h-[63px] outline outline-gray-300 outline-2  rounded-lg w-full p-3 max-w-[450px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm 2xl:text-lg' 
         onChange={(e) => setPassword(e.target.value)}
       />
       {/* Display error message if there is one */}
