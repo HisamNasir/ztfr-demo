@@ -3,7 +3,7 @@ import { FaLock } from 'react-icons/fa'
 
 export default function BottomText() {
   return (
-    <div className=' relative text-[6px] xl:text-[8px] 2xl:text-[10px]'>
+    <div className=' hidden sm:block relative text-[6px] xl:text-[8px] 2xl:text-[10px]'>
     <div className="absolute max-md:w-full px-[25px] py-[12px] xl:px-[50px] xl:py-[24px] bottom-0 left-0 ">
       <div className=" max-sm:flex max-sm:flex-col w-full max-sm:text-center justify-center">
         <div className=' max-sm:flex max-sm:flex-col max-sm:text-center w-full justify-center'>
