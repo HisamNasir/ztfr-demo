@@ -4,13 +4,13 @@ import imageSrc from '@/public/assets/ztfrGold.png'
 const GroupText = () => {
     return (
         <div className="hidden lg:flex   [word-spacing:1vw] tracking-[0.2em] flex-col flex-wrap w-full ">
-            <div className="flex  2xl:pb-1">
+            <div className="flex  ">
                 <p className="text-[8px] xl:text-[10px] 2xl:text-base tracking-[0.1em] ">SEND FILES</p>
                 <p className="text-[8px] xl:text-[10px] 2xl:text-base tracking-[0.1em] ">SEND FOLDERS</p>
                 <p className="text-[8px] xl:text-[10px] 2xl:text-base tracking-[0.1em] ">SHARE IDEAS</p>
                 <p className="text-[8px] xl:text-[10px] 2xl:text-base tracking-[0.1em] ">SHARE TRANSFERS IN MULTIPLE FORMATS</p>
             </div>
-            <div className="flex gap-2 2xl:py-1">
+            <div className="flex gap-2 ">
                 <p className="text-[8px] xl:text-[10px] 2xl:text-base tracking-[0.1em] ">UNLIMITED STORAGE</p>
                 <p className="text-[8px] xl:text-[10px] 2xl:text-base tracking-[0.1em] ">SEND UNLIMITED ON TRANSFERS</p>
                 <p className="text-[8px] xl:text-[10px] 2xl:text-base tracking-[0.1em] ">RECEIVE UNLIMITED ON TRANSFERS</p>
