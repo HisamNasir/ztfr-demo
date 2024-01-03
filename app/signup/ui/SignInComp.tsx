@@ -34,13 +34,13 @@ const SignIn = () => {
       <input
         placeholder="EMAIL"
         type='email'
-        className='flex items-center lg:h-[50px] 2xl:h-[63px] outline outline-gray-300 outline-2  rounded-lg w-full p-3 max-w-[450px] tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg' 
+        className='flex items-center h-[46px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full p-3 max-w-[450px] tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg' 
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         placeholder="PASSWORD"
         type='password'
-        className='flex items-center lg:h-[50px] 2xl:h-[63px] outline outline-gray-300 outline-2  rounded-lg w-full p-3 max-w-[450px] tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg' 
+        className='flex items-center h-[46px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full p-3 max-w-[450px] tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg' 
         onChange={(e) => setPassword(e.target.value)}
       />
       {/* Display error message if there is one */}
@@ -49,11 +49,11 @@ const SignIn = () => {
           {error}
         </div>
       )}
-      <div>
-      <div className=' max-w-[450px]'>
+      <div className='w-full md:flex justify-between relative'>
+      <div className='w-full text-center translate-x-12'>
       <button className='text-[#BE9F56] uppercase  max-w-[450px] tracking-wider text-[8px] lg:text-[10px] 2xl:text-[14px] text-center'>Forgotten your password?</button>
       </div>
-      <div className='flex justify-center md:justify-end  max-w-[500px] md:-translate-y-6'>
+      <div className='flex justify-center md:justify-end 2xl:translate-x-20 max-sm:translate-y-6  max-w-[500px] 2xl:-translate-y-6'>
         <button type='submit' onClick={handleSignIn} disabled={loading}>
           {loading ? (
             <CircularProgress color="inherit" size={24} />

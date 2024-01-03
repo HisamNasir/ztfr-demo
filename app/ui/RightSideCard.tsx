@@ -162,7 +162,7 @@ const RightSideCard = () => {
                     <div className='flex flex-col pt-2 justify-between sm:items-end col-span-3 row-span-3 sm:row-span-2 sm:col-span-1 sm:w-full h-full'>
                       <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">features</button>
                       <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">products</button>
-                      <button className=""><Image className='maxh-[11px]' src={Ztr} alt='' width={122} height={11} /></button>
+                      <button className=""><Image className=' h-auto w-[70px] md:w-[90px] 2xl:w-[128px]' src={Ztr} alt='' width={122} height={11} /></button>
                       <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">pricing</button>
                       <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">advertising</button>
                       <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">company</button>
