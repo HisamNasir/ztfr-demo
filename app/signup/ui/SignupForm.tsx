@@ -27,23 +27,23 @@ const SignupForm = () => {
   };
   return (
     <div className='text-center p-2 max-md:px-10 flex flex-col w-full max-w-[554px]'>
-      <div className='flex justify-between px-8 pb-1 2xl:pb-3 text-sm w-full max-w-[450px] '>
+      <div className='flex justify-between px-8 pb-2 2xl:pb-3 text-sm w-full max-w-[450px] '>
         <button
-          className={`uppercase tracking-wider text-xs md:text-sm 2xl:text-lg ${!isSignUp ? 'text-[#BE9F56]' : ''}`}
+          className={`uppercase tracking-wider text-sm 2xl:text-lg ${!isSignUp ? 'text-[#BE9F56]' : ''}`}
           onClick={() => setIsSignUp(false)}
         >LOG IN
           
         </button>
         <button
-          className={`uppercase tracking-wider text-xs md:text-sm 2xl:text-lg ${isSignUp ? 'text-[#BE9F56]' : ''}`}
+          className={`uppercase tracking-wider text-sm 2xl:text-lg ${isSignUp ? 'text-[#BE9F56]' : ''}`}
           onClick={() => setIsSignUp(true)}
         >CREATE USER ID
           
         </button>
       </div>
       <div className='sm:max-w-[450px]'>
-      <button className='flex items-center outline outline-gray-300 outline-2  rounded-lg w-full p-3 max-w-[450px] lg:h-[50px] 2xl:h-[63px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
-      onClick={handleGoogleSignIn}><Image className=' w-4 md:w-[20px] lg:w-[25px] 2xl:w-[37px] h-auto' height={30} width={30} alt='' src={GoogleLogo}/> <span className=' text-xs md:text-sm 2xl:text-lg'>CONTINUE WITH GOOGLE</span></button>
+      <button className='flex items-center outline outline-gray-300 outline-2  rounded-lg w-full p-3 max-w-[450px] lg:h-[50px] 2xl:h-[63px] tracking-wider bg-white justify-between px-8 text-sm' 
+      onClick={handleGoogleSignIn}><Image className=' w-[20px] lg:w-[25px] 2xl:w-[37px] h-auto' height={30} width={30} alt='' src={GoogleLogo}/> <span className=' text-sm 2xl:text-lg'>CONTINUE WITH GOOGLE</span></button>
       </div>
     <div className='flex justify-center my-1 2xl:my-2 text-2xl 2xl:text-3xl max-w-[450px]  text-[#BE9F56]'>or</div>
       {isSignUp ? <SignUp /> : <SignIn />}
