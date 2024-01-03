@@ -30,43 +30,39 @@ const SignIn = () => {
   };
 
   return (
-    <form className='space-y-4 w-full max-h-[458px]'>
+    <form className='space-y-2 2xl:space-y-4 w-full sm:max-w-[450px] max-h-[458px]'>
       <input
         placeholder="EMAIL"
         type='email'
-        className='flex items-center xl:h-[63px] outline outline-gray-300 outline-2  rounded-lg w-full p-2 max-w-[450px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
+        className='flex items-center lg:h-[50px] 2xl:h-[63px] outline outline-gray-300 outline-2  rounded-lg w-full p-3 max-w-[450px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         placeholder="PASSWORD"
         type='password'
-        className='flex items-center xl:h-[63px] outline outline-gray-300 outline-2  rounded-lg w-full p-2 max-w-[450px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
+        className='flex items-center lg:h-[50px] 2xl:h-[63px] outline outline-gray-300 outline-2  rounded-lg w-full p-3 max-w-[450px] tracking-wider bg-white justify-between px-8 text-xs md:text-sm' 
         onChange={(e) => setPassword(e.target.value)}
       />
-      <div className=' max-w-[450px]'>
-      <button className='text-[#BE9F56] uppercase  max-w-[450px] tracking-wider text-xs text-center'>Forgotten your password?</button>
-
-      </div>
-
-
-
       {/* Display error message if there is one */}
       {error && (
         <div className="text-red-500 bg-red-100 p-2  max-w-[450px]  text-sm rounded-md">
           {error}
         </div>
       )}
-
-
-
-      <div className='flex justify-end  max-w-[500px] -translate-y-8'>
+      <div>
+      <div className=' max-w-[450px]'>
+      <button className='text-[#BE9F56] uppercase  max-w-[450px] tracking-wider text-xs text-center'>Forgotten your password?</button>
+      </div>
+      <div className='flex justify-center md:justify-end  max-w-[500px] md:-translate-y-6'>
         <button type='submit' onClick={handleSignIn} disabled={loading}>
           {loading ? (
             <CircularProgress color="inherit" size={24} />
           ) : (
-            <Image alt='' className='w-[50px] h-[35px] md:w-[100px] md:h-[70px] lg:max-w-[136px] lg:max-h-[100px]' width={136} height={100} src={Tick} />
+            <Image alt='' className='w-[60px] lg:w-[80px] 2xl:w-[136px] h-auto' width={136} height={100} src={Tick} />
           )}
         </button>
+      </div>
+
       </div>
     </form>
   );

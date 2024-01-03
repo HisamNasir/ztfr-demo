@@ -160,15 +160,15 @@ const RightSideCard = () => {
                       <Image className=' h-[95%] w-auto max-w-[400px] max-h-[400px]' src={MainImg} alt=' ' width={400} height={400} />
                     </div>
                     <div className='flex flex-col pt-2 justify-between sm:items-end col-span-3 row-span-3 sm:row-span-2 sm:col-span-1 sm:w-full h-full'>
-                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left xl:text-[16px] tracking-widest mb-1 uppercase">features</button>
-                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left xl:text-[16px] tracking-widest mb-1 uppercase">products</button>
+                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">features</button>
+                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">products</button>
                       <button className=""><Image className='maxh-[11px]' src={Ztr} alt='' width={122} height={11} /></button>
-                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left xl:text-[16px] tracking-widest mb-1 uppercase">pricing</button>
-                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left xl:text-[16px] tracking-widest mb-1 uppercase">advertising</button>
-                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left xl:text-[16px] tracking-widest mb-1 uppercase">company</button>
-                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left xl:text-[16px] tracking-widest mb-1 uppercase">careers</button>
-                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left xl:text-[16px] tracking-widest mb-1 uppercase">my account</button>
-                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left xl:text-[16px] tracking-widest mb-1 uppercase">newsroom/press</button>
+                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">pricing</button>
+                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">advertising</button>
+                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">company</button>
+                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">careers</button>
+                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">my account</button>
+                      <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">newsroom/press</button>
                     </div>
                     <div className=' hidden sm:flex items-center col-span-3 w-full gap-4 h-full max-h-[200px] justify-between'>
                       <div className='flex items-center h-full w-full '>
