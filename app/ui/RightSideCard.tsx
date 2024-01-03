@@ -103,7 +103,7 @@ const RightSideCard = () => {
         >
           <div className=' h-full relative '>
             {/* top section */}
-            <nav className='px-6 pt-4 flex  left-5 top-5 justify-between items-center gap-4 '>
+            <nav className='px-6 pt-4 pb-1 flex  left-5 top-5 justify-between items-center gap-4 '>
               <div className='flex items-center gap-4 md:gap-8'>
                 <div className="cursor-pointer" onClick={closeSidebar}>
                   <Image className='w-3 md:w-4 xl:w-5 h-auto' src={X} width={20} height={20} alt='Close Sidebar' />
@@ -112,7 +112,7 @@ const RightSideCard = () => {
               </div>
             </nav>
             {/* mid section  */}
-            <div className='h-[calc(100%-105px)] '>
+            <div className='h-[calc(100%-80px)] '>
               <div className=' relative grid grid-cols-4 wll h-full grid-rows-4 gap-2 px-4'>
                 <div className=' absolute grid-cols-3 flex  items-center w-full  px-10'>
                   <div className=' hidden w-full sm:block'>
@@ -128,7 +128,7 @@ const RightSideCard = () => {
                       alt="UK Flag"
                       width={100}
                       height={100}
-                      className=" w-6 md:w-9 lg:w-8 lg:h-8 xl:w-[50px] xl:h-[50px]"
+                      className=" w-6 md:w-9 lg:w-8 lg:h-8 2xl:w-[50px] 2xl:h-[50px]"
                       src={UK}
                     />
                   </div>
@@ -142,7 +142,7 @@ const RightSideCard = () => {
                     ))}
                   </div>
                 </div>
-                <div className='relative row-span-3 pt-8 col-span-4 sm:col-span-3 h-full'>
+                <div className='relative row-span-3 pt-8 col-span-4 sm:col-span-3 h-full w-full '>
                 <div className=' absolute hidden sm:flex flex-col b-500 bottom-3 justify-end  h-full w-[11px] z-30  '>
                     <div className='flex flex-col justify-between  w-full max-w-[18px] h-[41px] z-10 my-2'>
                       <button onClick={handleScrollUp} className=" w-full h-auto"><Image alt='' className=' h-auto w-full rotate-90 max-h-[11px] ' src={Left} width={5} height={11} /></button>
@@ -175,7 +175,7 @@ const RightSideCard = () => {
                         <Image className=' h-full w-full  max-h-[200px] max-w-[334px] object-cover rounded-xl' src={Phone} alt='' width={334} height={200} />
                       </div>
 
-                      <div className='flex items-center justify-end h-full py-4 w-full gap-2'>
+                      <div className='flex items-center justify-end h-full py-4 w-full gap-5'>
                         <Image className='h-full w-full max-w-[118px] max-h-[150px] object-cover rounded-xl' src={Group1} width={118} height={150} alt='' />
                         <Image className='h-full w-full max-w-[118px] max-h-[150px] object-cover rounded-xl' src={Group2} width={118} height={150} alt='' />
                       </div>

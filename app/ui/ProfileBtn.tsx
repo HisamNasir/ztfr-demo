@@ -35,7 +35,7 @@ const ProfileBtn = () => {
           <div className=' flex'>
             {/* <p className=' text-xs'>{user.displayName}!</p> */}
             {user.photoURL && 
-                <Dropdown className='scale-80 md:scale-85 lg:scale-100'>
+                <Dropdown className='scale-80 xl:scale-85 2xl:scale-100'>
                 <DropdownTrigger>
                   <Avatar size='sm' as="button" className="transition-transform" src={user.photoURL} alt="User Profile" />
                   
@@ -52,7 +52,7 @@ const ProfileBtn = () => {
           </div>
         ) : (
           <button className=' h-full w-auto' onClick={GoToLogin}>
-            <Image className=' h-[15px] w-auto sm:h-[18px] md:h-[20px] xl:h-[25px]'   alt='' width={40} height={40} src={ProfileImg}/>
+            <Image className=' h-[15px] w-auto sm:h-[18px] xl:h-[20px] 2xl:h-[25px]'   alt='' width={40} height={40} src={ProfileImg}/>
           </button>
         )}
       </div>
