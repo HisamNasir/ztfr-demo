@@ -113,7 +113,7 @@ const RightSideCard = () => {
             </nav>
             {/* mid section  */}
             <div className='h-[calc(100%-105px)] '>
-              <div className=' relative grid grid-cols-4 max-w-full max-h-full grid-rows-4 gap-2 px-4'>
+              <div className=' relative grid grid-cols-4 wll h-full grid-rows-4 gap-2 px-4'>
                 <div className=' absolute grid-cols-3 flex  items-center w-full  px-10'>
                   <div className=' hidden w-full sm:block'>
                   </div>
