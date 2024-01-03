@@ -200,7 +200,7 @@ const RightSideCard = () => {
             <footer className='h-[13px] absolute px-10 bottom-5  row-span-1 w-full flex items-center '>
               <div className=' grid grid-cols-3 gap-10  w-full max-h-[18px]'>
                 <div className='flex items-center w-full'>
-                  <Image className=' max-md:w-[120px] xl:w-[160px]  2xl:w-[191px] w-full h-auto px-1' src={FootImg1} width={191} height={18} alt='' />
+                  <Image className=' max-md:w-[120px] xl:w-[140px]  2xl:w-[191px] w-full h-auto px-1' src={FootImg1} width={191} height={18} alt='' />
                 </div>
                 <div className=' flex justify-center items-center w-full'>
                   <Image className='max-md:w-[120px] xl:w-[160px]  2xl:w-[191px] w-full h-auto px-1' src={FootImg2} width={191} height={11} alt='' />
