@@ -50,7 +50,7 @@ const SignIn = () => {
         </div>
       )}
       <div className='w-full md:flex justify-between relative'>
-      <div className='w-full text-center'>
+      <div className='w-full text-center sm:translate-x-12'>
       <button className='text-[#BE9F56] uppercase  max-w-[450px] tracking-wider text-[8px] lg:text-[10px] 2xl:text-[14px] text-center'>Forgotten your password?</button>
       </div>
       <div className='flex justify-center md:justify-end 2xl:translate-x-20 max-sm:translate-y-6  max-w-[500px] 2xl:-translate-y-6'>

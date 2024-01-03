@@ -26,7 +26,7 @@ const SignupForm = () => {
     }
   };
   return (
-    <div className='text-center px-5 sm:px-10 flex flex-col w-full max-w-[554px]'>
+    <div className='text-center  flex flex-col w-full max-w-[554px]'>
       <div className='flex justify-between px-8 mb-[8px] 2xl:mb-[21px] text-sm w-full max-w-[450px] '>
         <button
           className={`uppercase tracking-wider text-xs lg:text-sm 2xl:text-lg ${!isSignUp ? 'text-[#BE9F56]' : ''}`}

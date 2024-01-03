@@ -23,7 +23,7 @@ const Signup = () => {
         
       </div>
       {/* centert --------------------------------------------- */}
-      <div className='md:flex px-[25px] py-[12px] xl:px-[50px] xl:py-[24px]  gap-8 justify-center items-center lg:px-20 w-full'>
+      <div className='md:flex py-[12px] px-[50px] xl:py-[24px]  gap-8 justify-center items-center w-full'>
 
           <div className='max-md:hidden space-y-2 h-full flex flex-col justify-center'>
             <Image alt=' ' className='hidden px-4 max-lg:block h-auto w-[100px] md:w-[200px] ' width={559} height={400} src={TransferImg} />
