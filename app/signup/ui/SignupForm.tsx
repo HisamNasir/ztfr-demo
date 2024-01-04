@@ -20,9 +20,9 @@ const SignupForm = () => {
     try {
       const provider = new GoogleAuthProvider();
       await signInWithPopup(auth, provider);
-      router.push('/');
+      
     } catch (error) {
-      // console.error('Error signing in with Google:', error.message);
+      console.error('Error signing in with Google:', error.message);
     }
   };
   return (
