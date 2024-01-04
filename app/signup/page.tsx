@@ -29,12 +29,12 @@ const Signup = () => {
             <Image alt=' ' className='hidden px-4 max-lg:block h-auto w-[100px] md:w-[200px] ' width={559} height={400} src={TransferImg} />
             <Image className=' w-full h-auto lg:w-[400px] 2xl:h-[400px] 2xl:w-[559px] ' alt='' width={559} height={400} src={SingUpImage} />
           </div>
-          <div className='hidden lg:flex justify-center '>
+          <div className='hidden lg:flex justify-center  '>
             <Image alt=' ' className=' w-full h-auto lg:w-[200px]  2xl:w-[354px] mx-[14px]' width={559} height={400} src={TransferImg} />
 
           </div>
-
-        <div className='flex w-full justify-center lg:w-[553px] h-[470px]  xl:h-[470px] 2xl:h-[670px] '>
+        
+        <div className='flex justify-end  w-full lg:w-[400px]  2xl:w-[553px] h-[470px]  lg:h-[440px] 2xl:h-[670px] '>
           <SignupForm />
         </div>
 
