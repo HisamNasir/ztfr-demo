@@ -24,7 +24,7 @@ const GroupText = () => {
             <div className="flex py-1 word-spacing:20px] ">
                 <p className="text-[8px]  2xl:text-base tracking-[0.13em] ">PUBLIC SHARING</p>
                 <p className="text-[8px]  2xl:text-base tracking-[0.13em] ">DYNAMIC LINKS</p>
-                <div className='relative flex lg:w-[100px] xl:w-[120px] 2xl:w-[147px] ml-8 2xl:ml-12 mr-2 2xl:mr-4 '>
+                <div className='relative flex lg:w-[100px] xl:w-[120px] 2xl:w-[147px] ml-8 2xl:ml-12 mr-3 2xl:mr-4 '>
                     <Image width={147} height={50} src={imageSrc} alt="Image" className=" absolute flex h-auto lg:w-[100px] 2xl:w-[147px]" />
                 </div>
                 <p className="text-[8px]  2xl:text-base tracking-[0.13em] ">PASSWORD PROTECTED</p>
