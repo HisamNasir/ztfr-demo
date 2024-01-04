@@ -68,14 +68,14 @@ const LeftSideCard = () => {
         LOGO
       </button>
     )}
-    <div className="flex transition-colors duration-500 relative h-[309px]  2xl:h-[489px] w-[210px] md:w-[260px] 2xl:w-[310px] rounded-2xl  bg-black text-white">
+    <div className="flex transition-colors duration-500 relative h-[360px]  2xl:h-[489px] w-[210px] md:w-[260px] 2xl:w-[310px] rounded-2xl  bg-black text-white">
       <div id="first-card">
         <div className="absolute right-4 top-4 text-xs 2xl:text-sm">
           <FaLock />
         </div>
         {!isCardOpen && (
           <div className=" absolute left-20 md:left-24 2xl:left-20 bottom-1/2 select-none flex items-end">
-            <p className=" text-[6pt] 2xl:text-xs text-center w-[210px] 2xl:w-[300px] font-normal -rotate-90 tracking-widest">
+            <p className=" text-[8px] 2xl:text-xs text-center w-[210px] 2xl:w-[300px] font-normal -rotate-90 tracking-widest">
               upload files or folders by dropping them anywhere in the
               world
             </p>
@@ -122,8 +122,8 @@ const LeftSideCard = () => {
 
       <div id="second-card"></div>
     </div>
-    <div className="absolute rotate-90 translate-x-16 -right-6 lg:-right-10  top-28">
-      <p className=" text-[4pt] lg:text-[5pt] w-full">
+    <div className="absolute rotate-90 translate-x-16 -right-8 lg:-right-12 top-28">
+      <p className=" text-[6px] lg:text-[7px] w-full">
         advanced encryption standard (aes) 256-bit
       </p>
     </div>

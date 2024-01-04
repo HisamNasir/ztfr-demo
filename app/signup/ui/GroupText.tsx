@@ -24,13 +24,13 @@ const GroupText = () => {
             <div className="flex py-1 word-spacing:20px] ">
                 <p className="text-[8px]  2xl:text-base tracking-[0.13em] ">PUBLIC SHARING</p>
                 <p className="text-[8px]  2xl:text-base tracking-[0.13em] ">DYNAMIC LINKS</p>
-                <div className='relative flex lg:w-[100px] xl:w-[120px] 2xl:w-[147px] ml-14 mr-4'>
-                    <Image width={147} height={50} src={imageSrc} alt="Image" className=" absolute flex h-auto lg:w-[100px] xl:w-[120px] 2xl:w-[147px]" />
+                <div className='relative flex lg:w-[100px] xl:w-[120px] 2xl:w-[147px] ml-8 2xl:ml-12 mr-2 2xl:mr-4 '>
+                    <Image width={147} height={50} src={imageSrc} alt="Image" className=" absolute flex h-auto lg:w-[100px] 2xl:w-[147px]" />
                 </div>
                 <p className="text-[8px]  2xl:text-base tracking-[0.13em] ">PASSWORD PROTECTED</p>
                 <p className="text-[8px]  2xl:text-base tracking-[0.13em] ">TRACK DOWNLOADS</p>
             </div>
-            <p className="text-[8px] xl:text-[9px] pt-1 2xl:text-base [word-spacing:2px] tracking-[0.13em] ">ADVANCED AES 254-BIT ENCRYPTION</p>
+            <p className="text-[8px]  2xl:text-base tracking-[0.13em] flex gap-2 py-1">ADVANCED AES 254-BIT ENCRYPTION</p>
         </div>
     );
 };

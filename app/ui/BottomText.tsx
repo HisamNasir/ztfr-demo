@@ -6,7 +6,7 @@ import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDis
 export default function BottomText() {
   return (
     <div className=' hidden font-normal sm:block relative text-[6px] xl:text-[8px] 2xl:text-[10px]'>
-    <div className="absolute max-md:w-full px-[25px] py-[12px] xl:px-[50px] xl:py-[24px] bottom-0 left-0 ">
+    <div className="absolute max-md:w-full px-[25px] py-[12px] 2xl:px-[50px] 2xl:py-[24px] bottom-0 left-0 ">
       <div className=" max-sm:flex max-sm:flex-col w-full max-sm:text-center justify-center">
         <div className=' max-sm:flex max-sm:flex-col max-sm:text-center w-full justify-center'>
           <p>zitransfer 2023</p>
@@ -17,7 +17,7 @@ export default function BottomText() {
       </div>
     </div>
 
-    <div  className="absolute px-[25px] py-[12px] xl:px-[50px] xl:py-[24px] bottom-8 md:bottom-0 right-0 ">
+    <div  className="absolute px-[25px] py-[12px] 2xl:px-[50px] 2xl:py-[24px] bottom-8 md:bottom-0 right-0 ">
       <div className="md:flex gap-2 items-end">
         <p className="flex  gap-2 items-center text-center sm:text-left ">
           <span>
