@@ -29,21 +29,21 @@ const SignupForm = () => {
     <div className='text-center flex flex-col w-full max-w-[554px]'>
       <div className='flex justify-between px-8 mb-[8px] 2xl:mb-[21px] text-sm w-full  lg:w-[350px] 2xl:w-[450px] '>
         <button
-          className={`uppercase tracking-wider font-normal text-xs lg:text-sm 2xl:text-lg ${!isSignUp ? 'text-[#BE9F56]' : ''}`}
+          className={`uppercase tracking-wider font-normal text-[10px] lg:text-xs 2xl:text-lg ${!isSignUp ? 'text-[#BE9F56]' : ''}`}
           onClick={() => setIsSignUp(false)}
         >LOG IN
           
         </button>
         <button
-          className={`uppercase tracking-wider font-normal text-xs lg:text-sm 2xl:text-lg ${isSignUp ? 'text-[#BE9F56]' : ''}`}
+          className={`uppercase tracking-wider font-normal text-[10px] lg:text-xs 2xl:text-lg ${isSignUp ? 'text-[#BE9F56]' : ''}`}
           onClick={() => setIsSignUp(true)}
         >CREATE USER ID
           
         </button>
       </div>
       <div className='sm: lg:w-[350px] 2xl:w-[450px]'>
-      <button className='flex items-center font-normal h-[44px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full  lg:w-[350px] 2xl:w-[450px] p-2 tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg' 
-      onClick={handleGoogleSignIn}><Image className=' w-[20px] lg:w-[25px] 2xl:w-[37px] h-auto' height={30} width={30} alt='' src={GoogleLogo}/> <span className=' text-xs lg:text-sm 2xl:text-lg'>CONTINUE WITH GOOGLE</span></button>
+      <button className='flex items-center font-normal h-[44px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full  lg:w-[350px] 2xl:w-[450px] p-2 tracking-wider bg-white justify-between px-[22px] text-[10px] lg:text-xs 2xl:text-lg' 
+      onClick={handleGoogleSignIn}><Image className=' w-[20px] lg:w-[25px] 2xl:w-[37px] h-auto' height={30} width={30} alt='' src={GoogleLogo}/> <span className=' text-[10px] lg:text-xs 2xl:text-lg'>CONTINUE WITH GOOGLE</span></button>
       </div>
     <div className='flex justify-center my-[5px] font-normal 2xl:my-[15px] text-2xl 2xl:text-3xl  lg:w-[350px] 2xl:w-[450px]  text-[#BE9F56]'>or</div>
       {isSignUp ? <SignUp /> : <SignIn />}

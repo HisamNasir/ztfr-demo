@@ -34,13 +34,13 @@ const SignIn = () => {
       <input
         placeholder="EMAIL"
         type='email'
-        className='flex items-center h-[44px] placeholder-black font-normal 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full p-3  lg:w-[350px] 2xl:w-[450px] tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg' 
+        className='flex items-center h-[44px] placeholder-black font-normal 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full p-3  lg:w-[350px] 2xl:w-[450px] tracking-wider bg-white justify-between px-[22px] text-[10px] lg:text-xs 2xl:text-lg' 
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         placeholder="PASSWORD"
         type='password'
-        className='flex items-center h-[44px] placeholder-black 2xl:h-[63px] font-normal outline outline-gray-300 outline-1  rounded-lg w-full p-3  lg:w-[350px] 2xl:w-[450px] tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg' 
+        className='flex items-center h-[44px] placeholder-black 2xl:h-[63px] font-normal outline outline-gray-300 outline-1  rounded-lg w-full p-3  lg:w-[350px] 2xl:w-[450px] tracking-wider bg-white justify-between px-[22px] text-[10px] lg:text-xs 2xl:text-lg' 
         onChange={(e) => setPassword(e.target.value)}
       />
       {/* Display error message if there is one */}
