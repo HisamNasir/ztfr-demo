@@ -71,7 +71,7 @@ const SignUpComp = () => {
           </div>
         <div className='  w-full font-normal text-[6px] xl:text-[8px] 2xl:text-[10px]  text-left max-w-[450px]'>By creating an USER ID, you agree to our <br />
           Terms of Service and Privacy & Cookie Statement.</div>
-      <div className='flex absolute right-0 justify-center md:justify-end 2xl:translate-x-20 max-sm:translate-y-4 2xl:-translate-y-6'>
+      <div className='flex lg:absolute right-0 justify-center md:justify-end 2xl:translate-x-20 max-sm:translate-y-4 2xl:-translate-y-6'>
         <button type='submit' onClick={handleSignUp} disabled={loading}>
           {loading ? (
             <CircularProgress color="inherit" size={24} />

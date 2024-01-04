@@ -50,15 +50,15 @@ const SignIn = () => {
         </div>
       )}
       <div className='w-full md:flex justify-between relative'>
-      <div className='w-full text-center sm:translate-x-12'>
+      <div className='w-full text-center'>
       <button className='text-[#BE9F56] uppercase font-normal  max-w-[450px] tracking-wider text-[8px] lg:text-[10px] 2xl:text-[14px] text-center'>Forgotten your password?</button>
       </div>
-      <div className='flex justify-center md:justify-end 2xl:translate-x-20 max-sm:translate-y-6  max-w-[500px] 2xl:-translate-y-6'>
+      <div className='flex lg:absolute right-0 justify-center md:justify-end 2xl:translate-x-20 max-sm:translate-y-6  max-w-[500px] 2xl:-translate-y-6'>
         <button type='submit' onClick={handleSignIn} disabled={loading}>
           {loading ? (
             <CircularProgress color="inherit" size={24} />
           ) : (
-            <Image alt='' className='w-[60px] lg:w-[80px] 2xl:w-[136px] h-auto' width={136} height={100} src={Tick} />
+            <Image alt='' className='w-[60px] lg:w-[80px] 2xl:w-[136px] h-auto 2xl:h-[100px]' width={136} height={100} src={Tick} />
           )}
         </button>
       </div>
