@@ -120,7 +120,7 @@ const RightSideCard = () => {
                   <div className='hidden sm:flex items-center justify-center w-full'>
                     <Image className=' px-2 mx-auto h-auto w-[200px] md:w-[210px] xl:w-[250px]' src={Ztransfer} alt='Z Transfer' width={253} height={35} />
                   </div>
-                  <div className="items-center w-full flex justify-end gap-4">
+                  <div className="items-center z-10 w-full flex justify-end gap-4">
                     <div className=' h-full w-auto py-2 ' >
                       <ProfileBtn />
                     </div>
