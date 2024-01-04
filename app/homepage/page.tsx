@@ -57,7 +57,7 @@ const Home: React.FC = () => {
           />
         </div>
 
-        <div className="absolute top-0 right-0 p-4 px-[25px] py-[12px] xl:px-[50px] xl:py-[24px]">
+        {/* <div className="absolute top-0 right-0 p-4 px-[25px] py-[12px] xl:px-[50px] xl:py-[24px]">
           <div className="flex gap-2  items-center">
             <div className=" flex items-center gap-4">
               <ProfileBtn />
@@ -70,21 +70,21 @@ const Home: React.FC = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="flex-grow flex items-center justify-center">
           <LeftSideCard />
 
           <div
             id="center"
-            className="flex flex-col items-center gap-6 md:gap-12 lg:gap-18 w-[70vw] md:w-[50vw] lg:w-full"
+            className="flex font-normal flex-col items-center gap-6 md:gap-12 lg:gap-18 w-[70vw] md:w-[50vw] lg:w-full"
           >
-            <div className=" flex flex-col gap-4 md:gap-6 lg:gap-8">
-              <h1 className=" text-xl md:text-[29px] lg:text-[42px] text-right">Lets do</h1>
-              <h1 className=" text-6xl md:text-[115px] lg:text-[128px] ">this</h1>
+            <div className=" flex flex-col gap-4 md:gap-6 lg:gap-8 h-">
+              <h1 className=" font-normal text-xl xl:text-[29px] 2xl:text-[42px] tracking-widest text-right">Lets do</h1>
+              <h1 className="font-normal text-6xl md:text-[115px] lg:text-[128px] ">this</h1>
             </div>
 
-            <p className=" text-xs md:text-sm text-center">
+            <p className="font-normal tracking-widest text-xs 2xl:text-sm text-center">
               UPLOAD FILES OR FOLDERS BY DROPPING THEM ANYWHERE IN THIS WINDOW
             </p>
           </div>

@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Lato } from 'next/font/google'
 import {NextThemeProviders} from "../app/lib/NextUIThemeProvider";
 
 
 import './globals.scss'
-const inter = Inter({ subsets: ['latin'] })
+const inter = Lato({
+  subsets: ['latin'],
+  weight: '100'
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',

@@ -3,7 +3,7 @@ import React from 'react';
 import imageSrc from '@/public/assets/ztfrGold.png'
 const GroupText = () => {
     return (
-        <div className="hidden lg:flex  [word-spacing:2px] tracking-[0.2em] flex-col flex-wrap w-full ">
+        <div className="hidden lg:flex font-normal [word-spacing:2px] tracking-[0.2em] flex-col flex-wrap w-full ">
             <div className="flex  pb-1">
                 <p className="text-[8px]  2xl:text-base tracking-[0.13em] ">SEND FILES</p>
                 <p className="text-[8px]  2xl:text-base tracking-[0.13em] ">SEND FOLDERS</p>

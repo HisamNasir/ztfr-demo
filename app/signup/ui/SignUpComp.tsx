@@ -33,50 +33,50 @@ const SignUpComp = () => {
       <div className='sm:max-w-[450px] space-y-[15px] 2xl:space-y-[21px] '>
 
         <input
-          className='flex items-center h-[46px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full max-w-[450px] p-2 tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg'
+          className='flex items-center placeholder-black font-normal h-[46px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full max-w-[450px] p-2 tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg'
           placeholder="EMAIL"
           type='email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
-          className='flex items-center h-[46px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg'
+          className='flex items-center placeholder-black  font-normal h-[46px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg'
           type="text"
           placeholder="First NAME"
         />
         <input
-          className='flex items-center h-[46px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg'
+          className='flex items-center placeholder-black font-normal h-[46px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg'
           type="text"
           placeholder="LAST NAME"
         />
         <input
-          className='flex items-center h-[46px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg'
+          className='flex items-center placeholder-black font-normal h-[46px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg'
           type="text"
           placeholder="ORGANISATION (OPTIONAL)"
         />
         <input
-          className='flex items-center h-[46px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg'
+          className='flex items-center placeholder-black font-normal h-[46px] 2xl:h-[63px] outline outline-gray-300 outline-1  rounded-lg w-full p-2 max-w-[450px]  tracking-wider bg-white justify-between px-[22px] text-xs lg:text-sm 2xl:text-lg'
           type="password"
           placeholder="PASSWORD"
           onChange={(e) => setPassword(e.target.value)}
         />
         {error && (
-          <div className="text-red-500 bg-red-100 p-2 text-sm rounded-md">
+          <div className="text-red-500 bg-red-100 font-normal p-2 text-sm rounded-md">
             {error}
           </div>
         )}
-        <div className='w-full md:flex justify-between relative'>
+        <div className='w-full  md:flex justify-between relative'>
           <div>
 
           </div>
-        <div className=' w-full text-[6px] lg:text-[8px] xl:text-[10px]  text-left max-w-[450px]'>By creating an USER ID, you agree to our <br />
+        <div className='  w-full font-normal text-[6px] xl:text-[8px] 2xl:text-[10px]  text-left max-w-[450px]'>By creating an USER ID, you agree to our <br />
           Terms of Service and Privacy & Cookie Statement.</div>
-      <div className='flex justify-center md:justify-end max-w-[500px] 2xl:translate-x-20 max-sm:translate-y-4 2xl:-translate-y-6'>
+      <div className='flex absolute right-0 justify-center md:justify-end 2xl:translate-x-20 max-sm:translate-y-4 2xl:-translate-y-6'>
         <button type='submit' onClick={handleSignUp} disabled={loading}>
           {loading ? (
             <CircularProgress color="inherit" size={24} />
           ) : (
-            <Image alt='' className='w-[60px] lg:w-[80px] 2xl:w-[136px] h-auto' width={136} height={100} src={Tick} />
+            <Image alt='' className=' w-[60px] lg:w-[80px] 2xl:w-[136px] h-auto 2xl:h-[100px]' width={136} height={100} src={Tick} />
           )}
         </button>
       </div>

@@ -95,7 +95,7 @@ const RightSideCard = () => {
 
       {showSidebar && (
         <motion.div
-          className="fixed z-20 gap-6 top-0 right-0 bg-black h-screen max-md:w-full  text-white aspect-square  sm:max-w-[960px]"
+          className="fixed z-20 gap-6 top-0 right-0 bg-black bg-opacity-90 h-screen max-md:w-full  text-white aspect-square  sm:max-w-[960px]"
           initial={{ x: '100%' }}
           animate={sidebarAnimation}
           exit={{ x: '100%' }}
