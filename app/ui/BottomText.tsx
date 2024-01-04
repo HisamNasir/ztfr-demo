@@ -8,12 +8,11 @@ export default function BottomText() {
     <div className=' hidden font-normal sm:block relative text-[6px] lg:text-[7px] 2xl:text-[10px]'>
     <div className="absolute max-md:w-full px-[25px] py-[12px] 2xl:px-[50px] 2xl:py-[24px] bottom-0 left-0 ">
       <div className=" max-sm:flex max-sm:flex-col w-full max-sm:text-center justify-center">
-        <div className=' max-sm:flex max-sm:flex-col max-sm:text-center w-full justify-center'>
-          <p>zitransfer 2023</p>
-
+          <p>© zitransfer 2023</p>
+        <div className=' md:flex gap-2  max-sm:flex-col max-sm:text-center w-full justify-center'>
           <p>all right reserved</p>
-        </div>
         <p>zitransfer is part of the zimo group</p>
+        </div>
       </div>
     </div>
 
@@ -23,8 +22,8 @@ export default function BottomText() {
           <span>
             <FaLock />
           </span>
-          zitransfer use advance encryption standart (AES) 256-bit to
-          protect the confidentiality of the data you upload
+          zitransfer use advance encryption standard (AES) 256-bit to
+          protect the confidentiality of the data you upload.
         </p>
       </div>
     </div>
