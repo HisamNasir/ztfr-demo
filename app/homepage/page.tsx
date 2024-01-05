@@ -47,7 +47,7 @@ const Home: React.FC = () => {
   return (
     <div className=" uppercase tracking-wider  transition-colors duration-500">
       <div className="min-h-screen flex flex-col">
-        <div className="absolute top-0 left-0 p-4 px-[25px] py-[12px] 2xl:px-[50px] 2xl:py-[24px]">
+        <div className="absolute top-0 left-0 p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
           <Image
             alt=""
             width={100}
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
           />
         </div>
 
-        <div className="absolute top-0 right-0 p-4 px-[25px] py-[12px] 2xl:px-[50px] 2xl:py-[24px]">
+        <div className="absolute top-0 right-0 p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
           <div className="flex gap-2  items-center">
             <div className=" flex items-center gap-4">
               <ProfileBtn />

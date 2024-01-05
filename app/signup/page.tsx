@@ -18,7 +18,7 @@ const Signup = () => {
   };
   return (
     <div className='relative h-screen flex items-center transition-all duration-500'>
-      <div className='absolute top-0  px-[25px] py-[12px] 2xl:px-[50px] 2xl:py-[24px]  -z-10 '>
+      <div className='absolute top-0  px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px] -z-10 '>
         <GroupText/>
         
       </div>
@@ -43,7 +43,7 @@ const Signup = () => {
         <RightSideCard/>
       </div>
       {/* bottom ---------------------------------...............  */}
-      <div className='px-[25px] py-[12px] 2xl:px-[50px] 2xl:py-[24px]  absolute max-sm:top-6 sm:bottom-16 2xl:bottom-24'>
+      <div className='px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]  absolute max-sm:top-6 sm:bottom-16 2xl:bottom-24'>
         <button onClick={goBack} className=' '><Image className='h-auto w-5 md:w-6 lg:w-[30px]' src={BackArrow} alt='' width={30} height={21} /></button>
       </div>
       <div className='absolute bottom-0 w-full text-[#BE9F56]'>

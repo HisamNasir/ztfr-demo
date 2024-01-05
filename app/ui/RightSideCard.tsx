@@ -106,7 +106,7 @@ const RightSideCard = () => {
             <nav className='px-6 pt-4 pb-1 flex  left-5 top-5 justify-between items-center gap-4 '>
               <div className='flex items-center gap-4 md:gap-8'>
                 <div className="cursor-pointer" onClick={closeSidebar}>
-                  <Image className='w-3 md:w-4 xl:w-5 h-auto' src={X} width={20} height={20} alt='Close Sidebar' />
+                  <Image className='w-3 sm:w-4 2xl:w-5 h-auto' src={X} width={20} height={20} alt='Close Sidebar' />
                 </div>
                 <p className=' text-xs md:text-sm'>Menu</p>
               </div>
@@ -128,13 +128,13 @@ const RightSideCard = () => {
                       alt="UK Flag"
                       width={100}
                       height={100}
-                      className=" w-6 md:w-9 lg:w-8 lg:h-8 2xl:w-[50px] 2xl:h-[50px]"
+                      className=" w-6 md:w-6 lg:w-7 lg:h-7 2xl:w-[50px] 2xl:h-[50px]"
                       src={UK}
                     />
                   </div>
                 </div>
-                <div className=' hidden sm:block row-span-3 h-full  w-[90px] xl:w-[100px] 2xl:w-[200px]'>
-                  <div ref={containerRef} className=' relative hidden row-span-3 sm:flex flex-col  h-full w-full max-w-[200px] py-6 gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
+                <div className=' hidden sm:block row-span-3 h-full w-[90px]  sm:w-[115px] 2xl:w-[200px]'>
+                  <div ref={containerRef} className=' relative hidden row-span-3 sm:flex flex-col  h-full w-full max-w-[200px] py-3 2xl:py-6 gap-4 2xl:gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll '>
 
                     {images.map((imageName, index) => (
 
@@ -143,26 +143,26 @@ const RightSideCard = () => {
                   </div>
                 </div>
                 <div className='relative row-span-3 pt-8 col-span-4 sm:col-span-3 h-full w-full '>
-                <div className=' absolute hidden sm:flex flex-col b-500 bottom-3 justify-end  h-full w-[11px] z-30  '>
+                <div className=' absolute hidden sm:flex flex-col -left-3 2xl:left-0 b-500 bottom-3 justify-end  h-full w-[11px] z-30  '>
                     <div className='flex flex-col justify-between  w-full max-w-[18px] h-[41px] z-10 my-2'>
                       <button onClick={handleScrollUp} className=" w-full h-auto"><Image alt='' className=' h-auto w-full rotate-90 max-h-[11px] ' src={Left} width={5} height={11} /></button>
                       <button onClick={handleScrollDown} className="w-full h-auto"><Image alt='' className=' h-auto w-full rotate-90 max-h-[11px]' src={Right} width={5} height={11} /></button>
                     </div>
                   </div>
-                  <div className=' absolute hidden sm:flex justify-end  w-full h-[11px] z-10 bottom-5 right-0 '>
+                  <div className=' absolute flex justify-end  w-full h-[11px] z-10 bottom-2 2xl:bottom-5 right-0 '>
                     <div className='flex justify-between items-center max-h-[11px] w-[41px] mx-8'>
                       <button onClick={handleScrollleft} className="  w-auto h-full"><Image alt='' className=' w-auto h-full max-h-[11px] ' src={Left} width={5} height={11} /></button>
                       <button onClick={handleScrollright} className=" w-auto h-full"><Image alt='' className=' w-auto h-full max-h-[11px] ' src={Right} width={5} height={11} /></button>
                     </div>
                   </div>
-                  <div className=' grid grid-cols-3 grid-rows-3 gap-2 w-full p-6 h-full'>
+                  <div className=' grid grid-cols-3 grid-rows-3 gap-2 w-full p-3 2xl:p-6 h-full'>
                     <div className='hidden sm:flex items-center col-span-2 row-span-2 w-full h-full '>
                       <Image className=' h-[95%] w-auto max-w-[400px] max-h-[400px]' src={MainImg} alt=' ' width={400} height={400} />
                     </div>
                     <div className='flex flex-col pt-2 justify-between sm:items-end col-span-3 row-span-3 sm:row-span-2 sm:col-span-1 sm:w-full h-full'>
                       <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">features</button>
                       <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">products</button>
-                      <button className=""><Image className=' h-auto w-[70px] md:w-[90px] 2xl:w-[128px]' src={Ztr} alt='' width={122} height={11} /></button>
+                      <button className=""><Image className=' h-auto w-[70px] lg:w-[90px] 2xl:w-[128px]' src={Ztr} alt='' width={122} height={11} /></button>
                       <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">pricing</button>
                       <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">advertising</button>
                       <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">company</button>
@@ -183,8 +183,8 @@ const RightSideCard = () => {
                     </div>
                   </div>
                 </div>
-                <div className=' col-span-4 w-full h-[90px] xl:h-[100px] 2xl:h-[200px]'>
-                  <div ref={containerRef2} className="flex gap-8 relative scrollbar-hide h-full snap-x overflow-hidden overflow-x-scroll ">
+                <div className=' col-span-4 w-full h-[90px] sm:h-[115px] 2xl:h-[200px]'>
+                  <div ref={containerRef2} className="flex gap-4 2xl:gap-8 relative scrollbar-hide h-full snap-x overflow-hidden overflow-x-scroll ">
 
                     {images.map((imageName, index) => (
 
@@ -197,22 +197,22 @@ const RightSideCard = () => {
             </div>
             {/* bot section  */}
 
-            <footer className='h-[13px] absolute px-10 bottom-5  row-span-1 w-full flex items-center '>
-              <div className=' grid grid-cols-3 gap-10  w-full max-h-[18px]'>
+            <footer className=' sm:h-[13px] 2xl:h-[22px] absolute px-10 bottom-5  row-span-1 w-full flex items-center '>
+              <div className=' relative grid grid-cols-3 gap-10  w-full sm:h-[13px] 2xl:h-[22px]'>
                 <div className='flex items-center w-full'>
-                  <Image className=' max-md:w-[120px] xl:w-[140px]  2xl:w-[191px] w-full h-auto px-1' src={FootImg1} width={191} height={18} alt='' />
+                  <Image className=' max-w-[120px] lg:w-[140px]  2xl:w-[191px] w-full h-auto mr-1' src={FootImg1} width={191} height={18} alt='' />
                 </div>
                 <div className=' flex justify-center items-center w-full'>
-                  <Image className='max-md:w-[120px] xl:w-[160px]  2xl:w-[191px] w-full h-auto px-1' src={FootImg2} width={191} height={11} alt='' />
+                  <Image className='max-w-[120px] lg:w-[140px]  2xl:w-[191px] w-full h-auto mx-1' src={FootImg2} width={191} height={11} alt='' />
                 </div>
-                <div className='flex gap-2 justify-end items-center px-1'>
-                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square w-full   max-w-[18px]' src={btn} width={25} height={25} alt='' />
-                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square w-full   max-w-[18px]' src={btn2} width={25} height={25} alt='' />
-                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square w-full   max-w-[18px]' src={btn3} width={25} height={25} alt='' />
-                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square w-full   max-w-[18px]' src={btn4} width={25} height={25} alt='' />
-                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square w-full   max-w-[18px]' src={btn5} width={25} height={25} alt='' />
-                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square w-full   max-w-[18px]' src={btn6} width={25} height={25} alt='' />
-                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square w-full   max-w-[18px]' src={btn7} width={25} height={25} alt='' />
+                <div className='flex h-full w-full gap-2 justify-end items-center ml-1 sm:h-[13px] 2xl:h-[22px]'>
+                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]' src={btn} width={25} height={25} alt='' />
+                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]' src={btn2} width={25} height={25} alt='' />
+                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]' src={btn3} width={25} height={25} alt='' />
+                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]' src={btn4} width={25} height={25} alt='' />
+                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]' src={btn5} width={25} height={25} alt='' />
+                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]' src={btn6} width={25} height={25} alt='' />
+                  <Image className=' opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]' src={btn7} width={25} height={25} alt='' />
                 </div>
               </div>
             </footer>
