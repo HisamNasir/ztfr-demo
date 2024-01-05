@@ -23,9 +23,9 @@ const Signup = () => {
         
       </div>
       {/* centert --------------------------------------------- */}
-      <div className='md:flex py-[12px] px-[50px] xl:py-[24px]  gap-8 justify-center items-center w-full'>
+      <div className='sm:flex py-[12px] px-[50px] xl:py-[24px]  gap-8 justify-center items-center w-full'>
 
-          <div className='max-md:hidden max-lg:space-y-2 h-full flex flex-col justify-center'>
+          <div className='max-sm:hidden max-lg:space-y-2 h-full flex flex-col justify-center'>
             <Image alt=' ' className='hidden px-4 max-lg:block h-auto w-[100px] md:w-[200px] ' width={559} height={400} src={TransferImg} />
             <Image className=' w-full h-auto lg:w-[400px] 2xl:h-[400px] 2xl:w-[559px] ' alt='' width={559} height={400} src={SingUpImage} />
           </div>
@@ -34,7 +34,7 @@ const Signup = () => {
 
           </div>
         
-        <div className='flex justify-end  w-full lg:w-[400px]  2xl:w-[553px] h-[470px]  lg:h-[440px] 2xl:h-[670px] '>
+        <div className='flex justify-end  w-full sm:w-[500px] lg:w-[400px]  2xl:w-[553px] h-[470px]  lg:h-[440px] 2xl:h-[670px] '>
           <SignupForm />
         </div>
 
