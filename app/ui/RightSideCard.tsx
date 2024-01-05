@@ -23,7 +23,6 @@ import Ztr from "@/public/assets/sidebar/ztr.png";
 import Group1 from "@/public/assets/sidebar/Group 1.png";
 import Group2 from "@/public/assets/sidebar/Group 2.png";
 import ProfileBtn from "./ProfileBtn";
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 const images = [
   "/assets/sidebar/1.png",
