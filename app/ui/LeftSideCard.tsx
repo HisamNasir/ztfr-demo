@@ -122,8 +122,8 @@ const LeftSideCard = () => {
 
       <div id="second-card"></div>
     </div>
-    <div className="absolute rotate-90 translate-x-16 -right-7 font-normal lg:-right-[44px] top-28">
-      <p className=" text-[6px] lg:text-[7px] w-full">
+    <div className="absolute rotate-90 translate-x-16 -right-7 font-normal lg:-right-[80px] top-28 lg:top-[144px]">
+      <p className=" text-[6px] lg:text-[10px] w-full">
         advanced encryption standard (aes) 256-bit
       </p>
     </div>
