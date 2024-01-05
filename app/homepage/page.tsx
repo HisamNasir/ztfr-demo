@@ -80,8 +80,8 @@ const HomePage= () => {
             className="flex font-normal flex-col items-center gap-6 lg:gap-12 2xl:gap-18 w-[70vw] md:w-[50vw] lg:w-full"
           >
             <div className=" flex flex-col text-end justify-end gap-4 lg:gap-6 2xl:gap-8 h-">
-              <h1 className=" font-normal text-xl lg:text-[29px] 2xl:text-[42px] tracking-[0.2em] text-right">{"Let's do"}</h1>
-              <h1 className="font-normal text-7xl lg:text-[115px] 2xl:text-[128px] tracking-widest text-end ">this</h1>
+              <h1 className=" font-normal text-xl lg:text-[29px] 2xl:text-[42px] tracking-[0.2em] text-right px-2">{"Let's do"}</h1>
+              <h1 className="font-medium text-7xl lg:text-[115px] 2xl:text-9xl tracking-widest text-end w p-0">{"this"}</h1>
             </div>
 
             <p className="font-normal tracking-widest text-[8px] lg:text-xs 2xl:text-sm text-center">
