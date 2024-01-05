@@ -38,17 +38,19 @@ const images = [
 const RightSideCard = () => {
   const [showSvg, setShowSvg] = useState(true);
   const [showSidebar, setShowSidebar] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarAnimation = useAnimation();
   const containerRef = useRef<HTMLDivElement>(null);
   const containerRef2 = useRef<HTMLDivElement>(null);
-  const openSidebar = async () => {
-    setShowSidebar(true);
-    await sidebarAnimation.start({ x: 0 });
+
+  const openSidebar = () => {
+    sidebarAnimation.start({ x: 0 });
+    setIsSidebarOpen(true); // Set the state to true when opening sidebar
   };
 
-  const closeSidebar = async () => {
-    await sidebarAnimation.start({ x: "100%" });
-    setShowSidebar(true);
+  const closeSidebar = () => {
+    sidebarAnimation.start({ x: "100%" });
+    setIsSidebarOpen(false); // Set the state to false when closing sidebar
   };
 
   const handleScrollUp = () => {
@@ -86,29 +88,32 @@ const RightSideCard = () => {
 
   return (
     <div className="relative ">
-      <button onClick={openSidebar}>
-        <div className="">
-          <div
-            id="card"
-            className="uppercase bg-black transition-colors duration-500s absolute right-0 items-center rounded-t-xl top-1/2 text-white h-8 w-36 xl:h-10 xl:w-41 2xl:h-12 2xl:w-52 translate-x-[56px] xl:translate-x-[52px] 2xl:translate-x-[80px] flex justify-center -rotate-90"
-          >
-            {showSvg ? (
-              <div className="relative rotate-90">
-                <Image
-                  className="w-[10px] xl:w-[15px] 2xl:w-[20px]"
-                  src={AVAV}
-                  alt=""
-                  width={90}
-                  height={22}
-                />
-              </div>
-            ) : (
-              <p className="text-sm xl:text-lg 2xl:text-2xl font-light">menu</p>
-            )}
+      {isSidebarOpen ? null : ( // Only render the button if the sidebar is not open
+        <button onClick={openSidebar}>
+          <div className="">
+            <div
+              id="card"
+              className="uppercase bg-black transition-colors duration-500s absolute right-0 items-center rounded-t-xl top-1/2 text-white h-8 w-36 xl:h-10 xl:w-41 2xl:h-12 2xl:w-52 translate-x-[56px] xl:translate-x-[52px] 2xl:translate-x-[80px] flex justify-center -rotate-90"
+            >
+              {showSvg ? (
+                <div className="relative rotate-90">
+                  <Image
+                    className="w-[10px] xl:w-[15px] 2xl:w-[20px]"
+                    src={AVAV}
+                    alt=""
+                    width={90}
+                    height={22}
+                  />
+                </div>
+              ) : (
+                <p className="text-sm xl:text-lg 2xl:text-2xl font-light">
+                  menu
+                </p>
+              )}
+            </div>
           </div>
-        </div>
-      </button>
-
+        </button>
+      )}
       {showSidebar && (
         <motion.div
           className="fixed z-20 gap-6 top-0 right-0 bg-black bg-opacity-90 h-screen max-md:w-full  text-white aspect-square  sm:max-w-[960px]"
@@ -292,46 +297,46 @@ const RightSideCard = () => {
 
                       <div className=" flex items-center justify-end h-full py-4 w-full gap-5">
                         <div className=" flex justify-end  h-full">
-                        <Image
-                          className="h-full w-auto  object-cover rounded-xl"
-                          src={Group1}
-                          width={118}
-                          height={150}
-                          alt=""
-                        />
+                          <Image
+                            className="h-full w-auto  object-cover rounded-xl"
+                            src={Group1}
+                            width={118}
+                            height={150}
+                            alt=""
+                          />
                         </div>
                         <div className=" h-full flex justify-end">
-                        <Image
-                          className="h-full w-auto object-cover rounded-xl"
-                          src={Group2}
-                          width={118}
-                          height={150}
-                          alt=""
-                        />
+                          <Image
+                            className="h-full w-auto object-cover rounded-xl"
+                            src={Group2}
+                            width={118}
+                            height={150}
+                            alt=""
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="col-span-4  flex items-end">
-                <div className=" col-span-4 w-full h-[90px] sm:h-[115px] 2xl:h-[200px]">
-                  <div
-                    ref={containerRef2}
-                    className="flex gap-4 2xl:gap-8 relative scrollbar-hide h-full snap-x overflow-hidden overflow-x-scroll "
-                  >
-                    {images.map((imageName, index) => (
-                      // eslint-disable-next-line react/jsx-key
-                      <Image
-                        key={index}
-                        className="h-full w-auto max-h-[200px] max-w-[200px]"
-                        width={200}
-                        height={200}
-                        src={imageName}
-                        alt={`Image ${index + 1}`}
-                      />
-                    ))}
+                  <div className=" col-span-4 w-full h-[90px] sm:h-[115px] 2xl:h-[200px]">
+                    <div
+                      ref={containerRef2}
+                      className="flex gap-4 2xl:gap-8 relative scrollbar-hide h-full snap-x overflow-hidden overflow-x-scroll "
+                    >
+                      {images.map((imageName, index) => (
+                        // eslint-disable-next-line react/jsx-key
+                        <Image
+                          key={index}
+                          className="h-full w-auto max-h-[200px] max-w-[200px]"
+                          width={200}
+                          height={200}
+                          src={imageName}
+                          alt={`Image ${index + 1}`}
+                        />
+                      ))}
+                    </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>

@@ -8,7 +8,7 @@ import LeftSideCard from "../ui/LeftSideCard";
 import ProfileBtn from "../ui/ProfileBtn";
 import BottomText from "../ui/BottomText";
 
-const Home: React.FC = () => {
+const HomePage= () => {
   const cardRef = useRef<HTMLDivElement>(null);
 
 
@@ -98,4 +98,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default HomePage;
