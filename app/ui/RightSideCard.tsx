@@ -123,8 +123,8 @@ const RightSideCard = () => {
         >
           <div className=" h-full relative ">
             {/* top section */}
-            <nav className="px-6 pt-4 pb-1 flex  left-5 top-5 justify-between items-center gap-4 ">
-              <div className="flex items-center gap-4 md:gap-8">
+            <nav className=" relative  flex h-[40px]  left-5 top-5 justify-between items-center gap-4 ">
+              <div className=" absolute top-0 left-0 z-30 flex items-center gap-4 md:gap-8">
                 <div className="cursor-pointer" onClick={closeSidebar}>
                   <Image
                     className="w-3 sm:w-4 2xl:w-5 h-auto"
@@ -150,7 +150,7 @@ const RightSideCard = () => {
                     />
                   </div>
                   <div className="items-center z-10 w-full flex justify-end gap-4">
-                    <div className=" h-full w-auto py-2 ">
+                    <div className=" h-full w-auto ">
                       <ProfileBtn />
                     </div>
                     <Image
