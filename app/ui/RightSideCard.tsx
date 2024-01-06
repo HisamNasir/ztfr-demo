@@ -240,13 +240,16 @@ const RightSideCard = () => {
                   </div>
                   <div className=" grid grid-cols-3 grid-rows-3 gap-2 w-full p-4 px-[5px] py-[6px] 2xl:px-[32px] 2xl:py-[20px] h-full">
                     <div className="hidden sm:flex items-center justify-center col-span-2 row-span-2 w-full h-full ">
+                      <div className=" h-full w-full  flex justify-center items-center  max-w-[400px] max-h-[400px]">
                       <Image
-                        className=" h-[95%] w-auto max-w-[400px] max-h-[400px]"
+                        className=" w-full  aspect-square object-cover  max-w-full max-h-full"
                         src={MainImg}
                         alt=" "
                         width={400}
                         height={400}
                       />
+
+                      </div>
                     </div>
                     <div className="flex flex-col pt-2 justify-between max-h-[600px] sm:items-end col-span-3 row-span-3 sm:row-span-2 sm:col-span-1 sm:w-full h-full">
                       <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">
@@ -284,7 +287,7 @@ const RightSideCard = () => {
                       </button>
                     </div>
                     <div className=" hidden sm:flex items-center col-span-3 w-full gap-4 h-full max-h-[200px] justify-between">
-                      <div className="flex items-center h-full w-full ">
+                      <div className="flex items-center h-full w-auto justify-center ">
                         <Image
                           className=" h-full w-full  max-h-[200px] max-w-[334px] object-cover rounded-xl"
                           src={Phone}
@@ -294,8 +297,8 @@ const RightSideCard = () => {
                         />
                       </div>
 
-                      <div className=" flex items-center justify-end h-full py-4 w-full gap-5">
-                        <div className=" flex w-full md:max-w-[70px] 2xl:max-w-[118px] justify-end  h-full">
+                      <div className=" flex items-center justify-end h-full py-4   gap-5 w-auto">
+                        <div className=" flex w-full md:max-w-[70px] 2xl:max-w-[118px] justify-end  ">
                           <Image
                             className="h-full w-auto  object-cover rounded-xl"
                             src={Group1}
@@ -304,7 +307,7 @@ const RightSideCard = () => {
                             alt=""
                           />
                         </div>
-                        <div className=" h-full flex w-full md:max-w-[70px] 2xl:max-w-[118px] justify-end">
+                        <div className=" w-full md:max-w-[70px] 2xl:max-w-[118px] justify-end">
                           <Image
                             className="h-full w-auto object-cover rounded-xl"
                             src={Group2}
