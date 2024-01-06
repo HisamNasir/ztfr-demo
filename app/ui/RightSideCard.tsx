@@ -287,7 +287,7 @@ const RightSideCard = () => {
                       </button>
                     </div>
                     <div className=" hidden sm:flex items-center col-span-3 w-full gap-4 h-full max-h-[200px] justify-between">
-                      <div className="flex items-center h-full  w-auto justify-center ">
+                      <div className="flex items-center h-full  w-auto  max-w-[334px] justify-center ">
                         <div className=" aspect-video h-full flex justify-center">
                         <Image
                           className=" h-full w-full  max-h-[200px] max-w-[334px] object-cover  rounded-xl"
