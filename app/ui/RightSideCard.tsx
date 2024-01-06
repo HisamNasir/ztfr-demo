@@ -239,7 +239,7 @@ const RightSideCard = () => {
                     </div>
                   </div>
                   <div className=" grid grid-cols-3 grid-rows-3 gap-2 w-full p-4 px-[5px] py-[6px] 2xl:px-[32px] 2xl:py-[20px] h-full">
-                    <div className="hidden sm:flex items-center justify-center col-span-2 row-span-2 w-full h-full ">
+                    <div className="hidden sm:flex items-center  col-span-2 row-span-2 w-full h-full ">
                       <div className=" h-full aspect-square   flex justify-center items-center rounded-xl  max-w-[400px] max-h-[400px]">
                       <Image
                         className=" w-full  aspect-square object-cover  max-w-full max-h-full rounded-xl"
@@ -287,20 +287,16 @@ const RightSideCard = () => {
                       </button>
                     </div>
                     <div className=" hidden sm:flex items-center col-span-3 w-full gap-4 h-full max-h-[200px] justify-between">
-                      <div className="flex items-center h-full  w-auto  max-w-[334px] justify-center ">
-                        <div className=" aspect-video h-full flex justify-center">
+                      
                         <Image
-                          className=" h-full w-full  max-h-[200px] max-w-[334px] object-cover  rounded-xl"
+                          className=" h-full w-auto  max-h-[200px] max-w-[334px] object-cover  rounded-xl"
                           src={Phone}
                           alt=""
                           width={334}
                           height={200}
                         />
 
-                        </div>
-                      </div>
-
-                      <div className=" flex items-center justify-end h-full py-4   gap-5 w-auto">
+                      <div className=" flex items-center w-full justify-end h-full py-4 gap-5">
                         <div className=" flex w-full md:max-w-[70px] 2xl:max-w-[118px] justify-end  ">
                           <Image
                             className="h-full w-auto  object-cover rounded-xl"
