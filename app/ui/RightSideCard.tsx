@@ -183,7 +183,7 @@ const RightSideCard = () => {
                 </div>
                 <div className="relative row-span-3 pt2 col-span-4 sm:col-span-3 h-full w-full ">
                   <div className=" absolute hidden sm:flex flex-col -left-3 2xl:left-0 b-500 bottom-3 justify-end  h-full w-[11px] z-30  ">
-                    <div className="flex flex-col justify-between  w-full max-w-[18px] h-[41px] z-10 my-2">
+                    <div className="flex flex-col justify-between  w-full max-w-[18px] h-[41px] z-10">
                       <button
                         onClick={handleScrollUp}
                         className=" w-full h-auto"
@@ -210,7 +210,7 @@ const RightSideCard = () => {
                       </button>
                     </div>
                   </div>
-                  <div className=" absolute flex justify-end  w-full h-[11px] z-10 bottom-2 2xl:bottom-5 right-0 ">
+                  <div className=" absolute flex justify-end  w-full h-[11px] z-10 bottom-1 2xl:bottom-4 right-0 ">
                     <div className="flex justify-between items-center max-h-[11px] w-[41px] mx-8">
                       <button
                         onClick={handleScrollleft}
