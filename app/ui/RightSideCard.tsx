@@ -115,7 +115,7 @@ const RightSideCard = () => {
       )}
       {showSidebar && (
         <motion.div
-          className="fixed z-20 gap-6 top-0 right-0 bg-black bg-opacity-90 h-screen max-md:w-full  text-white aspect-square  sm:max-w-[960px]"
+          className="fixed z-20 gap-6 top-0 right-0 bg-black bg-opacity-90 h-screen  text-white aspect-square  sm:w-[960px] max-w-full"
           initial={{ x: "100%" }}
           animate={sidebarAnimation}
           exit={{ x: "100%" }}
@@ -141,7 +141,7 @@ const RightSideCard = () => {
             <div className="h-[calc(100%-80px)] py-2">
               <div className=" relative grid grid-cols-4 wll h-full grid-rows-4 gap-2 px-4">
                 <div className=" absolute grid-cols-3 flex  items-center w-full  px-10">
-                  <div className=" hidden w-full sm:block"></div>
+                  <div className="w-full"></div>
                   <div className="hidden sm:flex items-center justify-center w-full">
                     <Image
                       className=" px-2 mx-auto h-auto w-[200px] md:w-[210px] xl:w-[250px]"
@@ -164,10 +164,10 @@ const RightSideCard = () => {
                     />
                   </div>
                 </div>
-                <div className=" hidden sm:block row-span-3 h-full w-[90px]  sm:w-[115px] 2xl:w-[200px]">
+                <div className=" hidden sm:block row-span-3 h-full  w-[90px] sm:w-[125px] md:w-[140px] lg:w-[150px] xl:w-[160px] 2xl:w-[200px]">
                   <div
                     ref={containerRef}
-                    className=" relative hidden row-span-3 sm:flex flex-col  h-full w-full max-w-[200px] py-3 2xl:py-6 gap-4 2xl:gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll "
+                    className=" relative hidden row-span-3 sm:flex flex-col  h-full w-full max-w-[200px] py-3 2xl:py-6 gap-4 lg:gap-7 2xl:gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll "
                   >
                     {images.map((imageName, index) => (
                       <Image
@@ -318,7 +318,7 @@ const RightSideCard = () => {
                   </div>
                 </div>
                 <div className="col-span-4  flex items-end">
-                  <div className=" col-span-4 w-full h-[90px] sm:h-[115px] 2xl:h-[200px]">
+                  <div className=" col-span-4 w-full h-[90px] sm:h-[125px] md:h-[140px] lg:h-[150px] xl:h-[160px] 2xl:h-[200px]">
                     <div
                       ref={containerRef2}
                       className="flex gap-4 2xl:gap-8 relative scrollbar-hide h-full snap-x overflow-hidden overflow-x-scroll "
