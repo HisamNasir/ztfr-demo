@@ -123,8 +123,8 @@ const RightSideCard = () => {
         >
           <div className=" h-full relative ">
             {/* top section */}
-            <nav className=" relative  flex h-[40px]  left-5 top-5 justify-between items-center gap-4 ">
-              <div className=" absolute top-0 left-0 z-30 flex items-center gap-4 md:gap-8">
+            <nav className=" relative  flex h-[40px] justify-between items-center gap-4 ">
+              <div className=" absolute top-0 left-0 z-30 flex items-center gap-4 md:gap-8 p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
                 <div className="cursor-pointer" onClick={closeSidebar}>
                   <Image
                     className="w-3 sm:w-4 2xl:w-5 h-auto"
@@ -239,7 +239,7 @@ const RightSideCard = () => {
                     </div>
                   </div>
                   <div className=" grid grid-cols-3 grid-rows-3 gap-2 w-full p-4 px-[5px] py-[6px] 2xl:px-[32px] 2xl:py-[20px] h-full">
-                    <div className="hidden sm:flex items-center col-span-2 row-span-2 w-full h-full ">
+                    <div className="hidden sm:flex items-center justify-center col-span-2 row-span-2 w-full h-full ">
                       <Image
                         className=" h-[95%] w-auto max-w-[400px] max-h-[400px]"
                         src={MainImg}
