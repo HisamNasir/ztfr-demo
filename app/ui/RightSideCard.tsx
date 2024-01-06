@@ -115,7 +115,7 @@ const RightSideCard = () => {
       )}
       {showSidebar && (
         <motion.div
-          className="fixed z-20 gap-6 top-0 right-0 bg-black bg-opacity-90 h-screen  text-white aspect-square  sm:w-[960px] max-w-full"
+          className="fixed z-20 gap-6 top-0 right-0 bg-black bg-opacity-90 h-screen  w-full  text-white aspect-square md:w-[600px] lg:w-[700px]   2xl:w-[960px] max-w-full"
           initial={{ x: "100%" }}
           animate={sidebarAnimation}
           exit={{ x: "100%" }}
@@ -162,9 +162,9 @@ const RightSideCard = () => {
                     />
                   </div>
                 </div>
-            <div className="h-[calc(100%-80px)] py-2">
+            <div className="h-[calc(100%-80px)]">
               <div className=" relative grid grid-cols-4 wll h-full grid-rows-4 gap-2 p-4">
-                <div className=" hidden sm:block row-span-3 h-full  w-[90px] sm:w-[125px] md:w-[140px] lg:w-[150px] xl:w-[160px] 2xl:w-[200px]">
+                <div className=" hidden sm:block row-span-3 h-full  w-[90px] sm:w-[110px] md:w-[120px] lg:w-[130px] xl:w-[140px] 2xl:w-[200px]">
                   <div
                     ref={containerRef}
                     className=" relative hidden row-span-3 sm:flex flex-col  h-full w-full max-w-[200px] py-3 2xl:py-6 gap-4 lg:gap-7 2xl:gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll "
@@ -181,7 +181,7 @@ const RightSideCard = () => {
                     ))}
                   </div>
                 </div>
-                <div className="relative row-span-3 pt-8 col-span-4 sm:col-span-3 h-full w-full ">
+                <div className="relative row-span-3 pt2 col-span-4 sm:col-span-3 h-full w-full ">
                   <div className=" absolute hidden sm:flex flex-col -left-3 2xl:left-0 b-500 bottom-3 justify-end  h-full w-[11px] z-30  ">
                     <div className="flex flex-col justify-between  w-full max-w-[18px] h-[41px] z-10 my-2">
                       <button
@@ -318,7 +318,7 @@ const RightSideCard = () => {
                   </div>
                 </div>
                 <div className="col-span-4  flex items-end">
-                  <div className=" col-span-4 w-full h-[90px] sm:h-[125px] md:h-[140px] lg:h-[150px] xl:h-[160px] 2xl:h-[200px]">
+                  <div className=" col-span-4 w-full h-[90px] sm:h-[105px] md:h-[110px] lg:h-[120px] xl:h-[130px] 2xl:h-[200px]">
                     <div
                       ref={containerRef2}
                       className="flex gap-4 2xl:gap-8 relative scrollbar-hide h-full snap-x overflow-hidden overflow-x-scroll "
