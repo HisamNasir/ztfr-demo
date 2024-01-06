@@ -138,9 +138,7 @@ const RightSideCard = () => {
               </div>
             </nav>
             {/* mid section  */}
-            <div className="h-[calc(100%-80px)] py-2">
-              <div className=" relative grid grid-cols-4 wll h-full grid-rows-4 gap-2 px-4">
-                <div className=" absolute grid-cols-3 flex  items-center w-full  px-10">
+                <div className="absolute grid-cols-3 top-0 flex items-center w-full  p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
                   <div className="w-full"></div>
                   <div className="hidden sm:flex items-center justify-center w-full">
                     <Image
@@ -164,6 +162,8 @@ const RightSideCard = () => {
                     />
                   </div>
                 </div>
+            <div className="h-[calc(100%-80px)] py-2">
+              <div className=" relative grid grid-cols-4 wll h-full grid-rows-4 gap-2 p-4">
                 <div className=" hidden sm:block row-span-3 h-full  w-[90px] sm:w-[125px] md:w-[140px] lg:w-[150px] xl:w-[160px] 2xl:w-[200px]">
                   <div
                     ref={containerRef}
@@ -238,7 +238,7 @@ const RightSideCard = () => {
                       </button>
                     </div>
                   </div>
-                  <div className=" grid grid-cols-3 grid-rows-3 gap-2 w-full p-3 2xl:p-6 h-full">
+                  <div className=" grid grid-cols-3 grid-rows-3 gap-2 w-full p-4 px-[5px] py-[6px] 2xl:px-[32px] 2xl:py-[20px] h-full">
                     <div className="hidden sm:flex items-center col-span-2 row-span-2 w-full h-full ">
                       <Image
                         className=" h-[95%] w-auto max-w-[400px] max-h-[400px]"
