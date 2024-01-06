@@ -240,7 +240,7 @@ const RightSideCard = () => {
                   </div>
                   <div className=" grid grid-cols-3 grid-rows-3 gap-2 w-full p-4 px-[5px] py-[6px] 2xl:px-[32px] 2xl:py-[20px] h-full">
                     <div className="hidden sm:flex items-center justify-center col-span-2 row-span-2 w-full h-full ">
-                      <div className=" h-full w-full  flex justify-center items-center rounded-xl  max-w-[400px] max-h-[400px]">
+                      <div className=" h-full aspect-square   flex justify-center items-center rounded-xl  max-w-[400px] max-h-[400px]">
                       <Image
                         className=" w-full  aspect-square object-cover  max-w-full max-h-full rounded-xl"
                         src={MainImg}
