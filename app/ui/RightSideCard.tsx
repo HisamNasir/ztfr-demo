@@ -211,7 +211,7 @@ const RightSideCard = () => {
                     </div>
                   </div>
                   <div className=" absolute flex justify-end  w-full h-[11px] z-10 bottom-1 2xl:bottom-4 right-0 ">
-                    <div className="flex justify-between items-center max-h-[11px] w-[41px] mx-2">
+                    <div className="flex justify-between items-center max-h-[11px] w-[41px]  mx-4 xl:mx-[20px] 2xl:mx-[50px]">
                       <button
                         onClick={handleScrollleft}
                         className="  w-auto h-full"
@@ -295,7 +295,7 @@ const RightSideCard = () => {
                       </div>
 
                       <div className=" flex items-center justify-end h-full py-4 w-full gap-5">
-                        <div className=" flex justify-end h-full max-xl:max-w-[70px]">
+                        <div className=" flex w-full md:max-w-[70px] 2xl:max-w-[118px] justify-end  h-full">
                           <Image
                             className="h-full w-auto  object-cover rounded-xl"
                             src={Group1}
@@ -304,7 +304,7 @@ const RightSideCard = () => {
                             alt=""
                           />
                         </div>
-                        <div className=" h-full flex justify-end max-xl:max-w-[70px]">
+                        <div className=" h-full flex w-full md:max-w-[70px] 2xl:max-w-[118px] justify-end">
                           <Image
                             className="h-full w-auto object-cover rounded-xl"
                             src={Group2}
