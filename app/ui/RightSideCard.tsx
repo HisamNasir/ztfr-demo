@@ -115,7 +115,7 @@ const RightSideCard = () => {
       )}
       {showSidebar && (
         <motion.div
-          className="fixed z-20 gap-6 top-0 right-0 bg-black bg-opacity-90 h-screen  w-full  text-white aspect-square md:w-[600px] lg:w-[700px]   2xl:w-[960px] max-w-full"
+          className="fixed z-20 gap-6 top-0 right-0 bg-black bg-opacity-90 h-screen  w-full  text-white aspect-square md:w-[600px] 2xl:w-[960px] max-w-full"
           initial={{ x: "100%" }}
           animate={sidebarAnimation}
           exit={{ x: "100%" }}
@@ -164,7 +164,7 @@ const RightSideCard = () => {
                 </div>
             <div className="h-[calc(100%-80px)]">
               <div className=" relative grid grid-cols-4 wll h-full grid-rows-4 gap-2 p-4">
-                <div className=" hidden sm:block row-span-3 h-full  w-[90px] sm:w-[110px] md:w-[120px] lg:w-[130px] xl:w-[140px] 2xl:w-[200px]">
+                <div className=" hidden sm:block row-span-3 h-full  w-[90px] sm:w-[110px] md:w-[120px] lg:w-[130px] 2xl:w-[200px]">
                   <div
                     ref={containerRef}
                     className=" relative hidden row-span-3 sm:flex flex-col  h-full w-full max-w-[200px] py-3 2xl:py-6 gap-4 lg:gap-7 2xl:gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll "
@@ -297,7 +297,7 @@ const RightSideCard = () => {
                         />
 
                       <div className=" flex items-center w-full justify-end h-full py-4 gap-5">
-                        <div className=" flex w-full md:max-w-[70px] 2xl:max-w-[118px] justify-end  ">
+                        <div className=" flex w-full h-full md:max-w-[70px] 2xl:max-w-[118px] justify-end  ">
                           <Image
                             className="h-full w-auto  object-cover rounded-xl"
                             src={Group1}
@@ -306,7 +306,7 @@ const RightSideCard = () => {
                             alt=""
                           />
                         </div>
-                        <div className=" w-full md:max-w-[70px] 2xl:max-w-[118px] justify-end">
+                        <div className=" w-full h-full md:max-w-[70px] 2xl:max-w-[118px] justify-end">
                           <Image
                             className="h-full w-auto object-cover rounded-xl"
                             src={Group2}
