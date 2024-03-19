@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import AVAV from "../public/assets/avav.svg";
-import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import X from "../public/assets/X.svg";
 import Ztransfer from "../public/assets/transferwhite.svg";
 import UK from "../public/assets/uk.png";
@@ -14,14 +14,16 @@ import btn4 from "../public/assets/sidebar/buttons/btn (4).svg";
 import btn5 from "../public/assets/sidebar/buttons/btn (5).svg";
 import btn6 from "../public/assets/sidebar/buttons/btn (6).svg";
 import btn7 from "../public/assets/sidebar/buttons/btn (7).svg";
-import MainImg from "../public/assets/sidebar/main.png";
 import Left from "../public/assets/sidebar/buttons/left.svg";
+import MainImg from "../public/assets/sidebar/main.png";
 import Right from "../public/assets/sidebar/buttons/right.svg";
 import Phone from "../public/assets/iphone.png";
 import Ztr from "../public/assets/sidebar/ztr.png";
 import Group1 from "../public/assets/sidebar/Group 1.png";
 import Group2 from "../public/assets/sidebar/Group 2.png";
 import ProfileBtn from "./ProfileBtn";
+import { useSelector } from 'react-redux';
+import { colorCombinations } from '../lib/constants';
 
 const images = [
   "/assets/sidebar/1.png",
@@ -40,6 +42,7 @@ const RightSideCard = () => {
   const sidebarAnimation = useAnimation();
   const containerRef = useRef(null);
   const containerRef2 = useRef(null);
+  const dominantColor = useSelector((state) => state.background.dominantColor);
 
   const openSidebar = () => {
     sidebarAnimation.start({ x: 0 });
@@ -62,6 +65,7 @@ const RightSideCard = () => {
       containerRef.current.scrollTop += 200;
     }
   };
+
   const handleScrollleft = () => {
     if (containerRef2.current) {
       containerRef2.current.scrollLeft -= 200;
@@ -84,14 +88,55 @@ const RightSideCard = () => {
     };
   }, []);
 
+  // Function to find the color combination closest to the dominant color
+  const findClosestColorCombination = () => {
+    if (!dominantColor) return null;
+
+    let closestCombination = null;
+    let minDistance = Infinity;
+
+    colorCombinations.forEach((combination) => {
+      const bgColor = combination.bgColor;
+      const r1 = parseInt(bgColor.slice(1, 3), 16);
+      const g1 = parseInt(bgColor.slice(3, 5), 16);
+      const b1 = parseInt(bgColor.slice(5, 7), 16);
+      
+      const r2 = dominantColor[0];
+      const g2 = dominantColor[1];
+      const b2 = dominantColor[2];
+
+      // Calculate Euclidean distance between colors
+      const distance = Math.sqrt(Math.pow(r2 - r1, 2) + Math.pow(g2 - g1, 2) + Math.pow(b2 - b1, 2));
+
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestCombination = combination;
+      }
+    });
+
+    return closestCombination;
+  };
+
+  const closestColorCombination = findClosestColorCombination();
+
+  if (!closestColorCombination) return null;
+
+  const { bgColor, textColor } = closestColorCombination;
+
+  const buttonStyle = {
+    backgroundColor: bgColor,
+    color: textColor,
+  };
+
   return (
-    <div className="relative ">
+    <div className="relative scrollbar-hide">
       {isSidebarOpen ? null : ( // Only render the button if the sidebar is not open
         <button onClick={openSidebar}>
           <div className="">
             <div
               id="card"
-              className="uppercase bg-black transition-colors duration-500s absolute right-0 items-center rounded-t-xl top-1/2 text-white h-8 w-36 xl:h-10 xl:w-41 2xl:h-12 2xl:w-52 translate-x-[56px] xl:translate-x-[52px] 2xl:translate-x-[80px] flex justify-center -rotate-90"
+              className="uppercase transition-colors duration-500s absolute right-0 items-center rounded-t-xl top-1/2 text-white bg-black h-8 w-36 xl:h-10 xl:w-41 2xl:h-12 2xl:w-52 translate-x-[56px] xl:translate-x-[52px] 2xl:translate-x-[80px] flex justify-center -rotate-90"
+              style={buttonStyle}
             >
               {showSvg ? (
                 <div className="relative rotate-90">
@@ -114,11 +159,12 @@ const RightSideCard = () => {
       )}
       {showSidebar && (
         <motion.div
-          className="fixed z-20 gap-6 top-0 right-0 bg-black bg-opacity-90 h-screen  w-full  text-white aspect-square md:w-[600px] 2xl:w-[960px] max-w-full"
+          className="fixed z-20 gap-6 top-0 right-0 bg-opacity-90 h-screen bg-black w-full  aspect-square md:w-[600px] 2xl:w-[960px] max-w-full"
           initial={{ x: "100%" }}
           animate={sidebarAnimation}
           exit={{ x: "100%" }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
+          style={{ backgroundColor: bgColor, color: textColor }}
         >
           <div className=" h-full relative ">
             {/* top section */}
@@ -137,30 +183,30 @@ const RightSideCard = () => {
               </div>
             </nav>
             {/* mid section  */}
-                <div className="absolute grid-cols-3 top-0 flex items-center w-full  p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
-                  <div className="w-full"></div>
-                  <div className="hidden sm:flex items-center justify-center w-full">
-                    <Image
-                      className=" px-2 mx-auto h-auto w-[200px] md:w-[210px] xl:w-[250px]"
-                      src={Ztransfer}
-                      alt="Z Transfer"
-                      width={253}
-                      height={35}
-                    />
-                  </div>
-                  <div className="items-center z-10 w-full flex justify-end gap-4">
-                    <div className=" h-full w-auto ">
-                      <ProfileBtn />
-                    </div>
-                    <Image
-                      alt=""
-                      width={100}
-                      height={100}
-                      className="w-[20px] lg:w-[30px] 2xl:w-[40px]"
-                      src={UK}
-                    />
-                  </div>
+            <div className="absolute grid-cols-3 top-0 flex items-center w-full  p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
+              <div className="w-full"></div>
+              <div className="hidden sm:flex items-center justify-center w-full">
+                <Image
+                  className=" px-2 mx-auto h-auto w-[200px] md:w-[210px] xl:w-[250px]"
+                  src={Ztransfer}
+                  alt="Z Transfer"
+                  width={253}
+                  height={35}
+                />
+              </div>
+              <div className="items-center z-10 w-full flex justify-end gap-4">
+                <div className=" h-full w-auto ">
+                  <ProfileBtn />
                 </div>
+                <Image
+                  alt=""
+                  width={100}
+                  height={100}
+                  className="w-[20px] lg:w-[30px] 2xl:w-[40px]"
+                  src={UK}
+                />
+              </div>
+            </div>
             <div className="h-[calc(100%-80px)]">
               <div className=" relative grid grid-cols-4 wll h-full grid-rows-4 gap-2 p-4">
                 <div className=" hidden sm:block row-span-3 h-full  w-[90px] sm:w-[110px] md:w-[120px] lg:w-[130px] 2xl:w-[200px]">
@@ -240,14 +286,13 @@ const RightSideCard = () => {
                   <div className=" grid grid-cols-3 grid-rows-3 gap-2 w-full p-4 px-[5px] py-[6px] 2xl:px-[32px] 2xl:py-[20px] h-full">
                     <div className="hidden sm:flex items-center  col-span-2 row-span-2 w-full h-full ">
                       <div className=" h-full aspect-square   flex justify-center items-center rounded-xl  max-w-[400px] max-h-[400px]">
-                      <Image
-                        className=" w-full  aspect-square object-cover  max-w-full max-h-full rounded-xl"
-                        src={MainImg}
-                        alt=" "
-                        width={400}
-                        height={400}
-                      />
-
+                        <Image
+                          className=" w-full  aspect-square object-cover  max-w-full max-h-full rounded-xl"
+                          src={MainImg}
+                          alt=" "
+                          width={400}
+                          height={400}
+                        />
                       </div>
                     </div>
                     <div className="flex flex-col pt-2 justify-between max-h-[600px] sm:items-end col-span-3 row-span-3 sm:row-span-2 sm:col-span-1 sm:w-full h-full">
@@ -286,15 +331,13 @@ const RightSideCard = () => {
                       </button>
                     </div>
                     <div className=" hidden sm:flex items-center col-span-3 w-full gap-4 h-full max-h-[200px] justify-between">
-                      
-                        <Image
-                          className=" h-full w-auto  max-h-[200px] max-w-[334px] object-cover  rounded-xl"
-                          src={Phone}
-                          alt=""
-                          width={334}
-                          height={200}
-                        />
-
+                      <Image
+                        className=" h-full w-auto  max-h-[200px] max-w-[334px] object-cover  rounded-xl"
+                        src={Phone}
+                        alt=""
+                        width={334}
+                        height={200}
+                      />
                       <div className=" flex items-center w-full justify-end h-full py-4 gap-5">
                         <div className=" flex w-full h-full md:max-w-[70px] 2xl:max-w-[118px] justify-end  ">
                           <Image
@@ -341,75 +384,69 @@ const RightSideCard = () => {
               </div>
             </div>
             {/* bot section  */}
-
             <footer className=" sm:h-[13px] 2xl:h-[22px] absolute px-10 bottom-3  row-span-1 w-full flex items-center ">
               <div className=" relative grid grid-cols-3 gap-10  w-full sm:h-[13px] 2xl:h-[22px]">
-                <div className="flex items-center w-full">
+                <div className="flex items-center justify-center">
                   <Image
-                    className=" max-w-[120px] lg:w-[140px]  2xl:w-[191px] w-full h-auto mr-1"
-                    src={FootImg1}
-                    width={191}
-                    height={18}
-                    alt=""
-                  />
-                </div>
-                <div className=" flex justify-center items-center w-full">
-                  <Image
-                    className="max-w-[120px] lg:w-[140px]  2xl:w-[191px] w-full h-auto mx-1"
-                    src={FootImg2}
-                    width={191}
-                    height={11}
-                    alt=""
-                  />
-                </div>
-                <div className="flex h-full w-full gap-2 justify-end items-center ml-1 sm:h-[13px] 2xl:h-[22px]">
-                  <Image
-                    className=" opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]"
+                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
                     src={btn}
-                    width={25}
-                    height={25}
+                    width={23}
+                    
+                    height={15}
                     alt=""
                   />
+                </div>
+                <div className="flex items-center justify-center">
                   <Image
-                    className=" opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]"
+                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
                     src={btn2}
-                    width={25}
-                    height={25}
+                    width={23}
+                    height={15}
                     alt=""
                   />
+                </div>
+                <div className="flex items-center justify-center">
                   <Image
-                    className=" opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]"
+                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
                     src={btn3}
-                    width={25}
-                    height={25}
+                    width={23}
+                    height={15}
                     alt=""
                   />
+                </div>
+                <div className="flex items-center justify-center">
                   <Image
-                    className=" opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]"
+                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
                     src={btn4}
-                    width={25}
-                    height={25}
+                    width={23}
+                    height={15}
                     alt=""
                   />
+                </div>
+                <div className="flex items-center justify-center">
                   <Image
-                    className=" opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]"
+                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
                     src={btn5}
-                    width={25}
-                    height={25}
+                    width={23}
+                    height={15}
                     alt=""
                   />
+                </div>
+                <div className="flex items-center justify-center">
                   <Image
-                    className=" opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]"
+                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
                     src={btn6}
-                    width={25}
-                    height={25}
+                    width={23}
+                    height={15}
                     alt=""
                   />
+                </div>
+                <div className="flex items-center justify-center">
                   <Image
-                    className=" opacity-50 hover:opacity-100 transition-opacity duration-300 aspect-square h-full w-full  max-w-[18px]"
+                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
                     src={btn7}
-                    width={25}
-                    height={25}
+                    width={23}
+                    height={15}
                     alt=""
                   />
                 </div>

@@ -7,6 +7,7 @@ import LeftSideCard from "../../components/LeftSideCard";
 import ProfileBtn from "../../components/ProfileBtn";
 import BottomText from "../../components/BottomText";
 import ImageWallpaper from "../../components/ImageWallpaper";
+import DominantColorDisplay from "@/components/DominantColorDisplay";
 
 const HomePage = () => {
   const cardRef = useRef(null);
@@ -40,6 +41,7 @@ const HomePage = () => {
             src={Ztfr}
           />
         </div>
+       
 
         <div className="absolute top-0 right-0 p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
           <div className="flex gap-2  items-center">
@@ -52,6 +54,9 @@ const HomePage = () => {
                 className="w-[20px] lg:w-[30px] 2xl:w-[40px]"
                 src={UK}
               />
+               {/* <div className="p-4 bg-white boder text-black">
+<DominantColorDisplay/>
+        </div> */}
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import BottomText from "../components/BottomText";
 import TransferImg from "@/public/assets/transfer.png";
