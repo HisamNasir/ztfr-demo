@@ -1,13 +1,9 @@
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
-import Ztfr from "../../public/assets/ztfr.png";
-import UK from "../../public/assets/uk.png";
 import RightSideCard from "../../components/RightSideCard";
 import LeftSideCard from "../../components/LeftSideCard";
 import ProfileBtn from "../../components/ProfileBtn";
 import BottomText from "../../components/BottomText";
 import ImageWallpaper from "../../components/ImageWallpaper";
-import DominantColorDisplay from "@/components/DominantColorDisplay";
 
 const HomePage = () => {
   const cardRef = useRef(null);
@@ -33,12 +29,10 @@ const HomePage = () => {
       <ImageWallpaper/>
       <div className="min-h-screen flex flex-col">
         <div className="absolute top-0 left-0 p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
-          <Image
+          <img
             alt=""
-            width={100}
-            height={100}
             className="w-[70px] md:w-[90px] lg:w-[100px]"
-            src={Ztfr}
+            src="assets/ztfr.png"
           />
         </div>
        
@@ -47,16 +41,11 @@ const HomePage = () => {
           <div className="flex gap-2  items-center">
             <div className=" flex items-center gap-4">
               <ProfileBtn />
-              <Image
+              <img
                 alt=""
-                width={100}
-                height={100}
                 className="w-[20px] lg:w-[30px] 2xl:w-[40px]"
-                src={UK}
+                src='assets/uk.png'
               />
-               {/* <div className="p-4 bg-white boder text-black">
-<DominantColorDisplay/>
-        </div> */}
             </div>
           </div>
         </div>

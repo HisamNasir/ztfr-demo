@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 218">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #ff0;
+      }
+    </style>
+  </defs>
+  <g id="Group_5625" data-name="Group 5625">
+    <g id="Path_28337-2" data-name="Path 28337-2">
+      <path d="M193,217.5H25c-3.31,0-6.52-.65-9.54-1.93-2.92-1.23-5.54-3-7.79-5.25s-4.02-4.87-5.25-7.79c-1.28-3.02-1.93-6.23-1.93-9.54V25c0-3.31,.65-6.52,1.93-9.54,1.23-2.92,3-5.54,5.25-7.79S12.55,3.66,15.46,2.43c3.02-1.28,6.23-1.93,9.54-1.93H193c3.31,0,6.52,.65,9.54,1.93,2.92,1.23,5.54,3,7.79,5.25s4.02,4.87,5.25,7.79c1.28,3.02,1.93,6.23,1.93,9.54V193c0,3.31-.65,6.52-1.93,9.54-1.23,2.92-3,5.54-5.25,7.79s-4.87,4.02-7.79,5.25c-3.02,1.28-6.23,1.93-9.54,1.93Z"/>
+      <path class="cls-2" d="M25,1c-3.24,0-6.38,.63-9.34,1.89-2.86,1.21-5.42,2.94-7.63,5.14-2.2,2.2-3.94,4.77-5.14,7.63-1.25,2.96-1.89,6.1-1.89,9.34V193c0,3.24,.63,6.38,1.89,9.34,1.21,2.86,2.94,5.42,5.14,7.63,2.2,2.2,4.77,3.94,7.63,5.14,2.96,1.25,6.1,1.89,9.34,1.89H193c3.24,0,6.38-.63,9.34-1.89,2.86-1.21,5.42-2.94,7.63-5.14,2.2-2.2,3.94-4.77,5.14-7.63,1.25-2.96,1.89-6.1,1.89-9.34V25c0-3.24-.63-6.38-1.89-9.34-1.21-2.86-2.94-5.42-5.14-7.63-2.2-2.2-4.77-3.94-7.63-5.14-2.96-1.25-6.1-1.89-9.34-1.89H25m0-1H193c13.81,0,25,11.19,25,25V193c0,13.81-11.19,25-25,25H25c-13.81,0-25-11.19-25-25V25C0,11.19,11.19,0,25,0Z"/>
+    </g>
+    <g id="Group_5616" data-name="Group 5616">
+      <path id="Path_28137" data-name="Path 28137" class="cls-1" d="M129.61,183.93v6.03h-6.03v6.04h6.04v-6.03h6.03v-6.04h-6.04Z"/>
+      <path id="Path_28138" data-name="Path 28138" class="cls-1" d="M51.17,177.9v-12.07h-18.1v18.1h18.1v-6.03Z"/>
+      <path id="Path_28139" data-name="Path 28139" class="cls-1" d="M105.48,183.93h6.03v6.03h-6.03v-6.03ZM51.17,105.49h6.04v6.03h6.03v6.03h-6.03v6.04h-6.04v-6.03h6.03v-6.04h-6.03v-6.03Zm-18.1-6.04h6.03v6.03h-6.03v-6.03Zm12.08-12.07h6.03v6.03h-6.03v-6.03Zm12.07,6.03v6.04h-6.04v-6.04h6.04Zm0-6.03h6.03v6.03h-6.03v-6.03Zm24.13-30.18v6.04h-6.03v6.03h-18.1v6.04h12.06v12.07h-6.03v-6.03h-6.04v6.03h-6.04v-18.1H21v6.04h24.13v12.06h-6.03v6.04H21v6.04h6.03v6.04h6.04v6.03h6.03v-6.03h6.03v18.09h-6.03v-6.04h-12.07v6.04h-6.03v24.14h6.04v-24.14h6.03v12.08h6.03v6.03h6.03v6.04h18.1v-6.04h-12.06v-6.04h-6.04v-6.03h12.08v-6.04h6.03v6.04h-6.03v6.04h12.07v6.03h6.04v6.04h-6.04v12.07h12.07v6.04h6.04v6.04h6.04v6.03h6.03v6.04h-6.03v12.07h6.04v-6.03h6.03v6.03h6.04v-6.03h6.03v-6.04h6.04v-12.06h6.04v-6.04h-6.04v6.03h-6.04v6.04h-6.03v-6.04h-18.1v-6.03h-.01v-6.04h6.04v-6.04h-18.11v-6.03h6.04v-6.04h-6.04v-6.04h-12.07v-12.07h-6.03v-6.03h12.06v-6.04h-12.06v-6.04h-6.04v-6.03h18.1v6.04h6.04v-6.04h6.03v-6.04h-12.08v-6.03h0v-12.07h6.03v12.07h6.04v-12.07h-6.03v-6.03h6.03v6.03h6.04v-6.04h0v-6.03h-6.04v-6.04h-6.04Z"/>
+      <path id="Path_28140" data-name="Path 28140" class="cls-1" d="M69.27,165.83v30.17h18.1v-18.1h-6.03v12.07h-6.03v-12.07h6.03v-12.07h-12.07Z"/>
+      <rect id="Rectangle_2208" data-name="Rectangle 2208" class="cls-1" x="117.55" y="159.79" width="6.04" height="6.04"/>
+      <path id="Path_28141" data-name="Path 28141" class="cls-1" d="M27.04,183.93v-24.14h30.17v30.17H27.04v-6.03Zm-6.04-30.18v42.24H63.24v-42.24H21Z"/>
+      <rect id="Rectangle_2209" data-name="Rectangle 2209" class="cls-1" x="153.76" y="153.76" width="6.04" height="6.04"/>
+      <path id="Path_28142" data-name="Path 28142" class="cls-1" d="M117.55,153.75h-6.04v6.04h-6.03v6.04h6.04v-6.04h6.03v-6.03h6.04v-6.04h-6.04v6.03Z"/>
+      <rect id="Rectangle_2210" data-name="Rectangle 2210" class="cls-1" x="33.07" y="141.69" width="6.04" height="6.04"/>
+      <rect id="Rectangle_2211" data-name="Rectangle 2211" class="cls-1" x="105.48" y="141.69" width="12.07" height="6.04"/>
+      <path id="Path_28143" data-name="Path 28143" class="cls-1" d="M177.9,183.93h6.03v6.03h-6.03v-6.03Zm-6.04-18.11v-6.04h12.07v6.04h-6.03v6.03h-6.04v-6.03Zm-30.17-12.07h-6.03v-6.03h6.04v6.03Zm6.02,6.04v-6.03h0v-6.03h18.1v18.1h-18.1v-6.04Zm-6.03-102.58v12.08h6.03v6.03h-12.06v-6.04h-12.07v-12.07h-6.04v18.1h-24.13v6.04h6.03v6.03h-6.03v12.07h6.04v-6.04h6.03v-6.03h6.03v6.03h-6.03v6.04h6.03v6.04h30.18v6.03h6.04v-6.03h12.07v12.07h6.04v-6.04h18.1v6.03h-12.07v6.04h6.04v12.08h6.03v6.03h-6.03v6.04h-6.04v-6.04h-24.13v-6.04h-6.04v6.04h-6.03v6.04h-6.03v-6.04h-6.04v6.04h6.03v6.04h6.04v12.06h6.04v12.07h-6.04v6.04h6.04v6.04h6.03v6.03h6.03v-6.04h-6.03v-6.03h0v-6.04h0v-6.03h24.13v6.03h-18.1v6.04h18.1v12.07h12.07v-6.03h6.04v-12.07h6.04v-6.04h-6.04v-12.07h-6.04v-6.03h12.07v-6.04h0v-6.04h-6.04v-6.04h-6.03v-12.07h0v-6.03h6.04v-6.04h-6.03v-6.04h-12.08v-6.03h-24.13v-6.04h0v-6.04h-12.06v6.04h6.04v6.04h-24.14v-12.07h6.04v-6.04h-6.03v-6.04h6.03v6.04h30.17v6.04h6.04v6.03h6.04v-6.04h0v-6.03h6.03v-6.04h-6.03v-6.04h-6.04v6.04h-6.03v-6.04h-6.03v-12.07h-6.04Z"/>
+      <path id="Path_28144" data-name="Path 28144" class="cls-1" d="M123.59,135.65v-6.03h-6.03v-6.04h-24.14v6.04h6.03v6.03h-6.03v12.07h6.04v-6.04h6.03v-6.03h12.07v6.03h6.04v-6.04h0Z"/>
+      <rect id="Rectangle_2212" data-name="Rectangle 2212" class="cls-1" x="189.96" y="123.58" width="6.04" height="6.04"/>
+      <rect id="Rectangle_2213" data-name="Rectangle 2213" class="cls-1" x="75.31" y="117.55" width="6.04" height="6.04"/>
+      <path id="Path_28145" data-name="Path 28145" class="cls-1" d="M141.69,117.55h-6.04v6.04h-6.03v-6.04h-6.04v-6.03h-6.04v6.04h6.04v6.03h6.03v6.04h30.18v6.04h12.07v-12.08h-30.17v-6.04Z"/>
+      <path id="Path_28146" data-name="Path 28146" class="cls-1" d="M93.42,117.55v-6.03h6.03v-6.04h-12.07v18.1h6.04v-6.04h0Z"/>
+      <rect id="Rectangle_2214" data-name="Rectangle 2214" class="cls-1" x="105.48" y="111.52" width="6.04" height="6.04"/>
+      <rect id="Rectangle_2215" data-name="Rectangle 2215" class="cls-1" x="189.96" y="99.45" width="6.04" height="6.04"/>
+      <path id="Path_28147" data-name="Path 28147" class="cls-1" d="M183.92,93.42h-6.03v-6.04h-6.04v12.07h12.07v-6.03Z"/>
+      <rect id="Rectangle_2216" data-name="Rectangle 2216" class="cls-1" x="183.93" y="87.38" width="6.04" height="6.04"/>
+      <rect id="Rectangle_2217" data-name="Rectangle 2217" class="cls-1" x="27.03" y="81.35" width="12.07" height="6.04"/>
+      <rect id="Rectangle_2218" data-name="Rectangle 2218" class="cls-1" x="189.96" y="75.31" width="6.04" height="6.04"/>
+      <rect id="Rectangle_2219" data-name="Rectangle 2219" class="cls-1" x="171.86" y="69.27" width="6.04" height="6.04"/>
+      <rect id="Rectangle_2220" data-name="Rectangle 2220" class="cls-1" x="183.93" y="69.27" width="6.04" height="6.04"/>
+      <rect id="Rectangle_2221" data-name="Rectangle 2221" class="cls-1" x="21" y="57.21" width="42.24" height="6.04"/>
+      <rect id="Rectangle_2222" data-name="Rectangle 2222" class="cls-1" x="69.27" y="57.21" width="6.04" height="6.04"/>
+      <rect id="Rectangle_2223" data-name="Rectangle 2223" class="cls-1" x="93.42" y="57.21" width="6.04" height="6.04"/>
+      <path id="Path_28148" data-name="Path 28148" class="cls-1" d="M105.48,63.24v6.04h6.04v-12.08h-6.04v6.04Z"/>
+      <rect id="Rectangle_2224" data-name="Rectangle 2224" class="cls-1" x="129.61" y="57.21" width="6.04" height="6.04"/>
+      <rect id="Rectangle_2225" data-name="Rectangle 2225" class="cls-1" x="153.76" y="57.21" width="42.24" height="6.04"/>
+      <path id="Path_28149" data-name="Path 28149" class="cls-1" d="M21,39.1v18.1h6.04v-18.1h-6.04Z"/>
+      <path id="Path_28150" data-name="Path 28150" class="cls-1" d="M81.34,51.18h0v-6.04h6.03v-6.04h-18.1v6.04h6.04v6.03h-6.04v6.04h12.07v-6.03Z"/>
+      <rect id="Rectangle_2226" data-name="Rectangle 2226" class="cls-1" x="87.38" y="51.17" width="12.07" height="6.04"/>
+      <rect id="Rectangle_2227" data-name="Rectangle 2227" class="cls-1" x="141.69" y="51.17" width="6.04" height="6.04"/>
+      <path id="Path_28151" data-name="Path 28151" class="cls-1" d="M159.79,51.18v-12.07h-6.04v18.1h6.04v-6.03Z"/>
+      <path id="Path_28152" data-name="Path 28152" class="cls-1" d="M141.68,45.14h0v-6.04h-6.04v6.04h-18.1v-6.04h-12.07v6.04h6.03v6.04h30.17v-6.04Z"/>
+      <path id="Path_28153" data-name="Path 28153" class="cls-1" d="M33.07,45.14v6.04h18.1v-12.07h-18.1v6.04Z"/>
+      <path id="Path_28154" data-name="Path 28154" class="cls-1" d="M57.21,45.14v12.07h6.04v-18.1h-6.04v6.04Z"/>
+      <rect id="Rectangle_2228" data-name="Rectangle 2228" class="cls-1" x="93.42" y="39.1" width="6.04" height="6.04"/>
+      <path id="Path_28155" data-name="Path 28155" class="cls-1" d="M165.82,45.14v6.04h18.1v-12.07h-18.1v6.04Z"/>
+      <path id="Path_28156" data-name="Path 28156" class="cls-1" d="M189.96,39.1v18.1h6.04v-18.1h-6.04Z"/>
+      <path id="Path_28157" data-name="Path 28157" class="cls-1" d="M21,21v18.1h6.04v-12.06h30.17v12.06h6.04V21H21Z"/>
+      <rect id="Rectangle_2229" data-name="Rectangle 2229" class="cls-1" x="33.07" y="33.07" width="18.1" height="6.04"/>
+      <path id="Path_28158" data-name="Path 28158" class="cls-1" d="M141.69,21v12.07h-6.03v-6.03h-6.03v-6.04h-6.04v6.04h-6.03v-6.04h-24.14v6.04h6.03v6.03h-6.03v6.03h12.07v-6.03h6.03v6.03h6.04v-6.03h12.07v6.03h18.1v-6.03h0v-12.07h-6.03Z"/>
+      <rect id="Rectangle_2230" data-name="Rectangle 2230" class="cls-1" x="165.82" y="33.07" width="18.1" height="6.04"/>
+      <rect id="Rectangle_2231" data-name="Rectangle 2231" class="cls-1" x="69.27" y="27.04" width="6.04" height="6.04"/>
+      <path id="Path_28159" data-name="Path 28159" class="cls-1" d="M81.34,21v12.07h6.04v-12.07h-6.04Z"/>
+      <path id="Path_28160" data-name="Path 28160" class="cls-1" d="M153.76,21v18.1h6.04v-12.06h30.17v12.06h6.04V21h-42.25Z"/>
+    </g>
+  </g>
+</svg>

@@ -56,7 +56,7 @@ const ProfileBtn = () => {
           </div>
         ) : (
           <button className=' h-full w-auto' onClick={GoToLogin}>
-            <Image className=' h-[15px] w-auto sm:h-[18px] xl:h-[20px] 2xl:h-[25px]'   alt='' width={40} height={40} src={ProfileImg}/>
+            <img className=' h-[15px] w-auto sm:h-[18px] xl:h-[20px] 2xl:h-[25px]' alt='' src={ProfileImg}/>
           </button>
         )}
       </div>

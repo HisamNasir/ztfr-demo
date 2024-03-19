@@ -1,30 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
-import AVAV from "../public/assets/avav.svg";
 import { motion, useAnimation } from "framer-motion";
-import X from "../public/assets/X.svg";
-import Ztransfer from "../public/assets/transferwhite.svg";
-import UK from "../public/assets/uk.png";
-import FootImg1 from "../public/assets/sidebar/foot1.png";
-import FootImg2 from "../public/assets/sidebar/foot2.png";
-import btn from "../public/assets/sidebar/buttons/btn (1).svg";
-import btn2 from "../public/assets/sidebar/buttons/btn (2).svg";
-import btn3 from "../public/assets/sidebar/buttons/btn (3).svg";
-import btn4 from "../public/assets/sidebar/buttons/btn (4).svg";
-import btn5 from "../public/assets/sidebar/buttons/btn (5).svg";
-import btn6 from "../public/assets/sidebar/buttons/btn (6).svg";
-import btn7 from "../public/assets/sidebar/buttons/btn (7).svg";
-import Left from "../public/assets/sidebar/buttons/left.svg";
-import MainImg from "../public/assets/sidebar/main.png";
-import Right from "../public/assets/sidebar/buttons/right.svg";
-import Phone from "../public/assets/iphone.png";
-import Ztr from "../public/assets/sidebar/ztr.png";
-import Group1 from "../public/assets/sidebar/Group 1.png";
-import Group2 from "../public/assets/sidebar/Group 2.png";
 import ProfileBtn from "./ProfileBtn";
 import { useSelector } from 'react-redux';
 import { colorCombinations } from '../lib/constants';
-
 const images = [
   "/assets/sidebar/1.png",
   "/assets/sidebar/2.png",
@@ -87,8 +65,6 @@ const RightSideCard = () => {
       clearInterval(toggleContent);
     };
   }, []);
-
-  // Function to find the color combination closest to the dominant color
   const findClosestColorCombination = () => {
     if (!dominantColor) return null;
 
@@ -104,10 +80,7 @@ const RightSideCard = () => {
       const r2 = dominantColor[0];
       const g2 = dominantColor[1];
       const b2 = dominantColor[2];
-
-      // Calculate Euclidean distance between colors
       const distance = Math.sqrt(Math.pow(r2 - r1, 2) + Math.pow(g2 - g1, 2) + Math.pow(b2 - b1, 2));
-
       if (distance < minDistance) {
         minDistance = distance;
         closestCombination = combination;
@@ -135,17 +108,15 @@ const RightSideCard = () => {
           <div className="">
             <div
               id="card"
-              className="uppercase transition-colors duration-500s absolute right-0 items-center rounded-t-xl top-1/2 text-white bg-black h-8 w-36 xl:h-10 xl:w-41 2xl:h-12 2xl:w-52 translate-x-[56px] xl:translate-x-[52px] 2xl:translate-x-[80px] flex justify-center -rotate-90"
+              className="uppercase transition-colors duration-500s absolute right-0 items-center rounded-t-xl top-1/2 text-white h-8 w-36 xl:h-10 xl:w-41 2xl:h-12 2xl:w-52 translate-x-[56px] xl:translate-x-[52px] 2xl:translate-x-[80px] flex justify-center -rotate-90"
               style={buttonStyle}
             >
               {showSvg ? (
                 <div className="relative rotate-90">
-                  <Image
+                  <img
                     className="w-[10px] xl:w-[15px] 2xl:w-[20px]"
-                    src={AVAV}
-                    alt=""
-                    width={90}
-                    height={22}
+                    src='assets/avav.svg'
+                    alt=""                    
                   />
                 </div>
               ) : (
@@ -159,7 +130,7 @@ const RightSideCard = () => {
       )}
       {showSidebar && (
         <motion.div
-          className="fixed z-20 gap-6 top-0 right-0 bg-opacity-90 h-screen bg-black w-full  aspect-square md:w-[600px] 2xl:w-[960px] max-w-full"
+          className="fixed z-20 gap-6 top-0 right-0 bg-opacity-90 h-screen  w-full  aspect-square md:w-[600px] 2xl:w-[960px] max-w-full"
           initial={{ x: "100%" }}
           animate={sidebarAnimation}
           exit={{ x: "100%" }}
@@ -171,12 +142,11 @@ const RightSideCard = () => {
             <nav className=" relative  flex h-[40px] justify-between items-center gap-4 ">
               <div className=" absolute top-0 left-0 z-30 flex items-center gap-4 md:gap-8 p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
                 <div className="cursor-pointer" onClick={closeSidebar}>
-                  <Image
+                  <img
                     className="w-3 sm:w-4 2xl:w-5 h-auto"
-                    src={X}
-                    width={20}
-                    height={20}
+                    src='assets/X.svg'
                     alt="Close Sidebar"
+                    
                   />
                 </div>
                 <p className=" text-xs md:text-sm">Menu</p>
@@ -186,24 +156,20 @@ const RightSideCard = () => {
             <div className="absolute grid-cols-3 top-0 flex items-center w-full  p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
               <div className="w-full"></div>
               <div className="hidden sm:flex items-center justify-center w-full">
-                <Image
+                <img
                   className=" px-2 mx-auto h-auto w-[200px] md:w-[210px] xl:w-[250px]"
-                  src={Ztransfer}
+                  src='assets/transferwhite.svg'
                   alt="Z Transfer"
-                  width={253}
-                  height={35}
                 />
               </div>
               <div className="items-center z-10 w-full flex justify-end gap-4">
                 <div className=" h-full w-auto ">
                   <ProfileBtn />
                 </div>
-                <Image
+                <img
                   alt=""
-                  width={100}
-                  height={100}
                   className="w-[20px] lg:w-[30px] 2xl:w-[40px]"
-                  src={UK}
+                  src='assets/uk.png'
                 />
               </div>
             </div>
@@ -215,11 +181,9 @@ const RightSideCard = () => {
                     className=" relative hidden row-span-3 sm:flex flex-col  h-full w-full max-w-[200px] py-3 2xl:py-6 gap-4 lg:gap-7 2xl:gap-8 scrollbar-hide snap-y overflow-hidden overflow-y-scroll "
                   >
                     {images.map((imageName, index) => (
-                      <Image
+                      <img
                         key={index}
                         className="relative h-auto w-full  max-w-[200px] max-h-[200px]"
-                        width={200}
-                        height={200}
                         src={imageName}
                         alt={`Image ${index + 1}`}
                       />
@@ -233,24 +197,20 @@ const RightSideCard = () => {
                         onClick={handleScrollUp}
                         className=" w-full h-auto"
                       >
-                        <Image
+                        <img
                           alt=""
                           className=" h-auto w-full rotate-90 max-h-[11px] "
-                          src={Left}
-                          width={5}
-                          height={11}
+                          src='assets/sidebar/buttons/left.svg'
                         />
                       </button>
                       <button
                         onClick={handleScrollDown}
                         className="w-full h-auto"
                       >
-                        <Image
+                        <img
                           alt=""
                           className=" h-auto w-full rotate-90 max-h-[11px]"
-                          src={Right}
-                          width={5}
-                          height={11}
+                          src='assets/sidebar/buttons/right.svg'
                         />
                       </button>
                     </div>
@@ -261,24 +221,20 @@ const RightSideCard = () => {
                         onClick={handleScrollleft}
                         className="  w-auto h-full"
                       >
-                        <Image
+                        <img
                           alt=""
                           className=" w-auto h-full max-h-[11px] "
-                          src={Left}
-                          width={5}
-                          height={11}
+                          src='assets/sidebar/buttons/left.svg'
                         />
                       </button>
                       <button
                         onClick={handleScrollright}
                         className=" w-auto h-full"
                       >
-                        <Image
+                        <img
                           alt=""
                           className=" w-auto h-full max-h-[11px] "
-                          src={Right}
-                          width={5}
-                          height={11}
+                          src='assets/sidebar/buttons/right.svg'
                         />
                       </button>
                     </div>
@@ -286,12 +242,10 @@ const RightSideCard = () => {
                   <div className=" grid grid-cols-3 grid-rows-3 gap-2 w-full p-4 px-[5px] py-[6px] 2xl:px-[32px] 2xl:py-[20px] h-full">
                     <div className="hidden sm:flex items-center  col-span-2 row-span-2 w-full h-full ">
                       <div className=" h-full aspect-square   flex justify-center items-center rounded-xl  max-w-[400px] max-h-[400px]">
-                        <Image
+                        <img
                           className=" w-full  aspect-square object-cover  max-w-full max-h-full rounded-xl"
-                          src={MainImg}
+                          src='assets/sidebar/main.png'
                           alt=" "
-                          width={400}
-                          height={400}
                         />
                       </div>
                     </div>
@@ -303,12 +257,10 @@ const RightSideCard = () => {
                         products
                       </button>
                       <button className="">
-                        <Image
+                        <img
                           className=" h-auto w-[70px] lg:w-[90px] 2xl:w-[128px]"
-                          src={Ztr}
+                          src='assets/sidebar/ztr.png'
                           alt=""
-                          width={122}
-                          height={11}
                         />
                       </button>
                       <button className="text-[8px] md:text-[10px] lg:text-xs max-sm:text-left 2xl:text-[16px] tracking-widest mb-1 uppercase">
@@ -331,27 +283,27 @@ const RightSideCard = () => {
                       </button>
                     </div>
                     <div className=" hidden sm:flex items-center col-span-3 w-full gap-4 h-full max-h-[200px] justify-between">
-                      <Image
+                      <img
                         className=" h-full w-auto  max-h-[200px] max-w-[334px] object-cover  rounded-xl"
-                        src={Phone}
+                        src='assets/iphone.png'
                         alt=""
                         width={334}
                         height={200}
                       />
                       <div className=" flex items-center w-full justify-end h-full py-4 gap-5">
                         <div className=" flex w-full h-full md:max-w-[70px] 2xl:max-w-[118px] justify-end  ">
-                          <Image
+                          <img
                             className="h-full w-auto  object-cover rounded-xl"
-                            src={Group1}
+                            src='assets/sidebar/Group 1.png'
                             width={118}
                             height={150}
                             alt=""
                           />
                         </div>
                         <div className=" w-full h-full md:max-w-[70px] 2xl:max-w-[118px] justify-end">
-                          <Image
+                          <img
                             className="h-full w-auto object-cover rounded-xl"
-                            src={Group2}
+                            src='assets/sidebar/Group 2.png'
                             width={118}
                             height={150}
                             alt=""
@@ -369,7 +321,7 @@ const RightSideCard = () => {
                     >
                       {images.map((imageName, index) => (
                         // eslint-disable-next-line react/jsx-key
-                        <Image
+                        <img
                           key={index}
                           className="h-full w-auto max-h-[200px] max-w-[200px]"
                           width={200}
@@ -384,69 +336,54 @@ const RightSideCard = () => {
               </div>
             </div>
             {/* bot section  */}
-            <footer className=" sm:h-[13px] 2xl:h-[22px] absolute px-10 bottom-3  row-span-1 w-full flex items-center ">
-              <div className=" relative grid grid-cols-3 gap-10  w-full sm:h-[13px] 2xl:h-[22px]">
+            <footer className=" sm:h-[13px] 2xl:h-[22px] row-span-1 w-full flex items-center ">
+              <div className=" relative grid grid-flow-col gap-10  w-full sm:h-[13px] 2xl:h-[22px]">
                 <div className="flex items-center justify-center">
-                  <Image
-                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
-                    src={btn}
-                    width={23}
-                    
-                    height={15}
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src='assets/sidebar/buttons/btn (1).svg'
                     alt=""
                   />
                 </div>
                 <div className="flex items-center justify-center">
-                  <Image
-                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
-                    src={btn2}
-                    width={23}
-                    height={15}
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src='assets/sidebar/buttons/btn (2).svg'
                     alt=""
                   />
                 </div>
                 <div className="flex items-center justify-center">
-                  <Image
-                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
-                    src={btn3}
-                    width={23}
-                    height={15}
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src='assets/sidebar/buttons/btn (3).svg'
                     alt=""
                   />
                 </div>
                 <div className="flex items-center justify-center">
-                  <Image
-                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
-                    src={btn4}
-                    width={23}
-                    height={15}
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src='assets/sidebar/buttons/btn (4).svg'
                     alt=""
                   />
                 </div>
                 <div className="flex items-center justify-center">
-                  <Image
-                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
-                    src={btn5}
-                    width={23}
-                    height={15}
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src='assets/sidebar/buttons/btn (5).svg'
                     alt=""
                   />
                 </div>
                 <div className="flex items-center justify-center">
-                  <Image
-                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
-                    src={btn6}
-                    width={23}
-                    height={15}
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src='assets/sidebar/buttons/btn (6).svg'
                     alt=""
                   />
                 </div>
                 <div className="flex items-center justify-center">
-                  <Image
-                    className=" h-auto w-[15px] 2xl:w-[23px] object-cover"
-                    src={btn7}
-                    width={23}
-                    height={15}
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src='assets/sidebar/buttons/btn (7).svg'
                     alt=""
                   />
                 </div>

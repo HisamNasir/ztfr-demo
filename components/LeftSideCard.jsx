@@ -96,7 +96,7 @@ const LeftSideCard = () => {
       )}
       <div className="flex transition-colors duration-500 relative h-[390px]  2xl:h-[489px] w-[210px] md:w-[280px] 2xl:w-[310px] ">
         <div id="first-card">
-          <div className="absolute right-4 top-4 text-xs 2xl:text-sm">
+          <div className="absolute right-4 top-4 text-xs 2xl:text-sm" style={textStyle}>
             <FaLock />
           </div>
           {!isCardOpen && (
@@ -130,12 +130,14 @@ const LeftSideCard = () => {
                   variant='underlined'
                   className="dark w-full font-normal"
                   label="Title"
+                  style={textStyle}
                 />
                 <Input
                   type="text"
                   variant='underlined'
                   className="dark w-full  font-normal"
                   label="Note"
+                  style={textStyle}
                 />
               </div>
               <div className="absolute bottom-4 right-2 font-normal">
