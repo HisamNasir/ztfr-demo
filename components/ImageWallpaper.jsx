@@ -17,13 +17,18 @@ const ImageWallpaper = () => {
 
     const handleVideoEnd = () => {
       setVideoFinished(true);
-      dispatch(setDominantColor('#000')); // Set dominant color to black when video finishes
+    };
+
+    const handleVideoPlaying = () => {
+      dispatch(setDominantColor('#000')); // Set dominant color to black when video is playing
     };
 
     video.addEventListener('ended', handleVideoEnd);
-
+    video.addEventListener('playing', handleVideoPlaying);
+    video.playbackRate = 5;
     return () => {
       video.removeEventListener('ended', handleVideoEnd);
+      video.removeEventListener('playing', handleVideoPlaying);
     };
   }, [dispatch]);
 
@@ -64,11 +69,12 @@ const ImageWallpaper = () => {
         if (colorIndex === colors.length - 1) {
           setColorIndex(0);
         }
-      }, 1000); // Change color every 5 seconds
+      }, 5000); // Change color every 5 seconds
 
       return () => clearInterval(intervalId);
     }
   }, [dispatch, colorIndex, videoFinished, colors]);
+
 
   return (
     <div className="image-wallpaper h-screen overflow-hidden absolute -z-50">
