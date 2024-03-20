@@ -25,8 +25,9 @@ const HomePage = () => {
 
 
   return (
-    <div className=" uppercase tracking-wider  transition-colors duration-500">
+    <>
       <ImageWallpaper/>
+    <div className=" uppercase tracking-wider  transition-colors duration-500">
       <div className="min-h-screen flex flex-col">
         <div className="absolute top-0 left-0 p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
           <img
@@ -73,6 +74,7 @@ const HomePage = () => {
         <BottomText />
       </div>
     </div>
+    </>
   );
 };
 
