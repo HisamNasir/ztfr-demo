@@ -6,6 +6,7 @@ import Image from 'next/image';
 const ImageWallpaper = () => {
   const dispatch = useDispatch();
   const currentImageIndex = useSelector((state) => state.background.currentImageIndex);
+  const dominantColor = useSelector((state) => state.background.dominantColor);
   const [videoFinished, setVideoFinished] = useState(false);
   const [colorIndex, setColorIndex] = useState(0);
 
@@ -36,7 +37,7 @@ const ImageWallpaper = () => {
           dispatch(incrementImageIndex());
           dispatch(extractDominantColor(`/media/images/${currentImageIndex + 2}.png`));
         }
-      }, 5000); // Change image every 5 seconds
+      }, 500); // Change image every 5 seconds
 
       return () => clearInterval(intervalId);
     }
@@ -52,6 +53,7 @@ const ImageWallpaper = () => {
         // If all colors have been displayed, reset colorIndex and increment imageIndex
         if (colorIndex === colors.length - 1) {
           dispatch(incrementImageIndex());
+          setVideoFinished(false); // Reset the videoFinished process
         }
 
         // If colorIndex is less than the length of colors array, dispatch the color
@@ -63,7 +65,7 @@ const ImageWallpaper = () => {
         if (colorIndex === colors.length - 1) {
           setColorIndex(0);
         }
-      }, 5000); // Change color every 5 seconds
+      }, 500); // Change color every 5 seconds
 
       return () => clearInterval(intervalId);
     }
@@ -90,7 +92,13 @@ const ImageWallpaper = () => {
               }}
             />
           ) : (
-            <div className="w-screen h-screen" style={{ backgroundColor: colors[colorIndex] }}></div>
+            <div
+              className="w-screen h-screen"
+              style={{ backgroundColor: dominantColor || colors[colorIndex] }}
+              onLoad={() => {
+                dispatch(setDominantColor(dominantColor || colors[colorIndex]));
+              }}
+            ></div>
           )}
         </>
       )}
