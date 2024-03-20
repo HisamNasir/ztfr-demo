@@ -13,7 +13,6 @@
               const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#000000'];
             
               useEffect(() => {
-                // Play video initially
                 const video = document.getElementById('background-video');
             
                 const handleVideoEnd = () => {
@@ -21,7 +20,7 @@
                 };
             
                 const handleVideoPlaying = () => {
-                  dispatch(setDominantColor('#000')); // Set dominant color to black when video is playing
+                  dispatch(setDominantColor('#000'));
                 };
             
                 video.addEventListener('ended', handleVideoEnd);
@@ -43,7 +42,7 @@
                       dispatch(incrementImageIndex());
                       dispatch(extractDominantColor(`/media/images/${currentImageIndex + 2}.png`));
                     }
-                  }, 500); // Change image every 5 seconds
+                  }, 500);
             
                   return () => clearInterval(intervalId);
                 }
@@ -53,32 +52,24 @@
               useEffect(() => {
                 if (videoFinished) {
                   const intervalId = setInterval(() => {
-                    // Increment colorIndex to display the next color
                     setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
-            
-                    // If all colors have been displayed, reset colorIndex and increment imageIndex
                     if (colorIndex === colors.length - 1) {
                       dispatch(incrementImageIndex());
-                      setVideoFinished(false); // Reset the videoFinished process
+                      setVideoFinished(false);
                     }
-            
-                    // If colorIndex is less than the length of colors array, dispatch the color
                     if (colorIndex < colors.length) {
                       dispatch(setDominantColor(colors[colorIndex]));
                     }
-            
-                    // If colorIndex reaches the end of the colors array, reset it
                     if (colorIndex === colors.length - 1) {
                       setColorIndex(0);
                     }
-                  }, 5000); // Change color every 5 seconds
+                  }, 500); 
             
                   return () => clearInterval(intervalId);
                 }
               }, [dispatch, colorIndex, videoFinished, colors]);
             
               useEffect(() => {
-                // Dispatch the first color when the component mounts
                 dispatch(setDominantColor(colors[colorIndex]));
               }, [dispatch]);
             
