@@ -6,7 +6,6 @@ import Image from 'next/image';
 const ImageWallpaper = () => {
   const dispatch = useDispatch();
   const currentImageIndex = useSelector((state) => state.background.currentImageIndex);
-  const dominantColor = useSelector((state) => state.background.dominantColor);
   const [videoFinished, setVideoFinished] = useState(false);
   const [colorIndex, setColorIndex] = useState(0);
 
@@ -65,7 +64,7 @@ const ImageWallpaper = () => {
         if (colorIndex === colors.length - 1) {
           setColorIndex(0);
         }
-      }, 500); // Change color every 5 seconds
+      }, 1000); // Change color every 5 seconds
 
       return () => clearInterval(intervalId);
     }
@@ -92,13 +91,7 @@ const ImageWallpaper = () => {
               }}
             />
           ) : (
-            <div
-              className="w-screen h-screen"
-              style={{ backgroundColor: dominantColor || colors[colorIndex] }}
-              onLoad={() => {
-                dispatch(setDominantColor(dominantColor || colors[colorIndex]));
-              }}
-            ></div>
+            <div className="w-screen h-screen" style={{ backgroundColor: colors[colorIndex] }}></div>
           )}
         </>
       )}
