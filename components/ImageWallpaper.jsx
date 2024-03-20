@@ -36,7 +36,7 @@ const ImageWallpaper = () => {
           dispatch(incrementImageIndex());
           dispatch(extractDominantColor(`/media/images/${currentImageIndex + 2}.png`));
         }
-      }, 500); // Change image every 5 seconds
+      }, 5000); // Change image every 5 seconds
 
       return () => clearInterval(intervalId);
     }
