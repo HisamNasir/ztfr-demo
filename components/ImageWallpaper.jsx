@@ -17,7 +17,7 @@ const ImageWallpaper = () => {
 
   const handleImageChange = () => {
     if (currentImageIndex === 59) {
-      setColorIndex((prevIndex) => (prevIndex + 1) % 7);
+      setVideoFinished(true); // Set videoFinished to true when all images have been shown
     } else {
       dispatch(incrementImageIndex());
       dispatch(extractDominantColor(`/media/images/${currentImageIndex + 2}.png`));
@@ -27,20 +27,15 @@ const ImageWallpaper = () => {
   const handleColorChange = () => {
     setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
 
-    // If all colors have been displayed, reset colorIndex, increment imageIndex, and reset videoFinished
+    // If all colors have been displayed, reset colorIndex and set videoFinished to false
     if (colorIndex === colors.length - 1) {
-      dispatch(incrementImageIndex());
-      setVideoFinished(false); // Reset the videoFinished process
+      setColorIndex(0);
+      setVideoFinished(false);
     }
 
     // If colorIndex is less than the length of colors array, dispatch the color
     if (colorIndex < colors.length) {
       dispatch(setDominantColor(colors[colorIndex]));
-    }
-
-    // If colorIndex reaches the end of the colors array, reset it
-    if (colorIndex === colors.length - 1) {
-      setColorIndex(0);
     }
   };
 
@@ -61,14 +56,16 @@ const ImageWallpaper = () => {
 
   useEffect(() => {
     if (videoFinished) {
-      const intervalId = setInterval(handleImageChange, 500); // Change image every 5 seconds
+      // Change image every 5 seconds
+      const intervalId = setInterval(handleImageChange, 500);
       return () => clearInterval(intervalId);
     }
   }, [dispatch, currentImageIndex, videoFinished]);
 
   useEffect(() => {
     if (videoFinished) {
-      const intervalId = setInterval(handleColorChange, 5000); // Change color every 5 seconds
+      // Change color every 5 seconds
+      const intervalId = setInterval(handleColorChange, 500);
       return () => clearInterval(intervalId);
     }
   }, [dispatch, colorIndex, videoFinished, colors]);
