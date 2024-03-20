@@ -5,7 +5,7 @@ export const backgroundSlice = createSlice({
   name: "background",
   initialState: {
     currentImageIndex: 0,
-    dominantColor: null,
+    dominantColor: [0, 0, 0], // Set default color to black (#000)
   },
   reducers: {
     incrementImageIndex: (state) => {
