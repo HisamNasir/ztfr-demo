@@ -1,32 +1,30 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  incrementImageIndex,
-  extractDominantColor,
-} from "../src/store/features/backgroundSlice";
-import Image from "next/image";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { incrementImageIndex, extractDominantColor, setDominantColor } from '../src/store/features/backgroundSlice';
+import Image from 'next/image';
 
 const ImagePlayer = ({ onImagesEnd }) => {
   const dispatch = useDispatch();
-  const currentImageIndex = useSelector(
-    (state) => state.background.currentImageIndex
-  );
+  const currentImageIndex = useSelector((state) => state.background.currentImageIndex);
+  const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
-    const handleImageChange = () => {
-      if (currentImageIndex === 59) {
-        onImagesEnd();
-      } else {
-        dispatch(incrementImageIndex());
-        dispatch(
-          extractDominantColor(`/media/images/${currentImageIndex + 2}.png`)
-        );
+    const intervalId = setInterval(() => {
+      dispatch(incrementImageIndex());
+      setImageIndex((prevIndex) => prevIndex + 1);
+      if (imageIndex >= 59) {
+        clearInterval(intervalId);
+        onImagesEnd(); // Notify parent component when all images are displayed
       }
-    };
+    }, 500); // Change image every 5 seconds
 
-    const intervalId = setInterval(handleImageChange, 500); // Change image every 5 seconds
     return () => clearInterval(intervalId);
-  }, [dispatch, currentImageIndex, onImagesEnd]);
+  }, [dispatch, currentImageIndex, onImagesEnd, imageIndex]);
+
+  useEffect(() => {
+    // Extract dominant color when component mounts or image index changes
+    dispatch(extractDominantColor(`/media/images/${currentImageIndex + 1}.png`));
+  }, [dispatch, currentImageIndex]);
 
   return (
     <Image

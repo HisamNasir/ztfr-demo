@@ -16,7 +16,7 @@ const ImageWallpaper = () => {
 
   const handleImagesEnd = () => {
     setImagesFinished(true);
-    setVideoFinished(true);
+    setVideoFinished(false);
     setColorsFinished(false);
 
   };
