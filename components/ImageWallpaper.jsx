@@ -25,6 +25,7 @@ const ImageWallpaper = () => {
     setColorsFinished(true);
     setVideoFinished(false); 
     setImagesFinished(false); 
+    setColorsFinished(false);
 
   };
   return (
