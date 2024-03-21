@@ -5,6 +5,7 @@ import ProfileBtn from "../../components/ProfileBtn";
 import BottomText from "../../components/BottomText";
 import ImageWallpaper from "../../components/ImageWallpaper";
 import DominantColorDisplay from "@/components/DominantColorDisplay";
+import ThemeText from "@/components/theme/ThemeText";
 
 const HomePage = () => {
   const cardRef = useRef(null);
@@ -28,12 +29,10 @@ const HomePage = () => {
   return (
     <>
       <ImageWallpaper/>
-      {/* <div className="absolute m-2 top-0 right-8 text-white">
-      <DominantColorDisplay/>
-      </div> */}
     <div className=" uppercase tracking-wider  transition-colors duration-500">
       <div className="min-h-screen flex flex-col">
         <div className="absolute top-0 left-0 p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
+          
           <img
             alt=""
             className="w-[70px] md:w-[90px] lg:w-[100px]"
@@ -57,7 +56,7 @@ const HomePage = () => {
 
         <div className="flex-grow flex items-center justify-center">
           <LeftSideCard />
-
+<ThemeText>
           <div
             id="center"
             className="flex font-normal flex-col items-center gap-6 lg:gap-12 2xl:gap-18 w-[70vw] md:w-[50vw] lg:w-full"
@@ -71,6 +70,8 @@ const HomePage = () => {
               UPLOAD FILES OR FOLDERS BY DROPPING THEM ANYWHERE IN THIS WINDOW
             </p>
           </div>
+
+</ThemeText>
         </div>
         <div className="absolute right-0 flex h-full items-center">
           <RightSideCard />
