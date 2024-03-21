@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import ProfileBtn from "./ProfileBtn";
-import { useSelector } from 'react-redux';
-import { colorCombinations } from '../lib/constants';
+import { useSelector } from "react-redux";
+import { colorCombinations } from "../lib/constants";
+import ThemeSVG from "./theme/ThemeSVG";
 const images = [
   "/assets/sidebar/1.png",
   "/assets/sidebar/2.png",
@@ -76,11 +77,13 @@ const RightSideCard = () => {
       const r1 = parseInt(bgColor.slice(1, 3), 16);
       const g1 = parseInt(bgColor.slice(3, 5), 16);
       const b1 = parseInt(bgColor.slice(5, 7), 16);
-      
+
       const r2 = dominantColor[0];
       const g2 = dominantColor[1];
       const b2 = dominantColor[2];
-      const distance = Math.sqrt(Math.pow(r2 - r1, 2) + Math.pow(g2 - g1, 2) + Math.pow(b2 - b1, 2));
+      const distance = Math.sqrt(
+        Math.pow(r2 - r1, 2) + Math.pow(g2 - g1, 2) + Math.pow(b2 - b1, 2)
+      );
       if (distance < minDistance) {
         minDistance = distance;
         closestCombination = combination;
@@ -115,8 +118,8 @@ const RightSideCard = () => {
                 <div className="relative rotate-90">
                   <img
                     className="w-[10px] xl:w-[15px] 2xl:w-[20px]"
-                    src='assets/avav.svg'
-                    alt=""                    
+                    src="assets/avav.svg"
+                    alt=""
                   />
                 </div>
               ) : (
@@ -144,9 +147,8 @@ const RightSideCard = () => {
                 <div className="cursor-pointer" onClick={closeSidebar}>
                   <img
                     className="w-3 sm:w-4 2xl:w-5 h-auto"
-                    src='assets/X.svg'
+                    src="assets/X.svg"
                     alt="Close Sidebar"
-                    
                   />
                 </div>
                 <p className=" text-xs md:text-sm">Menu</p>
@@ -158,7 +160,7 @@ const RightSideCard = () => {
               <div className="hidden sm:flex items-center justify-center w-full">
                 <img
                   className=" px-2 mx-auto h-auto w-[200px] md:w-[210px] xl:w-[250px]"
-                  src='assets/transferwhite.svg'
+                  src="assets/transferwhite.svg"
                   alt="Z Transfer"
                 />
               </div>
@@ -166,10 +168,11 @@ const RightSideCard = () => {
                 <div className=" h-full w-auto ">
                   <ProfileBtn />
                 </div>
+
                 <img
                   alt=""
                   className="w-[20px] lg:w-[30px] 2xl:w-[40px]"
-                  src='assets/uk.png'
+                  src="assets/uk.png"
                 />
               </div>
             </div>
@@ -200,7 +203,7 @@ const RightSideCard = () => {
                         <img
                           alt=""
                           className=" h-auto w-full rotate-90 max-h-[11px] "
-                          src='assets/sidebar/buttons/left.svg'
+                          src="assets/sidebar/buttons/left.svg"
                         />
                       </button>
                       <button
@@ -210,7 +213,7 @@ const RightSideCard = () => {
                         <img
                           alt=""
                           className=" h-auto w-full rotate-90 max-h-[11px]"
-                          src='assets/sidebar/buttons/right.svg'
+                          src="assets/sidebar/buttons/right.svg"
                         />
                       </button>
                     </div>
@@ -224,7 +227,7 @@ const RightSideCard = () => {
                         <img
                           alt=""
                           className=" w-auto h-full max-h-[11px] "
-                          src='assets/sidebar/buttons/left.svg'
+                          src="assets/sidebar/buttons/left.svg"
                         />
                       </button>
                       <button
@@ -234,7 +237,7 @@ const RightSideCard = () => {
                         <img
                           alt=""
                           className=" w-auto h-full max-h-[11px] "
-                          src='assets/sidebar/buttons/right.svg'
+                          src="assets/sidebar/buttons/right.svg"
                         />
                       </button>
                     </div>
@@ -244,7 +247,7 @@ const RightSideCard = () => {
                       <div className=" h-full aspect-square   flex justify-center items-center rounded-xl  max-w-[400px] max-h-[400px]">
                         <img
                           className=" w-full  aspect-square object-cover  max-w-full max-h-full rounded-xl"
-                          src='assets/sidebar/main.png'
+                          src="assets/sidebar/main.png"
                           alt=" "
                         />
                       </div>
@@ -259,7 +262,7 @@ const RightSideCard = () => {
                       <button className="">
                         <img
                           className=" h-auto w-[70px] lg:w-[90px] 2xl:w-[128px]"
-                          src='assets/sidebar/ztr.png'
+                          src="assets/sidebar/ztr.png"
                           alt=""
                         />
                       </button>
@@ -285,7 +288,7 @@ const RightSideCard = () => {
                     <div className=" hidden sm:flex items-center col-span-3 w-full gap-4 h-full max-h-[200px] justify-between">
                       <img
                         className=" h-full w-auto  max-h-[200px] max-w-[334px] object-cover  rounded-xl"
-                        src='assets/iphone.png'
+                        src="assets/iphone.png"
                         alt=""
                         width={334}
                         height={200}
@@ -294,7 +297,7 @@ const RightSideCard = () => {
                         <div className=" flex w-full h-full md:max-w-[70px] 2xl:max-w-[118px] justify-end  ">
                           <img
                             className="h-full w-auto  object-cover rounded-xl"
-                            src='assets/sidebar/Group 1.png'
+                            src="assets/sidebar/Group 1.png"
                             width={118}
                             height={150}
                             alt=""
@@ -303,7 +306,7 @@ const RightSideCard = () => {
                         <div className=" w-full h-full md:max-w-[70px] 2xl:max-w-[118px] justify-end">
                           <img
                             className="h-full w-auto object-cover rounded-xl"
-                            src='assets/sidebar/Group 2.png'
+                            src="assets/sidebar/Group 2.png"
                             width={118}
                             height={150}
                             alt=""
@@ -339,53 +342,67 @@ const RightSideCard = () => {
             <footer className=" sm:h-[13px] 2xl:h-[22px] row-span-1 w-full flex items-center ">
               <div className=" relative grid grid-flow-col gap-10  w-full sm:h-[13px] 2xl:h-[22px]">
                 <div className="flex items-center justify-center">
-                  <img
-                    className=" h-[15px] w-auto object-cover"
-                    src='assets/sidebar/buttons/btn (1).svg'
-                    alt=""
-                  />
+                  <ThemeSVG>
+                    <img
+                      className=" h-[15px] w-auto object-cover"
+                      src="assets/sidebar/buttons/btn (1).svg"
+                      alt=""
+                    />
+                  </ThemeSVG>
                 </div>
                 <div className="flex items-center justify-center">
-                  <img
-                    className=" h-[15px] w-auto object-cover"
-                    src='assets/sidebar/buttons/btn (2).svg'
-                    alt=""
-                  />
+                  <ThemeSVG>
+                    <img
+                      className=" h-[15px] w-auto object-cover"
+                      src="assets/sidebar/buttons/btn (2).svg"
+                      alt=""
+                    />
+                  </ThemeSVG>
                 </div>
                 <div className="flex items-center justify-center">
-                  <img
-                    className=" h-[15px] w-auto object-cover"
-                    src='assets/sidebar/buttons/btn (3).svg'
-                    alt=""
-                  />
+                  <ThemeSVG>
+                    <img
+                      className=" h-[15px] w-auto object-cover"
+                      src="assets/sidebar/buttons/btn (3).svg"
+                      alt=""
+                    />
+                  </ThemeSVG>
                 </div>
                 <div className="flex items-center justify-center">
-                  <img
-                    className=" h-[15px] w-auto object-cover"
-                    src='assets/sidebar/buttons/btn (4).svg'
-                    alt=""
-                  />
+                  <ThemeSVG>
+                    <img
+                      className=" h-[15px] w-auto object-cover"
+                      src="assets/sidebar/buttons/btn (4).svg"
+                      alt=""
+                    />
+                  </ThemeSVG>
                 </div>
                 <div className="flex items-center justify-center">
-                  <img
-                    className=" h-[15px] w-auto object-cover"
-                    src='assets/sidebar/buttons/btn (5).svg'
-                    alt=""
-                  />
+                  <ThemeSVG>
+                    <img
+                      className=" h-[15px] w-auto object-cover"
+                      src="assets/sidebar/buttons/btn (5).svg"
+                      alt=""
+                    />
+                  </ThemeSVG>
                 </div>
                 <div className="flex items-center justify-center">
-                  <img
-                    className=" h-[15px] w-auto object-cover"
-                    src='assets/sidebar/buttons/btn (6).svg'
-                    alt=""
-                  />
+                  <ThemeSVG>
+                    <img
+                      className=" h-[15px] w-auto object-cover"
+                      src="assets/sidebar/buttons/btn (6).svg"
+                      alt=""
+                    />
+                  </ThemeSVG>
                 </div>
                 <div className="flex items-center justify-center">
-                  <img
-                    className=" h-[15px] w-auto object-cover"
-                    src='assets/sidebar/buttons/btn (7).svg'
-                    alt=""
-                  />
+                  <ThemeSVG>
+                    <img
+                      className=" h-[15px] w-auto object-cover"
+                      src="assets/sidebar/buttons/btn (7).svg"
+                      alt=""
+                    />
+                  </ThemeSVG>
                 </div>
               </div>
             </footer>
