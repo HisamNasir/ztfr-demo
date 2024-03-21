@@ -3,7 +3,6 @@ import { motion, useAnimation } from "framer-motion";
 import ProfileBtn from "./ProfileBtn";
 import { useSelector } from "react-redux";
 import { colorCombinations } from "../lib/constants";
-import ThemeSVG from "./theme/ThemeSVG";
 const images = [
   "/assets/sidebar/1.png",
   "/assets/sidebar/2.png",
@@ -342,67 +341,53 @@ const RightSideCard = () => {
             <footer className=" sm:h-[13px] 2xl:h-[22px] row-span-1 w-full flex items-center ">
               <div className=" relative grid grid-flow-col gap-10  w-full sm:h-[13px] 2xl:h-[22px]">
                 <div className="flex items-center justify-center">
-                  <ThemeSVG>
-                    <img
-                      className=" h-[15px] w-auto object-cover"
-                      src="assets/sidebar/buttons/btn (1).svg"
-                      alt=""
-                    />
-                  </ThemeSVG>
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src="assets/sidebar/buttons/btn (1).svg"
+                    alt=""
+                  />
                 </div>
                 <div className="flex items-center justify-center">
-                  <ThemeSVG>
-                    <img
-                      className=" h-[15px] w-auto object-cover"
-                      src="assets/sidebar/buttons/btn (2).svg"
-                      alt=""
-                    />
-                  </ThemeSVG>
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src="assets/sidebar/buttons/btn (2).svg"
+                    alt=""
+                  />
                 </div>
                 <div className="flex items-center justify-center">
-                  <ThemeSVG>
-                    <img
-                      className=" h-[15px] w-auto object-cover"
-                      src="assets/sidebar/buttons/btn (3).svg"
-                      alt=""
-                    />
-                  </ThemeSVG>
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src="assets/sidebar/buttons/btn (3).svg"
+                    alt=""
+                  />
                 </div>
                 <div className="flex items-center justify-center">
-                  <ThemeSVG>
-                    <img
-                      className=" h-[15px] w-auto object-cover"
-                      src="assets/sidebar/buttons/btn (4).svg"
-                      alt=""
-                    />
-                  </ThemeSVG>
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src="assets/sidebar/buttons/btn (4).svg"
+                    alt=""
+                  />
                 </div>
                 <div className="flex items-center justify-center">
-                  <ThemeSVG>
-                    <img
-                      className=" h-[15px] w-auto object-cover"
-                      src="assets/sidebar/buttons/btn (5).svg"
-                      alt=""
-                    />
-                  </ThemeSVG>
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src="assets/sidebar/buttons/btn (5).svg"
+                    alt=""
+                  />
                 </div>
                 <div className="flex items-center justify-center">
-                  <ThemeSVG>
-                    <img
-                      className=" h-[15px] w-auto object-cover"
-                      src="assets/sidebar/buttons/btn (6).svg"
-                      alt=""
-                    />
-                  </ThemeSVG>
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src="assets/sidebar/buttons/btn (6).svg"
+                    alt=""
+                  />
                 </div>
                 <div className="flex items-center justify-center">
-                  <ThemeSVG>
-                    <img
-                      className=" h-[15px] w-auto object-cover"
-                      src="assets/sidebar/buttons/btn (7).svg"
-                      alt=""
-                    />
-                  </ThemeSVG>
+                  <img
+                    className=" h-[15px] w-auto object-cover"
+                    src="assets/sidebar/buttons/btn (7).svg"
+                    alt=""
+                  />
                 </div>
               </div>
             </footer>

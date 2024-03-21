@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { colorCombinations } from "../lib/constants";
+import { colorCombinations } from "../../lib/constants";
 
-const ThemeSVG = ({ children }) => {
+const ThemeImage = ({ children }) => {
   const dominantColor = useSelector((state) => state.background.dominantColor);
 
   // Function to find the color combination closest to the dominant color
@@ -42,20 +42,19 @@ const ThemeSVG = ({ children }) => {
 
   const { textColor } = closestColorCombination;
 
-  let svgStyle = {};
+  let imgStyle = {};
 
   if (textColor === "#fff") {
-    svgStyle.fill = "#fff"; // Set fill color to white if textColor is white
+    imgStyle.filter = "brightness(0) invert(1)"; // Invert the colors if textColor is white
   } else if (textColor === "#000") {
-    svgStyle.fill = "#000"; // Set fill color to black if textColor is black
+    imgStyle.filter = "none"; // Remove filter if textColor is black
   }
 
   return (
     <div>
       {React.Children.map(children, (child) => {
-        if (React.isValidElement(child) && child.type === "svg") {
-          // Apply fill color to the SVG child element
-          return React.cloneElement(child, { style: svgStyle });
+        if (React.isValidElement(child)) {
+          return React.cloneElement(child, { style: imgStyle });
         } else {
           return child;
         }
@@ -64,4 +63,4 @@ const ThemeSVG = ({ children }) => {
   );
 };
 
-export default ThemeSVG;
+export default ThemeImage;

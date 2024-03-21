@@ -6,7 +6,7 @@ import BottomText from "../../components/BottomText";
 import ImageWallpaper from "../../components/ImageWallpaper";
 import DominantColorDisplay from "@/components/DominantColorDisplay";
 import ThemeText from "@/components/theme/ThemeText";
-import ThemeSVG from "@/components/theme/ThemeSVG";
+import ThemeImage from "@/components/theme/ThemeImage";
 
 const HomePage = () => {
   const cardRef = useRef(null);
@@ -32,13 +32,13 @@ const HomePage = () => {
       <div className=" uppercase tracking-wider  transition-colors duration-500">
         <div className="min-h-screen flex flex-col">
           <div className="absolute top-0 left-0 p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
-            <ThemeSVG>
+            <ThemeImage>
               <img
                 alt=""
                 className="w-[70px] md:w-[90px] lg:w-[100px]"
                 src="assets/ztfr.png"
               />
-            </ThemeSVG>
+            </ThemeImage>
           </div>
 
           <div className="absolute top-0 right-0 p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
