@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import VideoPlayer from './VideoPlayer';
-import ImagePlayer from './ImagePlayer';
-import ColorPlayer from './ColorPlayer';
+import React, { useState } from "react";
+import VideoPlayer from "./VideoPlayer";
+import ImagePlayer from "./ImagePlayer";
+import ColorPlayer from "./ColorPlayer";
 
 const ImageWallpaper = () => {
   const [videoFinished, setVideoFinished] = useState(false);
@@ -16,22 +16,23 @@ const ImageWallpaper = () => {
 
   const handleImagesEnd = () => {
     setImagesFinished(true);
-    
-
   };
 
   const handleColorsEnd = () => {
     setColorsFinished(true);
-    setVideoFinished(false); 
-    setImagesFinished(false); 
+    setVideoFinished(false);
+    setImagesFinished(false);
     setColorsFinished(false);
-
   };
   return (
     <div className="image-wallpaper h-screen overflow-hidden absolute -z-50">
       {!videoFinished && <VideoPlayer onVideoEnd={handleVideoEnd} />}
-      {videoFinished && !imagesFinished && <ImagePlayer onImagesEnd={handleImagesEnd} />}
-      {imagesFinished && !colorsFinished && <ColorPlayer onColorsEnd={handleColorsEnd} />}
+      {videoFinished && !imagesFinished && (
+        <ImagePlayer onImagesEnd={handleImagesEnd} />
+      )}
+      {imagesFinished && !colorsFinished && (
+        <ColorPlayer onColorsEnd={handleColorsEnd} />
+      )}
     </div>
   );
 };

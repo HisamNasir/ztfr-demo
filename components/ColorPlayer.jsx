@@ -4,20 +4,18 @@ import { setDominantColor } from "../src/store/features/backgroundSlice";
 
 const ColorPlayer = ({ onColorsEnd }) => {
   const colors = [
-    "#FF0000",
-    "#00FF00",
-    "#0000FF",
-    "#FFFF00",
-    "#FF00FF",
-    "#00FFFF",
+    [255, 0, 0], // Red
+    [0, 255, 0], // Green
+    [0, 0, 255], // Blue
+    [255, 255, 0], // Yellow
+    [255, 0, 255], // Magenta
+    [0, 255, 255], // Cyan
   ];
+
   const [colorIndex, setColorIndex] = useState(0);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Set default dominant color to black
-    dispatch(setDominantColor("000"));
-
     const handleColorChange = () => {
       setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
 
@@ -25,24 +23,43 @@ const ColorPlayer = ({ onColorsEnd }) => {
         onColorsEnd();
       }
 
-      if (colorIndex < colors.length) {
-        const colorWithoutHash = colors[colorIndex].substring(1); // Remove #
-        dispatch(setDominantColor(colorWithoutHash));
-      }
-
-      if (colorIndex === colors.length - 1) {
-        setColorIndex(0);
-      }
+      const dominantColor = findClosestColor(colors[colorIndex + 1]);
+      dispatch(setDominantColor(dominantColor));
     };
 
     const intervalId = setInterval(handleColorChange, 5000); // Change color every 5 seconds
     return () => clearInterval(intervalId);
   }, [dispatch, colorIndex, onColorsEnd, colors]);
 
+  const findClosestColor = (targetColor) => {
+    let minDistance = Infinity;
+    let closestColor = targetColor;
+
+    colors.forEach((color) => {
+      const distance = calculateColorDistance(color, targetColor);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestColor = color;
+      }
+    });
+
+    return closestColor;
+  };
+
+  const calculateColorDistance = (color1, color2) => {
+    const r1 = color1[0],
+      g1 = color1[1],
+      b1 = color1[2];
+    const r2 = color2[0],
+      g2 = color2[1],
+      b2 = color2[2];
+    return Math.sqrt((r2 - r1) ** 2 + (g2 - g1) ** 2 + (b2 - b1) ** 2);
+  };
+
   return (
     <div
       className="w-screen h-screen"
-      style={{ backgroundColor: colors[colorIndex] }}
+      style={{ backgroundColor: `rgb(${colors[colorIndex].join(", ")})` }}
     ></div>
   );
 };

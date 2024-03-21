@@ -40,7 +40,7 @@ const HomePage = () => {
               />
             </ThemeImage>
           </div>
-
+          {/* <DominantColorDisplay /> */}
           <div className="absolute top-0 right-0 p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">
             <div className="flex gap-2  items-center">
               <div className=" flex items-center gap-4">
