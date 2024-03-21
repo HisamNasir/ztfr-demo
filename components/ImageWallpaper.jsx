@@ -10,24 +10,28 @@ const ImageWallpaper = () => {
 
   const handleVideoEnd = () => {
     setVideoFinished(true);
+    setImagesFinished(false);
+    setColorsFinished(false);
   };
 
   const handleImagesEnd = () => {
     setImagesFinished(true);
+    setVideoFinished(true);
+    setColorsFinished(false);
+
   };
 
   const handleColorsEnd = () => {
     setColorsFinished(true);
-    setVideoFinished(false); // Reset video playback
-    setImagesFinished(false); // Reset image playback
+    setVideoFinished(false); 
+    setImagesFinished(false); 
+
   };
   return (
     <div className="image-wallpaper h-screen overflow-hidden absolute -z-50">
       {!videoFinished && <VideoPlayer onVideoEnd={handleVideoEnd} />}
       {videoFinished && !imagesFinished && <ImagePlayer onImagesEnd={handleImagesEnd} />}
-      {videoFinished && !imagesFinished && (
-        <ColorPlayer onColorsEnd={handleColorsEnd} />
-      )}
+      {videoFinished && imagesFinished && !colorsFinished && <ColorPlayer onColorsEnd={handleColorsEnd} />}
     </div>
   );
 };
