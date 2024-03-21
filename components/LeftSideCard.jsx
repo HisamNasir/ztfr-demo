@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import { Input } from '@nextui-org/react';
 import { FaEllipsisV, FaLock } from "react-icons/fa";
 import { colorCombinations } from '../lib/constants';
+import ThemeBG from "./theme/ThemeBG";
+import ThemeText from "./theme/ThemeText";
 
 const LeftSideCard = () => {
   const cardRef = useRef(null);
@@ -66,15 +68,6 @@ const LeftSideCard = () => {
 
   if (!closestColorCombination) return null;
 
-  const { bgColor, textColor } = closestColorCombination;
-
-  const textStyle = {
-    color: textColor,
-  };
-
-  const containerStyle = {
-    backgroundColor: bgColor,
-  };
 
   return (
     <div
@@ -83,7 +76,7 @@ const LeftSideCard = () => {
         isCardOpen ? "left-4" : "-left-40"
       }`}
       onClick={handleCardClick}
-      style={containerStyle}
+      
     >
       {isCardOpen && (
         <button
@@ -91,17 +84,24 @@ const LeftSideCard = () => {
           className="top-2 left-2 absolute"
           onClick={handleCloseButtonClick}
         >
-          LOGO
+<ThemeText>
+          <p>LOGO</p>
+
+</ThemeText>
         </button>
       )}
-      <div className="flex transition-colors duration-500 relative h-[390px]  2xl:h-[489px] w-[210px] md:w-[280px] 2xl:w-[310px] ">
+      <ThemeBG>
+        <ThemeText>
+
+        
+      <div className="flex transition-colors duration-500 relative h-[390px] 2xl:h-[489px] w-[210px] md:w-[280px] 2xl:w-[310px] ">
         <div id="first-card">
-          <div className="absolute right-4 top-4 text-xs 2xl:text-sm" style={textStyle}>
+          <div className="absolute right-4 top-4 text-xs 2xl:text-sm" >
             <FaLock />
           </div>
           {!isCardOpen && (
             <div className=" absolute left-9 md:left-[65px] bottom-1/2 select-none flex items-end">
-              <p className=" text-[8px] md:text-xs text-center w-[300px] font-normal -rotate-90 tracking-widest" style={textStyle}>
+              <p className=" text-[8px] md:text-xs text-center w-[300px] font-normal -rotate-90 tracking-widest" >
                 upload files or folders by dropping them anywhere in the
                 world
               </p>
@@ -130,14 +130,14 @@ const LeftSideCard = () => {
                   variant='underlined'
                   className="dark w-full font-normal"
                   label="Title"
-                  style={textStyle}
+                  
                 />
                 <Input
                   type="text"
                   variant='underlined'
-                  className="dark w-full  font-normal"
+                  className="dark w-full font-normal"
                   label="Note"
-                  style={textStyle}
+                  
                 />
               </div>
               <div className="absolute bottom-4 right-2 font-normal">
@@ -148,14 +148,21 @@ const LeftSideCard = () => {
         </div>
         <div id="second-card"></div>
       </div>
+      </ThemeText>
+      </ThemeBG>
       <div className="absolute rotate-90 translate-x-16 -right-8 font-normal lg:-right-[84px] top-28 lg:top-[144px]">
-        <p className=" text-[6px] lg:text-[10px] w-full" style={textStyle}>
+        <ThemeText>
+        <p className=" text-[6px] lg:text-[10px] w-full" >
           advanced encryption standard (aes) 256-bit
         </p>
+
+        </ThemeText>
       </div>
       {isCardOpen && (
         <div className="absolute 2xl:translate-x-16  translate-x-9 md:-right-7 -right-6 top-[90px] 2xl:top-28">
-          <p className=" text-2xl 2xl:text-4xl w-full font-normal" style={textStyle}>1 tb</p>
+          <ThemeText>
+          <p className=" text-2xl 2xl:text-4xl w-full font-normal" >1 tb</p>
+          </ThemeText>
         </div>
       )}
     </div>
