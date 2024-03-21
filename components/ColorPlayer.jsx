@@ -16,6 +16,9 @@ const ColorPlayer = ({ onColorsEnd }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    // Set default dominant color to black
+    dispatch(setDominantColor("#000"));
+
     const handleColorChange = () => {
       setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
 
