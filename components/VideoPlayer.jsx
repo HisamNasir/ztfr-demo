@@ -12,16 +12,16 @@
     
         const handleVideoEnd = () => {
           setVideoFinished(true);
-          onVideoEnd(); // Notify ImageWallpaper that the video has ended
+          onVideoEnd(); 
         };
     
         const handleVideoPlay = () => {
-          dispatch(setDominantColor('#000000')); // Set dominant color to black when video is playing
+          dispatch(setDominantColor('000000')); 
         };
     
         video.addEventListener('ended', handleVideoEnd);
         video.addEventListener('play', handleVideoPlay);
-        video.playbackRate = 5;
+        // video.playbackRate = 5;
         return () => {
           video.removeEventListener('ended', handleVideoEnd);
           video.removeEventListener('play', handleVideoPlay);

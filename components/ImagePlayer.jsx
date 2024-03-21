@@ -16,7 +16,7 @@ const ImagePlayer = ({ onImagesEnd }) => {
         clearInterval(intervalId);
         onImagesEnd(); // Notify parent component when all images are displayed
       }
-    }, 500); // Change image every 5 seconds
+    }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(intervalId);
   }, [dispatch, currentImageIndex, onImagesEnd, imageIndex]);

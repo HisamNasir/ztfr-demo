@@ -4,6 +4,7 @@ import LeftSideCard from "../../components/LeftSideCard";
 import ProfileBtn from "../../components/ProfileBtn";
 import BottomText from "../../components/BottomText";
 import ImageWallpaper from "../../components/ImageWallpaper";
+import DominantColorDisplay from "@/components/DominantColorDisplay";
 
 const HomePage = () => {
   const cardRef = useRef(null);
@@ -27,6 +28,9 @@ const HomePage = () => {
   return (
     <>
       <ImageWallpaper/>
+      {/* <div className="absolute m-2 top-0 right-8 text-white">
+      <DominantColorDisplay/>
+      </div> */}
     <div className=" uppercase tracking-wider  transition-colors duration-500">
       <div className="min-h-screen flex flex-col">
         <div className="absolute top-0 left-0 p-4 px-[20px] py-[10px] 2xl:px-[50px] 2xl:py-[24px]">

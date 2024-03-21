@@ -10,14 +10,13 @@ const ColorPlayer = ({ onColorsEnd }) => {
     "#FFFF00",
     "#FF00FF",
     "#00FFFF",
-    "#000000",
   ];
   const [colorIndex, setColorIndex] = useState(0);
   const dispatch = useDispatch();
 
   useEffect(() => {
     // Set default dominant color to black
-    dispatch(setDominantColor("#000"));
+    dispatch(setDominantColor("000"));
 
     const handleColorChange = () => {
       setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
@@ -27,7 +26,8 @@ const ColorPlayer = ({ onColorsEnd }) => {
       }
 
       if (colorIndex < colors.length) {
-        dispatch(setDominantColor(colors[colorIndex]));
+        const colorWithoutHash = colors[colorIndex].substring(1); // Remove #
+        dispatch(setDominantColor(colorWithoutHash));
       }
 
       if (colorIndex === colors.length - 1) {
@@ -35,7 +35,7 @@ const ColorPlayer = ({ onColorsEnd }) => {
       }
     };
 
-    const intervalId = setInterval(handleColorChange, 500); // Change color every 5 seconds
+    const intervalId = setInterval(handleColorChange, 5000); // Change color every 5 seconds
     return () => clearInterval(intervalId);
   }, [dispatch, colorIndex, onColorsEnd, colors]);
 

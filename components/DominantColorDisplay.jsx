@@ -37,7 +37,7 @@ const DominantColorDisplay = () => {
   const closestColorCombination = findClosestColorCombination();
 
   return (
-    <div className="dominant-color-display" style={{ backgroundColor: dominantColor }}>
+    <div className="dominant-color-display p-2" style={{ backgroundColor: dominantColor }}>
       <p>Dominant Color: {dominantColor}</p>
       {closestColorCombination && (
         <p>
