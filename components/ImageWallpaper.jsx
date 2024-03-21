@@ -23,7 +23,7 @@ const ImageWallpaper = () => {
   };
   return (
     <div className="image-wallpaper h-screen overflow-hidden absolute -z-50">
-      {!videoFinished || <VideoPlayer onVideoEnd={handleVideoEnd} />}
+      {!videoFinished && <VideoPlayer onVideoEnd={handleVideoEnd} />}
       {videoFinished && !imagesFinished && <ImagePlayer onImagesEnd={handleImagesEnd} />}
       {videoFinished && !imagesFinished && (
         <ColorPlayer onColorsEnd={handleColorsEnd} />
