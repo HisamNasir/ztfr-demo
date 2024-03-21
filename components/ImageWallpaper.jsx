@@ -22,8 +22,8 @@ const ImageWallpaper = () => {
 
   const handleColorsEnd = () => {
     setColorsFinished(true);
-    setVideoFinished(false); // Reset video playback
-    setImagesFinished(false); // Reset image playback
+    setVideoFinished(false); 
+    setImagesFinished(false); 
     setColorsFinished(false);
 
   };
